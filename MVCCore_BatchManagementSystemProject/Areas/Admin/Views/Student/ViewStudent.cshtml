@@ -1,0 +1,123 @@
+﻿@model MVCCore_BatchManagementSystemProject.Models.TblstudentDetail
+@{
+    ViewData["Title"] = "ViewStudent";
+    Layout = "~/Areas/Admin/Views/Shared/_AdminLayout.cshtml";
+}
+<div class="row">
+   
+    <div class="row">
+        <div class="col-md-12">
+            <div class="accordion" id="myAccordion">
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="headingOne">
+                        <button type="button" class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#collapseOne">Student Profile Details</button>
+                    </h2>
+                    <div id="collapseOne" class="accordion-collapse collapse show" data-bs-parent="#myAccordion">
+                        <div class="card-body">
+
+                            <table class="table table-bordered">
+                                <tr>
+                                    <td>Student Name: </td>
+                                    <td>@Model.StudentName</td>
+                                </tr>
+                                <tr>
+                                    <td>Gender: </td>
+                                    <td>@Model.Gender</td>
+                                </tr>
+                                <tr>
+                                    <td>Qualification: </td>
+                                    <td>@Model.Qualification</td>
+                                </tr>
+                                <tr>
+                                    <td>Mobile Number: </td>
+                                    <td>@Model.MobileNumber</td>
+                                </tr>
+                                <tr>
+                                    <td>Email Address: </td>
+                                    <td>@Model.EmailAddress</td>
+                                </tr>
+                                <tr>
+                                    <td>Birth Date: </td>
+                                    <td>@Model.BirthDate.Value.ToShortDateString()</td>
+                                </tr>
+
+
+
+                            </table>
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="headingTwo">
+                        <button type="button" class="accordion-button" data-bs-toggle="collapse" data-bs-target="#collapseTwo">Registration Details</button>
+                    </h2>
+                    <div id="collapseTwo" class="accordion-collapse collapse " data-bs-parent="#myAccordion">
+                        <div class="card-body">
+                            <table class="table table-bordered">
+                                <tbody>
+                                    @foreach(var item in Model.TblstudentRegistrations)
+                                    {
+                                        float finalfees = (float)((item.Fee.FeesAmount+(item.Fee.FeesAmount * (item.Fee.Gst) / 100)) - item.Discount);
+                                        <tr>
+                                            <td>Course Name:</td>
+                                            <td>@item.Fee.Course.CourseName</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Registration Date:</td>
+                                            <td>@item.RegistrationDate.Value.ToShortDateString()</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Course Fees Amount:</td>
+                                            <td>@item.Fee.FeesAmount<span>( @item.Fee.FeeMode )</span></td>
+                                        </tr>
+                                         <tr>
+                                            <td>GST:</td>
+                                            <td>@item.Fee.Gst</td>
+                                        </tr>
+                                         <tr>
+                                            <td>Discount:</td>
+                                            <td>@item.Discount</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Final Fees Amount:</td>
+                                            <td>@finalfees</td>
+                                        </tr>
+                                    }
+                                </tbody>
+                            </table>
+
+
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="headingThree">
+                        <button type="button" class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#collapseThree">Course Syllabus</button>
+                    </h2>
+                    <div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#myAccordion">
+                        <div class="card-body">
+                            @foreach (var item in Model.TblstudentRegistrations)
+                            {
+                                foreach(var topic in item.Fee.Course.TbltrainingCourseTopics)
+                                {
+                                    <ul> 
+                                        <li>
+                                            <b>@topic.Topic.TopicName</b>
+                                            <ul>
+                                                @foreach(var content in topic.Topic.TbltopicContents)
+                                                {
+                                                    <li>@content.ContentName</li>
+                                                }
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                }
+
+                            }
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

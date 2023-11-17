@@ -1,0 +1,81 @@
+﻿@model  MVCCore_BatchManagementSystemProject.Models.TblstudentDetail
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Areas/Student/Views/Shared/_StudentLayout.cshtml";
+}
+
+<div class="row" style="padding:2%">
+
+    <div class="col-md-8">
+        @foreach(var item in Model.TblstudentRegistrations)
+        {
+            float totalfees =(float) (item.Fee.FeesAmount + (item.Fee.FeesAmount * item.Fee.Gst / 100));
+            <div class="card">
+                <div class="card-header">
+                    <h4>@item.Fee.Course.CourseName</h4>
+                    </div>
+                <div class="card-body"> 
+                    <table class="table">
+                        <tbody>
+                            <tr>
+                                <td>Course Fees:</td>
+                                <td>@item.Fee.FeesAmount<span>(@item.Fee.FeeMode)</span></td>
+                            </tr>
+                            <tr>
+                                <td>GST:</td>
+                                <td>@item.Fee.Gst</td>
+                            </tr>
+                            <tr>
+                                <td>Discount:</td>
+                                <td>@item.Discount</td>
+                            </tr>
+                            <tr>
+                                <td>Total Course Fees:</td>
+                                <td>@totalfees</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+        }
+    </div>
+</div>
+<div class="row" style="padding:2%">
+    <div class="col-md-7">
+        <h4>Syllabus</h4>
+        @foreach(var item in Model.TblstudentRegistrations)
+        { 
+            @foreach(var t in item.Fee.Course.TbltrainingCourseTopics)
+            {
+                <h5>@t.Topic.TopicName</h5>
+                    <table class="table table-bordered">
+                        <thead>
+                            <tr>
+                                <th>Sr No</th>
+                                <th>Content</th>
+                                <th>Expected Date</th>
+                                <th>Actual Date</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            @{
+                                int i = 1;
+                            }
+                            @foreach (var c in t.Topic.TbltopicContents)
+                            {
+                                <tr>
+                                    <td>@i</td>
+                                    <td>@c.ContentName</td>
+                                </tr>
+                                i++;
+                            }
+
+                    </tbody>
+                </table>
+            }
+              
+        }
+
+    </div>
+</div>

@@ -1,0 +1,250 @@
+﻿@model MVCCore_BatchManagementSystemProject.Models.Tblbatch
+@{
+    ViewData["Title"] = "BatchAttendance";
+    Layout = "~/Areas/Trainer/Views/Shared/_TrainerLayout.cshtml";
+}
+<script>
+    var batchId = 0;
+    var date = "";
+    var contentId = 0;
+    var expected_date = "";
+    var registrations = [];
+    @{
+        int batch_id = 0;
+        if (Model != null)
+        {
+            batch_id = Model.BatchId;
+        }
+    }
+    $(document).ready(function () {
+        // GetScheduleContents();
+
+        $("#ddbatch").change(function () {
+            GetScheduleContents();
+            GetStudents();
+        })
+            $("#ddcontent").change(function () {
+                BatchContenExpectedScheduleDate();
+            })
+            
+
+
+    })
+    function BatchContenExpectedScheduleDate() {
+        var id = $("#ddcontent").val();
+
+        $.ajax({
+            url: "/Trainer/TrainerBatch/BatchContent?id=" + id,
+            method: 'get',
+            success: function (resp) {
+                console.log(resp);
+                $("#expecteddate").html(resp.expectedDate);
+                expected_date = resp.expectedDate;
+            }
+        })
+    }
+    function GetScheduleContents() {
+        var batch_id = $("#ddbatch").val();
+        $.ajax({
+            url: "/Trainer/TrainerBatch/BatchWiseSchedule?batch_id=" + batch_id,
+            method: 'get',
+            success: function (resp) {
+                console.log(resp);
+                $("#ddcontent").empty();
+                $("#ddcontent").append("<option selected disabled>Select Content</option>");
+                $.each(resp, function (i, d) {
+                    $("#ddcontent").append("<option value=" + d.batchId + "_" + d.contentId + ">" + d.content.contentName + "</option>");
+                })
+            }
+        })
+    }
+    function GetStudents() {
+        var batch_id = $("#ddbatch").val();
+        $.ajax({
+            url: "/Trainer/TrainerBatch/BatchWiseStudents?batch_id=" + batch_id,
+            method: 'get',
+            success: function (resp) {
+                console.log(resp);
+                $("#tblstudents").empty();
+                $.each(resp, function (i, d) {
+                    $("#tblstudents").append("<tr><td>" + (i + 1) + "</td><td>" + d.registrationId + "</td><td>" + d.studentName + "</td><td><input type='checkbox' onchange='MarkAttendance(" + d.registrationId + ")' /></td></tr>");
+
+                })
+                
+            }
+        })
+    }
+
+    function MarkAttendance(rid){
+        if (registrations.indexOf(rid) == -1) {
+            registrations.push(rid);
+        }
+        else {
+            registrations.splice(registrations.indexOf(rid), 1);
+        }
+    }
+
+    function SelectSchedule(sid,dt,bid){
+        contentId = sid;
+        date = dt;
+        batchId = bid;
+    }
+
+    function SelectStudent(rid){
+        if (registrations.indexOf(rid) == -1) {
+            registrations.push(rid);
+        }
+        else {
+            registrations.splice(registrations.indexOf(rid), 1);
+        }
+    }
+    function SubmitAttendance() {
+        var actual_date = $("#txtdate").val();
+        var data=[];
+        $.each(registrations, function (i, d) {
+            var st = { "registration_id": d, "is_present": 1 };
+            data.push(st);
+        })
+        var id = $("#ddcontent").val();
+        var dt = id.split("_");
+        var content_id = dt[1];
+        var batch_id = $("#ddbatch").val();
+        var dt = { "batch_id": batch_id, "content_id": content_id, "expected_date": expected_date, "actual_date": actual_date, "students": data };
+       
+            console.log(dt)
+        $.ajax({
+            url: '/Trainer/TrainerBatch/MarkAttendance',
+            method:'post',
+            data:dt,
+            success: function (resp) {
+                alert(resp);
+            }
+        })
+    }
+</script>
+<div class="container-fluid">
+
+<h4>Batch Attendance</h4>
+<div class="card">
+    <div class="card-body">
+
+        <div class="row">
+                <div class="col-md-12">
+                    <div class="mb-3">
+                        <div style="padding-left:40px;">
+
+                            @Html.DropDownList("ddbatch",ViewBag.batches as List<SelectListItem> ,"Select Batch")
+                            <input type="button" value="Submit" />
+
+                        </div>
+                    </div>
+                    <div class="mb-3">
+                        <table class="table">
+                            <tr>
+                                <td colspan="2">Topic Name:<span></span></td>
+                            </tr>
+                            <tr>
+
+                                <td colspan="2"> 
+                                Content
+                                <select id="ddcontent">
+                                    <option selected disabled>Select Content</option>
+                                </select>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Expected Date :<b id="expecteddate"></b></td>
+                                <td>Attendance Date:<input type="date" id="txtdate" /></td>
+                               
+                                 
+                                
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+
+
+                <div class="col-md-12">
+                    <table class="table table-bordered">
+                        <thead>
+                            <tr>
+                                <th>Sr No</th>
+                                <th>Student Id</th>
+                                <th>Student Name</th>
+                                <th>Attendance</th>
+                            </tr>
+                        </thead>
+                        <tbody id="tblstudents">
+                        </tbody>
+                    </table>
+                    <input type="button" value="Submit" onclick="SubmitAttendance()" />
+                </div>
+
+        </div>
+           
+            @if (Model != null)
+            {
+
+                int i = 1;
+
+               
+
+                <div class="mb-3">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <h4 style="text-align:center">Batch Schedule</h4>
+                            <table class="table table-bordered">
+                                <thead>
+                                    <tr>
+                                        <td></td>
+                                        <th>Sr No</th>
+                                        <th>Content Name</th>
+                                        <th>Day</th>
+                                        <th>Expected Date</th>
+                                        <th>Actual Date</th>
+                                        <th>Status</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    @{
+                                        i = 1;
+                                    }
+                                    @foreach (var item in Model.TblbatchSchedules)
+                                    {
+                                        string status = "";
+                                        if (item.ActualDate != null)
+                                        {
+                                            status = "Completed";
+                                        }
+                                        else
+                                        {
+                                            status = "Not Completed";
+                                        }
+                                        <tr>
+                                            <td><input type="checkbox" id="chkschedule" onchange="SelectSchedule(@item.ContentId,'@item.ExpectedDate.Value.ToShortDateString()',@item.BatchId)" /></td>
+                                            <td>@i</td>
+                                            <td>@item.Content.ContentName</td>
+                                            <td>@item.ExpectedDate.Value.DayOfWeek</td>
+                                            <td>@item.ExpectedDate.Value.ToShortDateString()</td>
+                                            <td>@item.ActualDate</td>
+                                            <td>
+                                                @status
+                                            </td>
+
+                                        </tr>
+                                        i++;
+                                    }
+                                </tbody>
+                            </table>
+                            </div>
+                        <div class="col-md-6">
+                          
+                        </div>
+
+                    </div>
+                    
+                </div>
+            }
+        </div>
+    </div>
+</div>

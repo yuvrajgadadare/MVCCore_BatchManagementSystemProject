@@ -1,0 +1,195 @@
+﻿@model MVCCore_BatchManagementSystemProject.Models.StudentPaymentModel
+@{
+    ViewData["Title"] = "Invoice";
+    Layout = "~/Areas/Admin/Views/Shared/_AdminLayout.cshtml";
+}
+ <script src="~/lib/jquery/dist/jquery.min.js"></script>
+  
+<script>
+    function PrintInvoice() {
+        // var divName = document.getElementById("dvprint");
+        var printContents = document.getElementById("dvprint").innerHTML;
+        var originalContents = document.body.innerHTML;
+
+        document.body.innerHTML = printContents;
+
+        window.print();
+
+        document.body.innerHTML = originalContents;
+     
+    }
+</script>
+<input type="button" value="Print Invoice" class="btn" onclick="PrintInvoice()"/>
+<div class="row" >
+    <div class="card">
+        <div class="card-body" id="dvprint" style="display:block;">
+
+
+            <table class="table table-bordered">
+                <tr>
+
+                    <td style="width:70%;text-align:left">
+
+                        <img src="~/images/mainlogo.png" style="height:50px;width:120px;" />
+                    </td>
+
+                    <td>
+                        <b>
+                            Payment #:
+                        </b>  @Model.PaymentId
+                        <br />
+                        <b>Payment Date: </b>  @Model.PaymentDate.Value.ToShortDateString()
+                        <br />
+                        <b>
+                            GST Number
+                        </b> : 27AAICC6817A1ZV
+                        <br />
+                        <b>
+                            Email: 
+                        </b>   ciitpune@gmail.com
+                        <br />
+                        <b> Phone: 7028565830</b>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="2">
+                        <b>Branch: </b> CIIT Training Institute Hadapsar<br />
+                        <b>Address: </b> Office #2, 1st floor, manisha blitz , hadapsar, near shankar math, pune-28
+                    </td>
+                </tr>
+               
+                <tr>
+
+                    <td colspan="2" style="width:70%;text-align:center">
+                        <h3 style="font-family:Bookman Old Style">!! Student Invoice !!</h3>
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="2">
+                        <p>
+
+                            <br />
+                            <b>Student Name: </b> @ViewBag.st.StudentName
+                            <br />
+                            <b>Enroll For: </b> @ViewBag.st.CourseName
+                            <br />
+                            <b>Total Fees: </b> @ViewBag.st.total_fees_amount
+                        </p>
+                    </td>
+                </tr>
+            </table>
+
+            <table class="table table-bordered">
+                <thead>
+                    <tr>
+                        <th style="text-align:center"><b>Payment For: </b></th>
+                        <th style="text-align:center"><b>Payment Amount: </b></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td style="height:300px;width:70%;text-align:right">
+                            @Model.PaymentDescription 
+                        </td>
+                        <td>
+                           @Model.PaymentAmount 
+                        </td>
+                    </tr>
+
+
+                </tbody>
+                <tfoot>
+                    <tr>
+                        <td style="text-align:right"><b>Today's  Paid: </b></td>
+                        <td>
+                        @Model.PaymentAmount
+                        </td>
+                    </tr>
+                    <tr>
+                        <td style="text-align:right"><b>Previously Paid: </b></td>
+                        <td>
+                          @Model.PaidTillDate 
+                        </td>
+                    </tr>
+                    <tr>
+                        <td style="text-align:right"><b>Total Paid Till Date: </b></td>
+                        <td>
+                            @{
+                                float amount = (float)(Model.PaidTillDate + Model.PaymentAmount);
+                            }
+                             @amount
+                        </td>
+                    </tr>
+                    <tr>
+                        <td style="text-align:right"><b>Remaining Amount Till Date: </b></td>
+                        <td>
+                            @{
+                                float remaining_amount =(float) (Model.RemainingAmountTillDate - Model.PaymentAmount);
+                             }
+                             @remaining_amount 
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="2" style="text-align:left;">
+                        
+                                  <b>Payment Mode: </b>@Model.PaymentMode
+                                   
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="2" style="text-align:left;">
+                      
+                               
+                                        <b> Payment in Words:</b>  @Model.fees_in_word
+
+                                <br />
+                                        <b>Payment Details: </b>Total Fees: <b>@ViewBag.st.total_fees_amount</b> <span>( Course Fees : <b>@ViewBag.st.FeeAmount</b><span>, GST: <b>@ViewBag.st.Gst</b>, Discount : <b>@ViewBag.st.Discount</b> )</span></span>
+
+                                    </td>
+                           
+                    
+                    </tr>
+                </tfoot>
+            </table>
+
+            <h4>Previous Payments</h4>
+            <table class="table table-bordered">
+                <thead>
+                    <tr>
+                        <th>Sr No</th>
+                        <th>Payment Date</th>
+                        <th>Payment Amount</th>
+                        <th>Payment Mode</th>
+                        <th>Description</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @{
+                        int i = 1;
+                    }
+                    @foreach (var item in ViewBag.payments)
+                    {
+                        <tr>
+                            <td>@i</td>
+                            <td>@item.PaymentDate.ToShortDateString()</td>
+                            <td>@item.PaymentAmount</td>
+                            <td>@item.PaymentMode</td>
+                            <td>@item.PaymentDescription</td>
+
+                        </tr>
+                        i++;
+                    }
+                </tbody>
+            </table>
+            <p>
+                Note : This invoice is valid for everyone.This is computerised invoice which is autometically generated by system
+            </p>
+
+ 
+</div>
+
+    </div>
+</div>
+
+

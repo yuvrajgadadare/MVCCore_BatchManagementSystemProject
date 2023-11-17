@@ -1,0 +1,84 @@
+﻿@using Microsoft.AspNetCore.Http
+@inject IHttpContextAccessor Accessor
+@{
+    Layout = null;
+ }
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>_AdminLayout</title>
+    <link href="~/lib/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <style>
+        .list-group-item{
+            background-color: #0d6efd;color:white;
+        }  
+    </style>
+    <style>
+        tr, td, th {
+            height: 10px;
+            padding: 0px
+        }
+
+        .table > :not(caption) > * > * {
+            padding: .3rem .5rem
+        }
+
+        .form-control {
+            font-size: 14px;
+        }
+
+        body, input, select {
+            font-size: 14px;
+        }
+    </style>
+</head>
+<body>
+   <div class="container-fluid">
+       <div class="row">
+         <div class="col-2" style="padding-right:0px">
+                <div style="min-height:640px;background-color:#0d6efd;color:white">
+                    <h2>Admin Panel</h2>
+                    <ul class="list-group" style="background-color:black;color:white">
+                        <li class="list-group-item"><a href="/Admin/Dashboard/Index" style="color:white;text-decoration:none">Dashboard</a></li>
+                        <li class="list-group-item"><a href="/Admin/Topic/Index" style="color:white;text-decoration:none">Topic</a></li>
+                        <li class="list-group-item"><a href="/Admin/Content/AddContent" style="color:white;text-decoration:none">Content</a></li>
+                        <li class="list-group-item"><a href="/Admin/Student/Index" style="color:white;text-decoration:none">Student</a></li>
+                        <li class="list-group-item"><a href="/Admin/Trainer/Index" style="color:white;text-decoration:none">Trainer</a></li>
+                        <li class="list-group-item"><a href="/Admin/Course/Index" style="color:white;text-decoration:none">Course</a></li>
+                        <li class="list-group-item"><a href="/Admin/Student/AllInvoices" style="color:white;text-decoration:none">All Invoices</a></li>
+                        <li class="list-group-item"><a href="/Admin/Student/StudentPayment" style="color:white;text-decoration:none">Pay Now</a></li>
+                        <li class="list-group-item"><a href="/Admin/Batch/Index" style="color:white;text-decoration:none">Batch</a></li>
+                        <li class="list-group-item"><a href="/Admin/Holiday/Index" style="color:white;text-decoration:none">Holiday</a></li>
+                 </ul>
+             </div>
+         </div>
+         <div class="col-10" style="padding-left:0px">
+                <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+                    <div class="container-fluid">
+                        <a href="#" class="navbar-brand">Batch Management System</a>
+                        <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbarCollapse2">
+                            <span class="navbar-toggler-icon"></span>
+                        </button>
+                        <div class="collapse navbar-collapse" id="navbarCollapse2">
+                            <div class="navbar-nav">
+                                <a href="#" class="nav-item nav-link active">Home</a>
+                                <a href="#" class="nav-item nav-link">About</a>
+                                <a href="#" class="nav-item nav-link">Products</a>
+                            </div>
+                            <form class="d-flex ms-auto">
+                                <button type="submit" class="btn btn-outline-light">Log Out</button>
+                            </form>
+                        </div>
+                    </div>
+                </nav>
+               <div class="row" style="padding:20px">
+                    @RenderBody()
+               </div>
+         </div>
+       </div>
+   </div>
+</body>
+</html>

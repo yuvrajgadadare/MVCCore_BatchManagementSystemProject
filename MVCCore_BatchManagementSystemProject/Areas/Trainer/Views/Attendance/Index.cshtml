@@ -1,0 +1,165 @@
+﻿
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Areas/Trainer/Views/Shared/_TrainerLayout.cshtml";
+}
+
+<script>
+    var attendance = [];
+    $(document).ready(function (resp) {
+        $("#ddbatch").change(function () {
+            GetBatchStudents();
+            GetBatchSchedule();
+            GetMarkedAttendance();
+        })
+    })
+    function MarkAttendace(rid,status) {
+        
+        var index = -1;
+        $.each(attendance, function (i, d) {
+          //  alert(d.registration_id + " " + rid)
+            if (d.RegistrationId == rid) {
+                index = i;
+                // break;
+            }
+        })
+        var st = { "RegistrationId": rid, "IsPresent": status };
+
+     //   alert(index)
+        if (index == -1) {
+            attendance.push(st);
+
+        }
+        else {
+            attendance[index] = st;
+        }
+        console.log(attendance)
+    }
+      
+    
+    
+    
+    function GetBatchStudents() {
+        var batch_id = $("#ddbatch").val();
+        $.ajax({
+            url: '/Trainer/Attendance/GetBatchStudents?batch_id='+batch_id,
+            method:'get',
+            success: function (resp) {
+                console.log(resp);
+                $("#tbldata").empty("");
+                $.each(resp, function (i, d) {
+                    var st = "<select onchange='()'></select>";
+                    $("#tbldata").append("<tr><td>" + (i + 1) + "</td><td>" + d.registrationId + "</td><td>" + d.studentName + "</td><td>" + d.courseName + "</td><td><input type='radio' name='rd_" + d.registrationId + "' onchange='MarkAttendace(" + d.registrationId + ",1)'  /> Present &nbsp; <input type='radio' name='rd_" + d.registrationId + "' onchange='MarkAttendace(" + d.registrationId + ",0)'  /> Absetnt</td></tr>")
+                })
+            }
+        })
+    }
+
+    function GetBatchSchedule() {
+        var batch_id = $("#ddbatch").val();
+        $.ajax({
+            url: '/Trainer/Attendance/BatchSchedule?batch_id=' + batch_id,
+            method: 'get',
+            success: function (resp) {
+                console.log(resp);
+                $("#ddschedule").empty("");
+                $("#ddschedule").append("<option selected disabled>Select Schedule</option>")
+
+                $.each(resp, function(i, d) {
+                    var dt = d.expectedDate.split("T");
+
+                    $("#ddschedule").append("<option value=" + d.batchScheduleId + ">" + d.content.contentName + "(" + dt[0]+ ")" + "</option>")
+                })
+            }
+        })
+    }
+    function GetMarkedAttendance() {
+        var batch_id = $("#ddbatch").val();
+        $.ajax({
+            url: '/Trainer/Attendance/GetMarkedAttendance?batch_id=' + batch_id,
+            method: 'get',
+            success: function (resp) {
+                console.log(resp);
+                $("#tblattendancedata").empty("");
+                $.each(resp, function (i, d) {
+                    var edt = d.expected_date.split("T");
+                    var adt = d.actual_date.split("T");
+                    var tabledesign = "<div class='row'><div class='col-md-12'><table class='table table-borderless'><tr><td>Content= #<b>" + (i + 1) + "</b></td><td> Content Name=<b>" + d.content_name + "</b></td><td>Expected Date=<b>" + edt[0] + "</b></td><td>Acutal Date=<b>" + adt[0] + "</b></td></tr></table></div><div class='col-md-12>'>";
+                    tabledesign+="<tr><td colspan='4'>"
+                    var data = "<table class='table table-bordered'><thead><tr><th>Registration Id</th><th>Student Name</th><th>Attendance</th></tr></thead><tbody>";
+                    var ad = "";
+                    $.each(d.students, function (j, d) {
+                        var status = "";
+                        if (d.is_present == 0) {
+                            status = "Absent";
+                        }
+                        else if (d.is_present == 1) {
+                            status = "Present";
+                        }
+                        ad += "<tr><td>" + d.registration_id + "</td><td>" + d.student_name + "</td><td>" +status+ "</td></tr>";
+                    })
+                    ad += "</tbody></table></div></div><div class='row' style='height:5px;width:100%;background-color:lightblue'></div>";
+                    data += ad;
+                    tabledesign += data;
+                    $("#tbltopicdata").append(tabledesign);
+                    data += ad;
+
+                })
+           }
+        })
+    }
+    function SubmitAttendance() {
+        var st = { "BatchScheduleId": $("#ddschedule").val(), "AttendanceDate": $("#txtdate").val(), "TblscheduleAttendances": attendance };
+        $.ajax({
+            url: '/Trainer/Attendance/SubmitAttendace',
+            method: 'post',
+            data:st,
+            success: function (resp) {
+                alert(resp);
+            }
+        })
+    }
+</script>
+<div class="container-fluid">
+
+<table class="table table-borderless">
+    <tr>
+        <td style="width:40%">Select Batch : @Html.DropDownList("ddbatch",ViewBag.batches as List<SelectListItem>,"Select Batch",new{@class="form-control"})</td>
+            <td style="width:40%">
+                Select Schedule :
+           <select id="ddschedule" class="form-control">
+                <option selected disabled>select Schedule</option>
+            </select> 
+            </td>
+            <td style="width:20%">
+               Attendance Date:<input type="date" id="txtdate" class="form-control" />
+            </td>
+    </tr>
+</table>
+<hr/>
+<table class="table">
+    <thead>
+        <tr>
+            <th>Sr No</th>
+            <th>Registration Id</th>
+            <th>Student Name</th>
+            <th>Course Name</th>
+            <th>Attendance</th>
+        </tr>
+    </thead>
+    <tbody id="tbldata"></tbody>
+</table>
+<hr/>
+<input type="button" value="Submit" id="btnsubmit" onclick="SubmitAttendance()" />
+<hr />
+
+<div class="card">
+    <div class="card-header">
+        <h5 style="text-align:center">Marked Attendance </h5>
+    </div>
+    <div class="card-body">
+        <div  id="tbltopicdata"></div>
+    </div>
+</div>
+
+</div>

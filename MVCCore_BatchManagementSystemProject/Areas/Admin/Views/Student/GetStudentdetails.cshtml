@@ -1,0 +1,249 @@
+﻿@using MVCCore_BatchManagementSystemProject.Models;
+@model  MVCCore_BatchManagementSystemProject.Models.StudentModel
+@{
+    ViewData["Title"] = "GetStudentdetails";
+    Layout = "~/Areas/Admin/Views/Shared/_AdminLayout.cshtml";
+}
+<style>
+    .nav-tabs .nav-link
+    {
+        border:none;
+    }
+
+    .nav-tabs{
+        border:none;
+    }
+</style>
+<div class="row">
+    @{
+        TblstudentDetail std = Model.registration.Student;
+    }
+
+  <div class="col-md-3">
+      <a href="/Admin/Student">Back</a>
+  </div>
+  <div class="col-md-6">
+      <div style="min-height:500px">
+        <ul class="nav nav-tabs" id="myTab">
+            <li class="nav-item">
+                <a href="#home" class="nav-link active" data-bs-toggle="tab">Profile details</a>
+            </li>
+            <li class="nav-item">
+                <a href="#profile" class="nav-link" data-bs-toggle="tab">Registration Details</a>
+            </li>
+            <li class="nav-item">
+                <a href="#messages" class="nav-link" data-bs-toggle="tab">Payment History</a>
+            </li>
+        </ul>
+        <div class="tab-content">
+            <div class="tab-pane fade show active" id="home" >
+                    <div style="padding-top:30px;">
+                        <h4 class="mt-2">Profile Details</h4>
+                    </div>
+                <table class="table table-bordered">
+                    <thead>
+                        <tr>
+                            <td>Student Name</td>
+                            <td>@std.StudentName</td>
+                        </tr>
+                        <tr>
+                            <td>Gender</td>
+                            <td>@std.Gender</td>
+                        </tr>
+                        <tr>
+                            <td>Birth Date</td>
+                            <td>@std.BirthDate.Value.ToShortDateString()</td>
+                        </tr>
+                        <tr>
+                            <td>Email Address</td>
+                            <td>@std.EmailAddress</td>
+                        </tr>
+                        <tr>
+                            <td>Mobile Number</td>
+                            <td>@std.MobileNumber</td>
+                        </tr>
+                        <tr>
+                            <td>Photo</td>
+                            <td><img src="~/images/users/@std.ProfilePhoto" class="img-thumbnail" height="100" width="70" /></td>
+                        </tr>
+                    </thead>
+                </table>
+            </div>
+            <div class="tab-pane fade" id="profile">
+                    <div style="padding-top:30px;">
+                <h4 class="mt-2">Registration Details</h4>
+                </div>
+                @{
+                    TblstudentRegistration reg = Model.registration;
+                    float final_fees = (float)((reg.Fee.FeesAmount + (reg.Fee.FeesAmount * reg.Fee.Gst) / 100) - reg.Discount);
+                }
+                <table class="table table-bordered">
+                    <thead>
+                        <tr>
+                            <td>Course Name</td>
+                            <td>@reg.Fee.Course.CourseName</td>
+                        </tr>
+                        <tr>
+                            <td>Registration Date</td>
+                            <td>@reg.RegistrationDate.Value.ToShortDateString()</td>
+                        </tr>
+                        <tr>
+                            <td>Course Fees</td>
+                            <td>@reg.Fee.FeesAmount</td>
+                        </tr>
+                        <tr>
+                            <td>GST</td>
+                            <td>@reg.Fee.Gst</td>
+                        </tr>
+                        <tr>
+                            <td>Discount</td>
+                            <td>@reg.Discount</td>
+                        </tr>
+                        <tr>
+                            <td>Final Fees Amount</td>
+                            <td>@final_fees</td>
+                        </tr>
+                    </thead>
+                </table>
+            </div>
+            <div class="tab-pane fade" id="messages">
+                    <div style="padding-top:30px;">
+                <h4 class="mt-2">Payment Details</h4>
+                </div>
+                <table class="table table-bordered">
+                    <thead>
+                        <tr>
+                            <th>Sr No</th>
+                            <th>Payment Date</th>
+                            <th>Payment Amount</th>
+                            <th>Payment Mode</th>
+                            <th>Payment Description</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @{
+                            int index = 1;
+                        }
+                        @foreach (var item in Model.registration.TblstudentPayments)
+                        {
+                            <tr>
+                                <td>@index</td>
+                                <td>@item.PaymentDate.Value.ToShortDateString()</td>
+                                <td>@item.PaymentAmount</td>
+                                <td>@item.PaymentMode</td>
+                                <td>@item.PaymentDescription</td>
+                            </tr>
+                            index++;
+                        }
+                    </tbody>
+                </table>
+            </div>
+
+        </div>
+      </div>
+
+  </div>
+ <div class="row">
+    @{
+        int i = 1;
+    }
+    @foreach (var item in Model.batches)
+    {
+        <div class="card">
+            <div class="card-title"><br/>
+                <h5 style="text-align:center"> Batch @item.BatchName for @item.Topic.TopicName</h5>
+            </div>
+            <div class="card-body">
+                <table class="table table-bordered">
+                    <thead>
+                        <tr>
+                            <th style="width:5%">Sr No</th>
+                            <th style="width:55%">Content Name</th>
+                            <th style="width:10%"> Expected Date</th>
+                            <th style="width:10%">Actual Date</th>
+                            <th style="width:20%">Attendance</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @{
+                            float per = 0;
+
+                            int j = 1;
+                            int total_Days = 0, present = 0, absent = 0,scheduled=0, not_scheduled = 0;
+                            total_Days = item.TblbatchSchedules.Count();
+
+                        }
+                        @foreach(var t in item.TblbatchSchedules)
+                        {
+                            string actualdate = "",expecteddate="";
+                            string attendance = "Not Completed";
+                            if(t.ActualDate!=null)
+                            {
+                                scheduled++;
+                                actualdate = t.ActualDate.Value.ToShortDateString();
+                            }
+                            else
+                            {
+                                not_scheduled++;
+                            }
+                            if (t.ExpectedDate != null)
+                            {
+
+                                expecteddate = t.ExpectedDate.Value.ToShortDateString();
+                            }
+                           
+                            if (t.TblbatchScheduleAttendances.Count() > 0)
+                            {
+                                @* List < TblbatchScheduleAttendance> ad = t.TblbatchScheduleAttendances.ToList(); *@
+                                actualdate = t.TblbatchScheduleAttendances.First().AttendanceDate.Value.ToShortDateString();
+                                TblscheduleAttendance s= t.TblbatchScheduleAttendances.First().TblscheduleAttendances.First();
+                                if (s.IsPresent == 0)
+                                {
+                                    attendance = "Absent";
+                                    absent++;
+                                }
+                                else if (s.IsPresent == 1)
+                                {
+                                    attendance = "Present";
+                                    present++;
+
+                                }
+
+                            }
+                            if (scheduled > 0)
+                            {
+                                per = (present * 100) / scheduled;
+                            }
+                            <tr>
+                                <td>@j</td>
+                                <td>@t.Content.ContentName</td>
+                                <td>@expecteddate</td>
+                                <td>@actualdate</td>
+                                <td>@attendance</td>
+                                <td>
+ 
+                            </tr>
+                            j++;
+                        }
+                    </tbody>
+                </table>
+            </div>
+            <div class="card-footer">
+                    <table class="table">
+                        <tr>
+                        <td>Total Days=<b>@total_Days</b></td>
+                        <td>Scheduled Days=<b>@scheduled</b></td>
+                        <td>Not Scheduled Yet=<b>@not_scheduled</b></td>
+                        <td>Present Days=<b>@present</b></td>
+                        <td>Absent Days=<b>@absent</b></td>
+                        <td>Attendance=<b>@per<span>%</span></b></td>
+                       
+                        </tr>
+                    </table>
+            </div>
+        </div>
+        i++;
+    }
+    
+ </div>
+

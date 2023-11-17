@@ -1,0 +1,18 @@
+﻿@{
+    ViewData["Title"] = "StudentPayment";
+    Layout = "~/Areas/Admin/Views/Shared/_AdminLayout.cshtml";
+}
+<div class="row">
+<div class="col-md-2"></div>
+<div class="col-md-6">
+        <form action="/Admin/Student/PayFees">
+            <table class="table">
+                <tr>
+                    <td>Select Student</td>
+                    <td>@Html.DropDownList("registration_id",ViewBag.students as List<SelectListItem>,"Select Student",new{@class="form-control"} )</td>
+                    <td><input type="submit" value="Submit" class="btn btn-primary" /></td>
+                </tr>
+            </table>
+        </form>
+</div>
+</div>

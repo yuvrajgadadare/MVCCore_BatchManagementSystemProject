@@ -1,0 +1,151 @@
+﻿@model MVCCore_BatchManagementSystemProject.Models.Tblbatch
+@{
+    ViewData["Title"] = "ViewBatch";
+    Layout = "~/Areas/Admin/Views/Shared/_AdminLayout.cshtml";
+}
+
+<script>
+
+    $(document).ready(function () {
+
+    })
+    function GetStudentAttendanceDetails(bid, rid) {
+        //  alert(bid+" "+rid)
+        $.ajax({
+            url: "/Trainer/TrainerBatch/GetStudentBatchWiseAttendance?batch_id=" + bid + "&registration_id=" + rid,
+            method: 'get',
+            success: function (resp) {
+                console.log(resp);
+                $("#tbldata").empty();
+                var topic = resp[0].topic_name;
+                $("#topic").html(topic);
+                $.each(resp, function (i, d) {
+
+                    var edt = d.expected_date;
+                    var adt = d.actual_date;
+                    $("#tbldata").append("<tr style='background-color:" + d.color + ";height:20px'><td>" + (i + 1) + "</td><td>" + d.content_name + "</td><td>" + edt + "</td><td>" + adt + "</td><td>" + d.delay_or_advance + "</td><td>" + d.status + "</td></tr>")
+                })
+                $("#myModal").modal("show");
+            }
+        })
+    }
+</script>
+<div id="myModal" class="modal fade" tabindex="-1">
+    <div class="modal-dialog">
+        <div class="modal-content" style="width:900px">
+            <div class="modal-header">
+                <h5 style="text-align:center">Attendance For <b id="topic"></b></h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+            </div>
+            <div class="modal-body">
+                <table class="table table-bordered" style="width:100%">
+                    <thead>
+                        <tr>
+                            <th>Sr No</th>
+                            <th>Content Name</th>
+                            <th>Expected Date</th>
+                            <th>Actual Date</th>
+                            <th>Late/Early</th>
+                            <th>Attendance</th>
+                        </tr>
+                    </thead>
+                    <tbody id="tbldata"></tbody>
+                </table>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="row" style="padding:2%">
+    <h5 style="text-align:center">Batch Details</h5>
+    <table class="table table-borderless" style="font-size:12px;">
+        <tr>
+            <td> Batch Name:  <b>@Model.BatchName</b></td>
+            <td> Batch For:  <b>@Model.Topic.TopicName</b></td>
+        </tr>
+        <tr>
+            <td> Start Time:  <b>@Model.BatchTime</b></td>
+            <td> Start Date:  <b>@Model.StartDate.Value.ToShortDateString()</b></td>
+            <td> End Date:  <b>@Model.EndDate.Value.ToShortDateString()</b></td>
+        </tr>
+    </table>
+    <table class="table" style="font-size:12px;">
+        <thead>
+            <tr>
+                <th>Sr No</th>
+                <th>Student Name</th>
+                <th>Course Name</th>
+                <th>RegistartionDate</th>
+                <th>Mobile Number</th>
+                <th>Email Address</th>
+                <th>Photo</th>
+            </tr>
+        </thead>
+        <tbody>
+            @{
+                int i = 1;
+            }
+            @foreach (var item in Model.TblbatchStudents)
+            {
+                <tr>
+                    <td>@i</td>
+                @*     <td>@item.Registration.Student.StudentName</td> *@
+                    <td><a href="#" onclick="GetStudentAttendanceDetails(@item.BatchId, @item.Registration.RegistrationId)">@item.Registration.Student.StudentName</a></td>
+
+                    <td>@item.Registration.Fee.Course.CourseName</td>
+                    <td>@item.Registration.RegistrationDate.Value.ToShortDateString()</td>
+                    <td>@item.Registration.Student.MobileNumber</td>
+                    <td>@item.Registration.Student.EmailAddress</td>
+                    <td> <img src="~/images/users/@item.Registration.Student.ProfilePhoto" style="height:40px;width:40px;" /></td>
+                </tr>
+                i++;
+            }
+        </tbody>
+    </table>
+    <h5 style="text-align:center">Batch Schedule</h5>
+    <table class="table table-bordered"  style="font-size:12px;">
+        <thead>
+            <tr>
+                <th>Sr No</th>
+                <th>Content Name</th>
+                <th>Day</th>
+                <th>Expected Date</th>
+                <th>Actual Date</th>
+                <th>Status</th>
+            </tr>
+        </thead>
+        <tbody>
+            @{
+                i = 1;
+            }
+            @foreach (var item in Model.TblbatchSchedules)
+            {
+                string status = "";
+                if (item.ActualDate != null)
+                {
+                    status = "Completed";
+                }
+                else
+                {
+                    status = "Not Completed";
+                }
+                <tr>
+                    <td>@i</td>
+                    <td>@item.Content.ContentName</td>
+                    <td>@item.ExpectedDate.Value.DayOfWeek</td>
+                    <td>@item.ExpectedDate.Value.ToShortDateString()</td>
+                    <td>@item.ActualDate</td>
+                    <td>
+                        @status
+                    </td>
+
+                </tr>
+                i++;
+            }
+        </tbody>
+    </table>
+</div>
+

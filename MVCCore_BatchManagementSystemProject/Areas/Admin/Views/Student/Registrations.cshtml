@@ -1,0 +1,90 @@
+﻿@model IEnumerable<MVCCore_BatchManagementSystemProject.Models.StudentRegistrationModel>
+@{
+    ViewData["Title"] = "Registrations";
+    Layout = "~/Areas/Admin/Views/Shared/_AdminLayout.cshtml";
+ }
+<style>
+    tr, td, th {
+        height: 10px;
+        padding: 0px
+    }
+    .table > :not(caption) > * > * {
+        padding: .3rem .5rem
+    }
+    .form-control {
+        font-size: 12px;
+    }
+    body, input, select {
+        font-size: 12px;
+    }
+</style>
+<script>
+    var registrations = [];
+    $(document).ready(function() {
+        GetStudents();
+    })
+    function FetchStudents() {
+        var txt = $("#txt").val();
+        console.log(txt)
+        $("#tbldata").empty();
+        $.each(registrations, function (i, d) {
+            if (d.studentName.toLowerCase().includes(txt.toLowerCase())) {
+                $("#tbldata").append("<tr><td>" + (i + 1) + "</td><td>" + d.studentName + "</td><td>" + d.courseName + "</td><td>" + d.registrationDate + "</td><td>" + d.feesAmount + "</td><td>" + d.gst + "</td><td>" + d.discount + "</td><td><a href='/Admin/Student/ViewStudent?registration_id=" + d.registrationId + "'>View</a></td></tr>")
+            }
+        })
+    }
+    function GetStudents() {
+        $.ajax({
+            url: '/Admin/Student/GetAllRegistrations',
+            method: 'get',
+            contentType: 'application/json',
+            success: function (resp) {
+                registrations = resp;
+                //   $("#tbldata").empty();
+                console.log(resp);
+                // $.each(resp, function (i, d) {
+                //     $("#tbldata").append("<tr><td>" + (i + 1) + "</td><td>" + d.student_name + "</td><td>" + d.paymentDate + "</td><td>" + d.paymentAmount + "</td><td>" + d.paymentMode + "</td><td>" + d.paymentDescription + "</td><td><a href='/Admin/Student/Invoice?payment_id=" + d.paymentId + "'>Invoice</a></td></tr>")
+                // })
+            }
+        })
+    }
+</script>
+<div class="row">
+    <a href="/Admin/Student/" style="width:300px" class="btn btn-primary">Add Student Details</a>
+    <div class="col-md-12">
+        <input type="text" id="txt" class="form-control" placeholder="search student by  name" onkeyup="FetchStudents()" />
+        <table class="table tabele-bordered">
+            <thead>
+                <tr>
+                    <th>Sr No</th>
+                    <th>Student Name</th>
+                    <th>Course Name</th>
+                    <th>Registration Date</th>
+                    <th>Course Fees</th>
+                    <th>GST</th>
+                    <th>Discount</th>
+                    <th>Action</th>
+                </tr>
+            </thead>
+            <tbody id="tbldata">
+                @{
+                    int i = 1;
+                 }
+                @foreach(var item in Model)
+                {
+                    <tr>
+                        <td>@i</td>
+                        <td>@item.StudentName</td>
+                        <td>@item.CourseName</td>
+                        <td>@item.RegistrationDate.Value.ToShortDateString()</td>
+                        <td>@item.FeesAmount</td>
+                        <td>@item.Gst</td>
+                        <td>@item.Discount</td>
+                        <td><a href="/Admin/Student/ViewStudent?registration_id=@item.RegistrationId">View</a></td>
+                    </tr>
+                    i++;
+                }
+            </tbody>
+        </table>
+    </div>
+    </div>

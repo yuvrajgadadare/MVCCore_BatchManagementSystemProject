@@ -1,0 +1,155 @@
+﻿@model MVCCore_BatchManagementSystemProject.Models.TblstudentDetail
+@{
+    ViewData["Title"] = "Content";
+    Layout = "~/Areas/Admin/Views/Shared/_AdminLayout.cshtml";
+ }
+
+
+<div class="row">
+    @* <a href="/Admin/Student/Registrations" style="width:300px" class="btn btn-primary">View Student Registrations</a> *@
+
+    <div class="row">
+        @using (Html.BeginForm(FormMethod.Post,new { @enctype="multipart/form-data"}))
+        {
+            <div class="card">
+                <div class="card-header">
+                    <h5 class="card-title">Student Profile Form</h5>
+                </div>
+                <div class="card-body">
+                   <div class="row">
+                        <div class="col-md-6">
+                            <div class="mb-3">
+                                <label>Student Name</label>
+                                @Html.TextBoxFor(e=>e.StudentName,new{@class="form-control"})
+                            </div>
+
+                        </div>
+                        <div class="col-md-3">
+
+                            <div class="mb-3">
+                                <label>Gender</label><br/>
+                                @Html.RadioButtonFor(e=>e.Gender,"Male") <span>Male</span>
+                                @Html.RadioButtonFor(e=>e.Gender,"Female") <span>Female</span>
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <div class="mb-3">
+                                <label>Birth Date</label>
+                                @Html.TextBoxFor(e=>e.BirthDate,new{@type="date", @class="form-control"})
+                            </div>
+                        </div>
+                   </div>
+           
+            <div class="row">
+                <div class="col-md-3">
+
+                    <div class="mb-3">
+                        <label>Qualification</label>
+                        @Html.TextBoxFor(e=>e.Qualification,new{@class="form-control"})
+                     </div>
+                </div>
+                    <div class="col-md-3">
+
+                    <div class="mb-3">
+                        <label>Email Address</label>
+                        @Html.TextBoxFor(e=>e.EmailAddress,new{@class="form-control"})
+                    </div>
+                    </div>
+                    <div class="col-md-3">
+
+                    <div class="mb-3">
+                        <label>Mobile Number</label>
+                        @Html.TextBoxFor(e=>e.MobileNumber,new{@class="form-control"})
+                    </div>
+                    </div>
+                        <div class="col-md-3">
+                            <div class="mb-3">
+                                <label>Profile Photo</label>
+                                <input type="file" name="photo" class="form-control">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-md-3">
+
+                            <div class="mb-3">
+                                <label>Registration Date</label>
+                                <input type="date" id="registrationdate" name="registrationdate" class="form-control" />
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+
+                            <div class="mb-3">
+                                <label>Course</label>
+                                @Html.DropDownList("feeid",ViewBag.courses as List<SelectListItem>,"Select Course",new{@class="form-control"})
+
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <div class="mb-3">
+                                <label>Discount</label>
+                                <input type="text" id="discount" name="discount" class="form-control">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="card-footer">
+                    <input type="submit" value="Submit" class="btn btn-primary">
+                    <span style="color:green;">@ViewBag.msg</span>
+                </div>
+            </div>
+        }
+
+
+    </div>
+    <div class="row">
+        <table class="table table-bordered">
+            <thead>
+                <tr>
+                    <th>Sr No</th>
+                    <th>Student Name</th>
+                    <th>Gender</th>
+                    <th>Birth Date</th>
+                    <th>Mobile Number</th>
+                    <th>Email Address</th>
+                    <th>Qualification</th>
+                    <th>Course Name</th>
+                    <th>Total Fees</th>
+                    <th>Discount</th>
+                    <th>GST</th>
+                    <th>Photo</th>
+                    <td>Action</td>
+                </tr>
+            </thead>
+            <tbody>
+                @{
+                    int i = 1;
+                 }
+                @foreach (var item in ViewBag.students)
+                {
+                    <tr>
+                         <td>@i</td>
+                        <td>@item.StudentName</td>
+                        <td>@item.Gender</td>
+                        <td>@item.BirthDate.ToShortDateString()</td>
+                        <td>@item.MobileNumber</td>
+                        <td>@item.EmailAddress</td>
+                        <td>@item.Qualification</td>
+                        <td>@item.CourseName</td>
+                        <td>@item.FeesAmount</td>
+                        <td>@item.Discount</td>
+                        <td>@item.Gst</td>
+                        <td><img src="~/images/users/@item.ProfilePhoto" height="50" width="50" /></td>
+                        <td>
+                            <a href="/Admin/Student/GetStudentdetails?registration_id=@item.RegistrationId">View Details</a>
+                        </td>
+                        
+                    </tr>
+                    i++;
+                }
+            </tbody>
+        </table>
+    </div>
+</div>
+

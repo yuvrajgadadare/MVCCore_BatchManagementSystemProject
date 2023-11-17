@@ -1,0 +1,61 @@
+﻿@using Microsoft.AspNetCore.Http
+@inject IHttpContextAccessor Accessor
+@{
+    Layout = null;
+ }
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Trainer Layout</title>
+    <link href="~/lib/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <style>
+        .list-group-item{
+            background-color: #0d6efd;color:white;
+        }  
+    </style>
+</head>
+<body>
+   <div class="container-fluid">
+       <div class="row">
+            <div class="col-2" style="padding-right:0px">
+                <div style="min-height:500px;background-color:#0d6efd;color:white">
+                    <h2>Trainer Panel</h2>
+                    <ul class="list-group" style="background-color:black;color:white">
+                        <li class="list-group-item"><a href="/Trainer/TrainerDashboard" style="color:white;text-decoration:none">Dashboard</a></li>
+                        <li class="list-group-item"><a href="/Trainer/TrainerProfile" style="color:white;text-decoration:none">Profile</a></li>
+                        <li class="list-group-item"><a href="/Trainer/TrainerBatch" style="color:white;text-decoration:none">Batches</a></li>
+                        <li class="list-group-item"><a href="/Trainer/TrainerBatch/BatchAttendance" style="color:white;text-decoration:none">Batche Attendance</a></li>
+                        <li class="list-group-item"><a href="/Trainer/Attendance/Index" style="color:white;text-decoration:none"> Attendance</a></li>
+
+                 </ul>
+             </div>
+         </div>
+            <div class="col-10" style="padding-left:0px">
+                <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+                    <div class="container-fluid">
+                        <a href="#" class="navbar-brand">Batch Management System</a>
+                        <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbarCollapse2">
+                            <span class="navbar-toggler-icon"></span>
+                        </button>
+                        <div class="collapse navbar-collapse" id="navbarCollapse2">
+                            <div class="navbar-nav">
+                                <a href="#" class="nav-item nav-link active">Home</a>
+                                <a href="#" class="nav-item nav-link">About</a>
+                                <a href="#" class="nav-item nav-link">Products</a>
+                            </div>
+                            <div class="d-flex ms-auto">
+                                <h5 style="color:white">Welcome @Accessor.HttpContext.Session.GetString("TrainerName")<span style="color:pink"><a href="/Accountant/Logout" style="color:yellow;text-decoration:none"> Logout</a></span> </h5>
+                            </div>
+                        </div>
+                    </div>
+                </nav>
+                @RenderBody()
+
+         </div>
+       </div>
+   </div>
+</body>
+</html>

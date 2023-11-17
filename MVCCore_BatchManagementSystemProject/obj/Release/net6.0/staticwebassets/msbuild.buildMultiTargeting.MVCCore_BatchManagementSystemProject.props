@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="..\build\MVCCore_BatchManagementSystemProject.props" />
+</Project>

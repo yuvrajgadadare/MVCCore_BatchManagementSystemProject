@@ -1,0 +1,136 @@
+﻿@model MVCCore_BatchManagementSystemProject.Models.TbltopicContent
+@{
+    ViewData["Title"] = "Content";
+    Layout = "~/Areas/Admin/Views/Shared/_AdminLayout.cshtml";
+}
+<style>
+    tr, td, th {
+        height: 10px;
+        padding: 0px
+    }
+
+    .table > :not(caption) > * > * {
+        padding: .3rem .5rem
+    }
+
+    .form-control{
+        font-size: 12px;
+    }
+
+    body, input, select {
+        font-size: 12px;
+    }
+
+</style>
+<script>
+    var contents = [];
+    $(document).ready(function () {
+        $("#btnadd").click(function () {
+            AddContent();
+        })
+        $("#btnsubmit").click(function () {
+            AddTopicContents();
+        })
+    })
+
+    function AddContent() {
+        var cname=$("#txtcontent").val();
+        var st = { "ContentName": cname };
+        contents.push(st);
+        ClearData();
+        Display();
+    }
+    function AddTopicContents(){
+        var topic = $("#TopicId").val();
+        var st = { "TopicId": topic, "TbltopicContents": contents };
+        $.ajax({
+            url: '/Admin/Content/AddContents',
+            method:'post',
+            data:st,
+            success: function (resp) {
+                alert(resp);
+                windowlocation.href = "/Admin/Content/Index";
+            }
+        })
+    }
+
+    function Display() {
+        $("#tbldata").empty();
+        $.each(contents, function (i, d) {
+            $("#tbldata").append("<tr><td>"+(i+1)+"</td><td>"+d.ContentName+"</td></tr>")
+        })
+    }
+    function ClearData() {
+        $("#txtcontent").val("");
+    }
+</script>
+<div class="row">
+    <div class="col-4">
+      
+            <div class="card">
+                <div class="card-header">
+                    <h5 class="card-title">Content Form</h5>
+                </div>
+                <div class="card-body">
+                    <div class="mb-3">
+                        <label>Topic Name</label>
+                        @Html.DropDownListFor(e=>e.TopicId,ViewBag.topics as List<SelectListItem>,"Select Topic",new{@class="form-control"})
+                    </div>
+                    <div class="mb-3">
+                       <table class="table table-borderless">
+                           <tr>
+                               <td>
+                                   Content Name<br/>
+                               <input  type="text" id="txtcontent" class="form-control"/>    
+                               </td> 
+                               <td>
+                                   <br/>
+                                   <input type="button" value="+" class="btn btn-primary" id="btnadd" />
+                                   </td>
+                           </tr>
+                       </table>
+                       <table class="table table-bordered">
+                           <thead>
+                               <tr>
+                                   <th>Sr No</th>
+                                   <th>Content Name</th>
+                               </tr>
+                           </thead>
+                           <tbody id="tbldata"></tbody>
+                       </table>
+                    </div>
+                </div>
+                <div class="card-footer">
+                    <input type="button" value="Submit" id="btnsubmit" class="btn btn-primary">
+                    <span style="color:green;">@ViewBag.msg</span>
+                </div>
+            </div>
+        
+    </div>
+    <div class="col-8">
+        <table class="table table-bordered">
+            <thead>
+                <tr>
+                    <th>Sr No</th>
+                    <th>Topic Name</th>
+                    <th>Content Name</th>
+                    <th>Action</th>
+                </tr>
+            </thead>
+            <tbody>
+                @{
+                    int i = 1;
+                }
+                @foreach (var item in ViewBag.contents)
+                {
+                    <tr>
+                        <td>@i</td>
+                        <td>@item.TopicName</td>
+                        <td>@item.ContentName</td>
+                    </tr>
+                    i++;
+                }
+            </tbody>
+        </table>
+    </div>
+</div>

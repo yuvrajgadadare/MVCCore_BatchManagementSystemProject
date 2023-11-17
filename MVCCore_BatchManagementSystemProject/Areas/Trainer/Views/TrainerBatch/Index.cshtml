@@ -1,0 +1,209 @@
+﻿@model IEnumerable<MVCCore_BatchManagementSystemProject.Models.Tblbatch>
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Areas/Trainer/Views/Shared/_TrainerLayout.cshtml";
+}
+<script>
+    var batch_id = 0;
+    var students = [];
+    $(document).ready(function () {
+        $("#btnsubmitstudents").click(function () {
+            SubmitStudents();
+        })
+
+        GetStudents();
+    })
+
+    function GetStudents() {
+        $.ajax({
+            url: '/Trainer/TrainerBatch/GetRegisteredStudents',
+            method:'get',
+            contentType:'application/json',
+            success: function (resp) {
+                console.log(resp);
+                $.each(resp, function (i, d) {
+                    $("#dvstudents").append("<div class='col-md-4'> <input type='checkbox' onchange='SelectStudent(" + d.registrationId + ")' />" + d.studentName + "</div>")
+                })
+            }
+        })
+    }
+    function SelectStudent(sid) {
+        if (students.indexOf(sid) == -1) {
+            students.push(sid);
+        }
+        else {
+            students.splice(students.indexOf(sid), 1);
+        }
+    }
+    function AddStudent(bid){
+        batch_id = bid;
+        $("#myModal").modal("show")
+
+    }
+
+    function SubmitStudents() {
+        var sdata = [];
+        $.each(students, function (i, d) {
+            sdata.push({ "BatchId": batch_id, RegistrationId: d });
+
+        })
+        var st = { "TblbatchStudents": sdata };
+//        console.log(sdata);
+        $.ajax({
+            url: '/Trainer/TrainerBatch/AddBatchStudent',
+            method:'post',
+            data:st,
+            //contentType:'application/json',
+            success: function (resp) {
+                alert(resp);
+                window.location.href = "/Trainer/TrainerBatch";
+            }
+        })
+
+    }
+</script>
+<div class="row" style="padding:2%">
+    <div class="col-md-12">
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>Batch No</th>
+                    <th>Batch Name</th>
+                    <th>Topic Name</th>
+                    <th>Batch Timing</th>
+                    <th>Start Date</th>
+                    <th>End Date</th>
+
+                </tr>
+            </thead>
+
+            <tbody>
+                @{
+                    int i = 1;
+                }
+                @foreach(var item in Model)
+                {
+                    <tr>
+                        <td>@i</td>
+                        <td>@item.BatchName</td>
+                        <td>@item.Topic.TopicName</td>
+                        <td>@item.BatchTime</td>
+                        <td>@item.StartDate</td>
+                        <td>@item.EndDate</td>
+                        <td><a href="/Trainer/TrainerBatch/BatchDetails?id=@item.BatchId">View</a></td>
+                    </tr>
+                    i++;
+                }
+            </tbody>
+            </table>
+   @*  @foreach(var item in Model)
+    {
+        <div class="card">
+            <div class="card-body">
+                <div class="row">
+                        <h5>@item.BatchName</h5>
+                    </div>
+               <div class="row">
+                   <div class="col-md-12">
+                            <table class="table">
+                                <thead>
+                                    <tr>
+                                        <th>Batch No</th>
+                                        <th>Batch Name</th>
+                                        <th>Topic Name</th>
+                                        <th>Batch Timing</th>
+                                        <th>Start Date</th>
+                                        <th>End Date</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>Trainer Name-@item.Trainer.TrainerName</td>
+                                        <td>Topic Name-@item.Topic.TopicName</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Start Date-@item.StartDate.Value.ToShortDateString()</td>
+                                        <td>End Date-@item.EndDate.Value.ToShortDateString()</td>
+                                        <td>Batch Time-@item.BatchTime</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                   </div>
+              
+               <div class="col-md-12" style="">
+                   <input type="button" value="Add Student" class="btn btn-primary" id="btnaddstudent" onclick="AddStudent(@item.BatchId)">
+                            <br>
+                                @foreach(var s in item.TblbatchStudents)
+                                {
+                                    <div class="m-2">
+                                        <p>
+                                            <!-- Trigger Buttons HTML -->
+                                        <a href="#myCollapse_@s.RegistrationId" style="text-decoration:none" data-bs-toggle="collapse">
+                                            @s.Registration.Student.StudentName
+                                        </a>
+
+                                        </p>
+                                        <!-- Collapsible Element HTML -->
+                                        <div class="collapse" id="myCollapse_@s.RegistrationId">
+                                            <div class="card card-body">
+                                            <table class="table">
+                                                <tr>
+                                                    <td>
+                                                        <img src="~/images/users/@s.Registration.Student.ProfilePhoto" style="height:100px;width:100px;" />
+
+                                                    </td>
+                                                    <td>
+                                                        <table>
+                                                            <tr><td>Email Address: @s.Registration.Student.EmailAddress</td></tr>
+                                                            <tr><td>Mobile Number: @s.Registration.Student.MobileNumber</td></tr>
+                                                            <tr><td>Qualification: @s.Registration.Student.Qualification</td></tr>
+                                                            <tr><td>Course Name: @s.Registration.Fee.Course.CourseName</td></tr>
+                                                            <tr><td>Joining Date: @s.Registration.RegistrationDate.Value.ToShortDateString()</td></tr>
+
+                                                        </table>
+                                                    </td>
+                                                </tr>
+                                            </table>
+
+                                            </div>
+                                        </div>
+                                    </div>
+
+
+
+                                }
+
+               </div>
+               </div>
+            </div>
+        </div>
+    }
+ *@
+</div>
+
+</div>
+@* <div id="myModal" class="modal fade">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">Confirmation</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+            </div>
+            <div class="modal-body">
+                <div class="mb-3">
+                    <label>Student Name</label>
+                    <div class="row" id="dvstudents">
+
+                   </div>
+                </div>
+
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+                <button type="button" class="btn btn-primary" id="btnsubmitstudents">Submit</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+ *@

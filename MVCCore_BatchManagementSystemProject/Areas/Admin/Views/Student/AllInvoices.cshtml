@@ -1,0 +1,77 @@
+﻿@model IEnumerable<MVCCore_BatchManagementSystemProject.Models.StudentPaymentModel>
+@{
+    ViewData["Title"] = "AllInvoices";
+    Layout = "~/Areas/Admin/Views/Shared/_AdminLayout.cshtml";
+}
+
+<script>
+
+    var payments = [];
+    $(document).ready(function () {
+        GetPayments();
+    })
+    function FetchPayments() {
+        var txt = $("#txt").val();
+        $("#tbldata").empty();
+        $.each(payments, function (i, d) {
+            if (d.student_name.toLowerCase().includes(txt.toLowerCase())) {
+                $("#tbldata").append("<tr><td>" + (i + 1) + "</td><td>" + d.student_name + "</td><td>" + d.paymentDate + "</td><td>" + d.paymentAmount + "</td><td>" + d.paymentMode + "</td><td>" + d.paymentDescription + "</td><td><a href='/Admin/Student/Invoice?payment_id=" + d.paymentId + "'>Invoice</a></td></tr>")
+            }
+        })
+    }
+    function GetPayments() {
+        $.ajax({
+            url: '/Admin/Student/GetFilteredPayments',
+            method: 'get',
+            contentType: 'application/json',
+            success: function (resp) {
+                payments = resp;
+             //   $("#tbldata").empty();
+              //  console.log(resp);
+                // $.each(resp, function (i, d) {
+                //     $("#tbldata").append("<tr><td>" + (i + 1) + "</td><td>" + d.student_name + "</td><td>" + d.paymentDate + "</td><td>" + d.paymentAmount + "</td><td>" + d.paymentMode + "</td><td>" + d.paymentDescription + "</td><td><a href='/Admin/Student/Invoice?payment_id=" + d.paymentId + "'>Invoice</a></td></tr>")
+                // })
+            }
+        })
+    }
+</script>
+<div class="card">
+    <div class="card-header">
+        <h4>All Invoices</h4>
+    </div>
+    <div class="card-body">
+        <input type="text" id="txt" class="form-control" placeholder="search invoice by student name"  onkeyup="FetchPayments()"/>
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>Sr No</th>
+                    <th>Student Name</th>
+                    <th>Payment Date</th>
+                    <th>Payment Amount</th>
+                    <th>Payment Mode</th>
+                    <th>Description</th>
+                    <th>Invoice</th>
+                </tr>
+            </thead>
+            <tbody id="tbldata">
+                @{
+                    int i = 1;
+                }
+                @foreach (var item in Model)
+                {
+                    <tr>
+                        <td>@i</td>
+                        <td>@item.student_name</td>
+                        <td>@item.PaymentDate.Value.ToShortDateString()</td>
+                        <td>@item.PaymentAmount</td>
+                        <td>@item.PaymentMode</td>
+                        <td>@item.PaymentDescription</td>
+                        <td><a href="/Admin/Student/Invoice?payment_id=@item.PaymentId">Invoice</a></td>
+                    </tr>
+                    i++;
+                }  
+            </tbody>
+        </table>
+    </div>
+</div>
+

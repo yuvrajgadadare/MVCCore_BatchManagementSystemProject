@@ -1,0 +1,38 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="container-fluid">
+    <div class="row">
+ 
+        <div class="col-8"></div>
+        <div class="col-4" style="padding-top:50px;">
+            @using (Html.BeginForm())
+            {
+
+                <div class="card">
+                    <div class="card-header">
+                        <h4>Login here</h4>
+                    </div>
+                    <div class="card-body">
+                        <div class="mb-3">
+                            <label>Email Address</label>
+                            @Html.TextBox("email_address","",new{@class="form-control"})
+                        </div>
+                        <div class="mb-3">
+                            <label>Password</label>
+                            @Html.Password("password","",new{@class="form-control"})
+                        </div>
+
+                  </div>
+                    <div class="card-footer">
+                        <input type="submit" value="Login" class="btn btn-primary">
+                        <input type="reset" value="Reset" class="btn btn-danger">
+                   <h4 style="color:red">@ViewBag.msg</h4>
+                    </div>
+                </div>
+            }
+        </div>
+    </div>
+</div>
+ 

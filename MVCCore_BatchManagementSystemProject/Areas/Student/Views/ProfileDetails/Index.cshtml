@@ -1,0 +1,62 @@
+﻿@model MVCCore_BatchManagementSystemProject.Models.TblstudentDetail
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Areas/Student/Views/Shared/_StudentLayout.cshtml";
+}
+<div class="row" style="padding:2%">
+<div class="col-md-6">
+    <div class="card">
+            <h5 style="text-align:center">Student Profile</h5>
+            <table class="table table-borderless" style="margin:2%">
+                <thead>
+                    <tr>
+                        <td>Student Name <br/><b>@Model.StudentName</b></td>
+                        <td>Gender <br /><b>@Model.Gender</b></td>
+                    </tr>
+                    <tr>
+                        <td>Birth Date<br /><b>@Model.BirthDate.Value.ToShortDateString()</b></td>
+                        <td>Email Address <br /><b>@Model.EmailAddress</b></td>
+                    </tr>
+                    <tr>
+                        <td>Mobile Number <br /><b>@Model.MobileNumber</b></td>
+                        <td>Qualification<br /><b>@Model.Qualification</b></td>
+                    </tr>
+                    <tr>
+                        <td>Photo:<img src="~/images/users/@Model.ProfilePhoto" height="50" width="50" /></td>
+                    </tr>
+                </thead>
+            </table>
+    </div>
+</div>
+<div class="col-md-6">
+        @foreach (var item in ViewBag.registrations)
+        {
+            float totalfees = (float)(item.FeesAmount + (item.FeesAmount * item.Gst / 100));
+            <div class="card">
+                <h5 style="text-align:center">@item.CourseName</h5>
+                <div class="card-body">
+                    <table class="table">
+                        <tbody>
+                            <tr>
+                                <td>Course Fees:</td>
+                                <td>@item.FeesAmount<span>(@item.FeeMode)</span></td>
+                            </tr>
+                            <tr>
+                                <td>GST:</td>
+                                <td>@item.Gst</td>
+                            </tr>
+                            <tr>
+                                <td>Discount:</td>
+                                <td>@item.Discount</td>
+                            </tr>
+                            <tr>
+                                <td>Total Course Fees:</td>
+                                <td>@totalfees</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        }
+</div>
+</div>

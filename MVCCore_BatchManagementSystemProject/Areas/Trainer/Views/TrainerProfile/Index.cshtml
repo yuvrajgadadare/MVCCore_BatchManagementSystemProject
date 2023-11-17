@@ -1,0 +1,49 @@
+﻿@model MVCCore_BatchManagementSystemProject.Models.Tbltrainer
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Areas/Trainer/Views/Shared/_TrainerLayout.cshtml";
+}
+
+
+<div class="row">
+
+    <div class="col-md-2"></div>
+    <div class="col-md-6">
+        <h1>Trainer Profile</h1>
+
+        <table class="table table-bordered">
+            <thead>
+                <tr>
+                    <td>Trainer Name :</td>
+                    <td>@Model.TrainerName</td>
+                </tr>
+                <tr>
+                    <td>Gender :</td>
+                    <td>@Model.Gender</td>
+                </tr>
+
+             
+                <tr>
+                    <td>Email Address :</td>
+                    <td>@Model.EmailAddress</td>
+                </tr>
+                <tr>
+                    <td>Mobile Number :</td>
+                    <td>@Model.MobileNumber</td>
+                </tr>
+                <tr>
+                    <td>Qualification:</td>
+                    <td>@Model.Qualification</td>
+                </tr>
+                <tr>
+                    <td>Photo:</td>
+                    <td><img src="~/images/trainers/@Model.ProfilePhoto" height="120" width="120" /></td>
+                </tr>
+
+            </thead>
+        </table>
+    </div>
+</div>
+
+
+

@@ -1,0 +1,229 @@
+﻿@model MVCCore_BatchManagementSystemProject.Models.Tbltrainer
+@{
+    ViewData["Title"] = "Trainer";
+    Layout = "~/Areas/Admin/Views/Shared/_AdminLayout.cshtml";
+}
+<style>
+    tr, td, th {
+        height: 10px;
+        padding: 0px
+    }
+
+    .table > :not(caption) > * > * {
+        padding: .3rem .5rem
+    }
+
+    body {
+        font-size: 12px;
+    }
+</style>
+<script>
+    var trainer_id = 0;
+    var topics = [];
+    function AddTopics(tid) {
+        trainer_id = tid;
+        $("#myModal").modal("show")
+    }
+
+    function SelectTopic(tid){
+        if (topics.indexOf(tid) == -1) {
+            topics.push(tid);
+        }
+        else {
+            topics.splice(topics.indexOf(tid), 1);
+        }
+        console.log(topics);
+    }
+
+    function SubmitTopics() {
+        var data = [];
+        $.each(topics, function (i, d) {
+            var st = { "TopicId": d };
+            data.push(st);
+        })
+        console.log(st);
+        var st = {"TrainerId":trainer_id, "TbltrainerTopics":data}
+        $.ajax({
+            url: '/Admin/Trainer/AddTrainerTopics',
+            method:'post',
+            data:st,
+            // contentType:'application/json',
+            success: function (resp) {
+                alert(resp);
+                window.location.href = "/Admin/Trainer/Index";
+            }
+        })
+    }
+
+    function ViewTopics(id) {
+        $.ajax({
+            url: '/Admin/Trainer/GetTrainerTopics?id='+id,
+            method: 'get',
+         
+            success: function (resp) {
+                console.log(resp);
+                $("#tbltopicsdata").empty();
+                $.each(resp, function (i, d) {
+                    $("#tbltopicsdata").append("<div class='col-md-4'>"+d.topicName+"<hr/></div>")
+                })
+                $("#myTopics").modal("show");
+            }
+        })
+    }
+</script>
+
+<div id="myTopics" class="modal fade">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">Trainers Topic</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+            </div>
+            <div class="modal-body" >
+                
+                    <div class="row" id="tbltopicsdata"></div>
+          
+            </div>
+             
+        </div>
+    </div>
+</div>
+    <div id="myModal" class="modal fade">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title">Add Course Topic</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="row">
+                    @foreach (var item in ViewBag.topics)
+                    {
+                        <div class="col-md-4">
+                            <input type="checkbox" onchange="SelectTopic(@item.TopicId)"> @item.TopicName
+                        </div>
+                    }
+                </div>
+                        <div class="mb-3">
+                         
+
+                        </div>
+
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+                        <button type="button" class="btn btn-primary" onclick="SubmitTopics()">Submit</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+   
+<div class="row">
+    <div class="row">
+        @using (Html.BeginForm(FormMethod.Post, new { @enctype = "multipart/form-data" }))
+        {
+            <div class="card">
+                <div class="card-header">
+                    <h5 class="card-title">Trainer Profile Form</h5>
+                </div>
+                <div class="card-body">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="mb-3">
+                                <label>Trainer Name</label>
+                                @Html.TextBoxFor(e=>e.TrainerName,new{@class="form-control"})
+                            </div>
+
+                        </div>
+                        <div class="col-md-3">
+
+                            <div class="mb-3">
+                                <label>Gender</label><br />
+                                @Html.RadioButtonFor(e=>e.Gender,"Male") <span>Male</span>
+                                @Html.RadioButtonFor(e=>e.Gender,"Female") <span>Female</span>
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+
+                            <div class="mb-3">
+                                <label>Qualification</label>
+                                @Html.TextBoxFor(e=>e.Qualification,new{@class="form-control"})
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                       
+                        <div class="col-md-3">
+
+                            <div class="mb-3">
+                                <label>Email Address</label>
+                                @Html.TextBoxFor(e=>e.EmailAddress,new{@class="form-control"})
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+
+                            <div class="mb-3">
+                                <label>Mobile Number</label>
+                                @Html.TextBoxFor(e=>e.MobileNumber,new{@class="form-control"})
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <div class="mb-3">
+                                <label>Profile Photo</label>
+                                <input type="file" name="photo" class="form-control">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="card-footer">
+                    <input type="submit" value="Submit" class="btn btn-primary">
+                    <span style="color:green;">@ViewBag.msg</span>
+                </div>
+            </div>
+        }
+
+
+    </div>
+    <div class="row">
+        <table class="table table-bordered">
+            <thead>
+                <tr>
+                    <th>Sr No</th>
+                    <th>Trainer Name</th>
+                    <th>Gender</th>
+                    <th>Mobile Number</th>
+                    <th>Email Address</th>
+                    <th>Qualification</th>
+                    <th>Photo</th>
+                    <th>Action</th>
+                </tr>
+            </thead>
+            <tbody>
+                @{
+                    int i = 1;
+                }
+                @foreach (var item in ViewBag.trainers)
+                {
+                    <tr>
+                        <td>@i</td>
+                        <td>@item.TrainerName</td>
+                        <td>@item.Gender</td>
+                        <td>@item.MobileNumber</td>
+                        <td>@item.EmailAddress</td>
+                        <td>@item.Qualification</td>
+                        <td><img src="~/images/trainers/@item.ProfilePhoto" height="50" width="50" /></td>
+                        <td>
+                            <input type="button" value="Add Topics" id="btnaddtopic" onclick="AddTopics(@item.TrainerId)" />
+                            &nbsp;
+                            <input type="button" value="View Topics"  onclick="ViewTopics(@item.TrainerId)" />
+                            
+                        </td>
+                    </tr>
+                    i++;
+                }
+            </tbody>
+        </table>
+    </div>
+</div>
+
