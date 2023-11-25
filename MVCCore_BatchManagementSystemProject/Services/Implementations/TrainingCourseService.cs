@@ -19,13 +19,10 @@ namespace MVCCore_BatchManagementSystemProject.Services.Implementations
             this.topicepo = topicepo;
             this.contentrepo = contentrepo;
         }
-
         public void AddCourse(TbltrainingCourse course)
         {
             courserepo.Create(course);
-
         }
-
         public void AddCourseFees(TbltrainingCourseFee course_fee)
         {
             feerepo.Create(course_fee);
@@ -101,7 +98,10 @@ namespace MVCCore_BatchManagementSystemProject.Services.Implementations
                 foreach(TbltrainingCourseTopic tp in coursetopicrepo.GetAll().Where(e => e.CourseId.Equals(c.CourseId)).ToList())
                 {
                     TbltrainingTopic p = topicepo.GetById((int)tp.TopicId);
+                    List<TbltopicContent> contents=contentrepo.GetAll().Where(e => e.TopicId.Equals(p.TopicId)).ToList();
+                    p.TbltopicContents = contents;
                     tp.Topic = p;
+                    
                     topics.Add(tp);
                 }
                 c.TbltrainingCourseTopics = topics;

@@ -75,7 +75,7 @@
                 </div>
                 @{
                     TblstudentRegistration reg = Model.registration;
-                    float final_fees = (float)((reg.Fee.FeesAmount + (reg.Fee.FeesAmount * reg.Fee.Gst) / 100) - reg.Discount);
+                    float final_fees = (float)(reg.Fee.FeesAmount + ((reg.Fee.FeesAmount * reg.Fee.Gst) / 100) - reg.Discount);
                 }
                 <table class="table table-bordered">
                     <thead>

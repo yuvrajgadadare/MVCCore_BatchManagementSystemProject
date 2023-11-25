@@ -56,6 +56,14 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcU2hhcmVkXF9BZG1pbkxheW91dC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
+[F:/CIIT Projects/Own Projects/MVCCore_BatchManagementSystemProject/MVCCore_BatchManagementSystemProject/Areas/Admin/Views/Student/AllInvoices.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcU3R1ZGVudFxBbGxJbnZvaWNlcy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[F:/CIIT Projects/Own Projects/MVCCore_BatchManagementSystemProject/MVCCore_BatchManagementSystemProject/Areas/Admin/Views/Student/GetStudentdetails.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcU3R1ZGVudFxHZXRTdHVkZW50ZGV0YWlscy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
 [F:/CIIT Projects/Own Projects/MVCCore_BatchManagementSystemProject/MVCCore_BatchManagementSystemProject/Areas/Admin/Views/Student/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcU3R1ZGVudFxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
@@ -74,6 +82,10 @@ build_metadata.AdditionalFiles.CssScope =
 
 [F:/CIIT Projects/Own Projects/MVCCore_BatchManagementSystemProject/MVCCore_BatchManagementSystemProject/Areas/Admin/Views/Student/StudentPayment.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcU3R1ZGVudFxTdHVkZW50UGF5bWVudC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[F:/CIIT Projects/Own Projects/MVCCore_BatchManagementSystemProject/MVCCore_BatchManagementSystemProject/Areas/Admin/Views/Student/ViewStudent.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcU3R1ZGVudFxWaWV3U3R1ZGVudC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
 [F:/CIIT Projects/Own Projects/MVCCore_BatchManagementSystemProject/MVCCore_BatchManagementSystemProject/Areas/Admin/Views/Topic/Index.cshtml]

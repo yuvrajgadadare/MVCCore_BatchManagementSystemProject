@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "P2Pv4WE0c5BhE5ObHi7+6seDT2cuPC0Wd9EQjJDd1i8=",
+  "Hash": "J/WrQA4gYYsMK0bEfS1qlJLd5T3cA8Po1blgJRT3zA4=",
   "Source": "MVCCore_BatchManagementSystemProject",
   "BasePath": "_content/MVCCore_BatchManagementSystemProject",
   "Mode": "Default",
@@ -168,6 +168,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\images\\trainers\\Akash Barage.jpg"
+    },
+    {
+      "Identity": "F:\\CIIT Projects\\Own Projects\\MVCCore_BatchManagementSystemProject\\MVCCore_BatchManagementSystemProject\\wwwroot\\images\\trainers\\CIIT Institute.jpeg",
+      "SourceId": "MVCCore_BatchManagementSystemProject",
+      "SourceType": "Discovered",
+      "ContentRoot": "F:\\CIIT Projects\\Own Projects\\MVCCore_BatchManagementSystemProject\\MVCCore_BatchManagementSystemProject\\wwwroot\\",
+      "BasePath": "_content/MVCCore_BatchManagementSystemProject",
+      "RelativePath": "images/trainers/CIIT Institute.jpeg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\trainers\\CIIT Institute.jpeg"
     },
     {
       "Identity": "F:\\CIIT Projects\\Own Projects\\MVCCore_BatchManagementSystemProject\\MVCCore_BatchManagementSystemProject\\wwwroot\\images\\trainers\\Gayatri Gadadare.png",

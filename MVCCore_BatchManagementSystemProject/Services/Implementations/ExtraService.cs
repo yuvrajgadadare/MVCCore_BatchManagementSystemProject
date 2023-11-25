@@ -74,7 +74,7 @@ namespace MVCCore_BatchManagementSystemProject.Services.Implementations
         public void Send_Email(string to, string subject, string body)
         {
 
-            var fromAddress = new MailAddress("enquiry@ciitinstitute.com", "CIIT Training Institute");
+            var fromAddress = new MailAddress("hr@ciitinstitute.com", "CIIT Training Institute");
             var toAddress = new MailAddress(to, to);
             MailMessage message = new MailMessage(fromAddress, toAddress);
             message.Subject = subject;
@@ -88,7 +88,7 @@ namespace MVCCore_BatchManagementSystemProject.Services.Implementations
                 EnableSsl = false,
                 DeliveryMethod = SmtpDeliveryMethod.Network,
                 UseDefaultCredentials = false,
-                Credentials = new NetworkCredential("enquiry@ciitinstitute.com", "P0wersh@t")
+                Credentials = new NetworkCredential("hr@ciitinstitute.com", "Ciit#0908")
             };
             System.Net.ServicePointManager.Expect100Continue = false;
             smtp.Send(message);

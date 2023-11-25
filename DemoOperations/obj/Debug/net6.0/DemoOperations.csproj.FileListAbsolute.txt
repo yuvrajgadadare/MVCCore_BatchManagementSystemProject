@@ -1,0 +1,11 @@
+F:\CIIT Projects\Own Projects\MVCCore_BatchManagementSystemProject\DemoOperations\bin\Debug\net6.0\DemoOperations.deps.json
+F:\CIIT Projects\Own Projects\MVCCore_BatchManagementSystemProject\DemoOperations\bin\Debug\net6.0\DemoOperations.dll
+F:\CIIT Projects\Own Projects\MVCCore_BatchManagementSystemProject\DemoOperations\bin\Debug\net6.0\DemoOperations.pdb
+F:\CIIT Projects\Own Projects\MVCCore_BatchManagementSystemProject\DemoOperations\obj\Debug\net6.0\DemoOperations.GeneratedMSBuildEditorConfig.editorconfig
+F:\CIIT Projects\Own Projects\MVCCore_BatchManagementSystemProject\DemoOperations\obj\Debug\net6.0\DemoOperations.AssemblyInfoInputs.cache
+F:\CIIT Projects\Own Projects\MVCCore_BatchManagementSystemProject\DemoOperations\obj\Debug\net6.0\DemoOperations.AssemblyInfo.cs
+F:\CIIT Projects\Own Projects\MVCCore_BatchManagementSystemProject\DemoOperations\obj\Debug\net6.0\DemoOperations.csproj.CoreCompileInputs.cache
+F:\CIIT Projects\Own Projects\MVCCore_BatchManagementSystemProject\DemoOperations\obj\Debug\net6.0\DemoOperations.dll
+F:\CIIT Projects\Own Projects\MVCCore_BatchManagementSystemProject\DemoOperations\obj\Debug\net6.0\refint\DemoOperations.dll
+F:\CIIT Projects\Own Projects\MVCCore_BatchManagementSystemProject\DemoOperations\obj\Debug\net6.0\DemoOperations.pdb
+F:\CIIT Projects\Own Projects\MVCCore_BatchManagementSystemProject\DemoOperations\obj\Debug\net6.0\ref\DemoOperations.dll

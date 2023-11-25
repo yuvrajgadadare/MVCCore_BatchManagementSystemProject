@@ -20,6 +20,12 @@ namespace MVCCore_BatchManagementSystemProject.Areas.Admin.Controllers
             List<TbltrainingCourse> lst = courseService.GetAllCourseDetails();
             return View(lst);
         }
+
+        public IActionResult CourseSyllabus(int course_id)
+        {
+            TbltrainingCourse c = courseService.GetAllCourseDetails().FirstOrDefault(e=>e.CourseId.Equals(course_id));  
+            return View(c);
+        }
         //[HttpPost]
         //public IActionResult Index(CourseModel c)
         //{

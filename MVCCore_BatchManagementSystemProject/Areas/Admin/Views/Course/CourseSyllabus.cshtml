@@ -1,0 +1,25 @@
+﻿@model MVCCore_BatchManagementSystemProject.Models.TbltrainingCourse
+@{
+    ViewData["Title"] = "CourseSyllabus";
+    Layout = "~/Areas/Admin/Views/Shared/_AdminLayout.cshtml";
+}
+
+<div class="row">
+    <div class="col-md-12">
+        <table class="table table-borderless">
+            <tr>
+                <td>Course Name - <b>@Model.CourseName</b></td>
+            </tr>
+
+        </table>    
+        <table class="table table-borderless">
+            <tr>
+                @foreach (var item in Model.TbltrainingCourseFees)
+                {
+                        <td>Course Fees - <b>@item.FeesAmount<span>( @item.FeeMode )</span></b></td>
+                }
+            </tr>
+
+        </table>
+    </div>
+</div>
