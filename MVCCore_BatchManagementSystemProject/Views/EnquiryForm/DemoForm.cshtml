@@ -1,0 +1,191 @@
+﻿@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<script src="~/Scripts/angular.min.js"></script>
+
+<script>
+    var m = angular.module("MyApp", []);
+    m.controller("MyController", function ($scope, $http) {
+
+        //$http({
+        //    url: "http://api.ciitinstitute.com/api/opening",
+        //    method: 'get',
+
+        //    contentType: 'application/json'
+        //}).then(function (resp) {
+        //    var data = [];
+
+        //    $scope.openings = resp.data;
+        //})
+
+        $scope.AddEnquiry = function (e) {
+            $http({
+                url: "http://localhost:58677/api/weblead",
+                method: 'post',
+                data: e,
+                contentType: 'application/json'
+            }).then(function (resp) {
+                alert("your request submitted successfully.Our representative will reach you soon");
+
+//                $scope.msg = "your request submitted successfully.Our representative will reach you soon";
+
+                $scope.e = {};
+                window.location.href = "/";
+
+            })
+        }
+    })
+</script>
+
+<div class="container" style="margin-top: 3.4%; padding-left: 0px; padding-right: 0px; border-radius: 0.5%;background-color:white">
+
+
+<div class="col-md-12" style="margin:1%">
+    <div class="col-md-4" ng-app="MyApp" ng-controller="MyController">
+        <form name="myForm">
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h3> Enquiry Form</h3>
+                </div>
+                <div class="panel-body">
+                    <div class="form-group">
+                        <input type="text" name="candidate_name" style="width:100%" ng-model="e.candidate_name" required placeholder="Enter Your Name" class="form-control" />
+                        <span style="color:red" ng-show="myForm.candidate_name.$touched && myForm.candidate_name.$invalid">The name is required.</span>
+                    </div>
+                    <div class="form-group">
+                        <input type="text" name="qualification" style="width:100%" ng-model="e.qualification" required placeholder="Enter Your Qualification" class="form-control" />
+                        <span style="color:red" ng-show="myForm.qualification.$touched && myForm.qualification.$invalid">qualification is required.</span>
+                    </div>
+
+                    <div class="form-group">
+                        <input type="text" style="width:100%" name="mobile_number" required ng-model="e.mobile_number" placeholder="Mobile Number" class="form-control" />
+                        <span style="color:red" ng-show="myForm.mobile_number.$touched && myForm.mobile_number.$invalid">The mobile number is required.</span>
+
+                    </div>
+
+                    <div class="form-group">
+                        <input type="email" style="width:100%" name="email_address" required ng-model="e.email_address" placeholder="Email Address"  class="form-control"/>
+                        <span style="color:red" ng-show="myForm.email_address.$touched && myForm.email_address.$invalid">The email address is required.</span>
+
+                    </div>
+
+                    <div class="form-group">
+                        <input type="text" style="width:100%" ng-model="e.city" name="city" required placeholder="Enter your city" class="form-control" />
+                        <span style="color:red" ng-show="myForm.city.$touched && myForm.city.$invalid">please enter your city</span>
+
+                    </div>
+
+                    <div class="form-group">
+                        <input type="text" style="width:100%" name="enquiry_for" required ng-model="e.enquiry_for" placeholder="Enquiry for" class="form-control" />
+                        <span style="color:red" ng-show="myForm.enquiry_for.$touched && myForm.enquiry_for.$invalid">this field in mandatory</span>
+
+                    </div>
+
+                    <div class="form-group">
+                        <textarea style="width:100%" name="description" required ng-model="e.description" placeholder="Type your requirement here" class="form-control"></textarea>
+                        <span style="color:red" ng-show="myForm.description.$touched && myForm.description.$invalid">Please share your requirement </span>
+
+                    </div>
+
+                </div>
+                <div class="panel-footer">
+                    <input type="button" ng-click="AddEnquiry(e)" value="Submit" class="btn btn-primary" />
+
+                    <a href="/Home/Index" class="btn btn-danger">cancel</a>
+                    <h4 style="color:green">{{msg}}</h4>
+
+                </div>
+
+            </div>
+
+
+
+        </form>
+    </div>
+    <div class="col-md-8">
+        <h3>FAQ – Frequently Asked Question</h3>
+        <br />
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <h4>Why is CIIT the best place to work & join for IT training program?</h4>
+            </div>
+            <div class="panel-body">
+                <p>
+                    We do complete the training with live project. We not only explain the concepts but also show you how to implement & where to implement in real time project. You will get a chance to work with our development team on live projects which not only improve your skills but confidence as well. Some of our key features includes,
+                    <ul style="margin-left:4%">
+                        <li>8+ years of industry experience</li>
+                        <li>3000+ students trained</li>
+                        <li>50+ IT products delivered to the clients</li>
+                        <li>100+ placement partners</li>
+                        <li>2000+ students placed in various IT industry</li>
+                    </ul>
+                </p>
+            </div>
+        </div>
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <h4>Do you just focus your training on the things that we face in the interviews?</h4>
+            </div>
+            <div class="panel-body">
+                <p>
+                    No. Our aim is to produce valuable IT professionals, who can get better job in IT Industry. We teach students that how to face interview after course completion. For that on every weekend we take mock interviews. Our ex-students who are already placed into IT industry or some working professionals also take interview of our students and they guide them for how to face an interview. 
+                </p>
+            </div>
+        </div>
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <h4>What skills or education do I require to enroll in the course?</h4>
+            </div>
+            <div class="panel-body">
+                <p>
+                    Anyone who has got interest in learning software languages and want to take better job with better experience can take-up this course. To be specific, below list of candidates can take it up.
+                    <ul>
+                    <li>Any Under Graduates, Graduates, Job & Career Seekers</li>
+                        <li>Any NoN-IT candidate who wants to do job in IT</li>
+                        <li>Small, Medium Business Owners who wants to learn software technologies and want to start own software business</li>
+                    <li>Any IT Professional who want to upgrade his/her skill or wants to change his/her job</li>
+                    </ul>
+                    </p>
+            </div>
+        </div>
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <h4> Can I attend the course more than once?</h4>
+            </div>
+            <div class="panel-body">
+                <p>
+                    Yes. You are free to attend the training sessions as many times as you want until you get the hold of the topics. 
+                    Just ask our mentors for upcoming batches available on your convenient timing. 
+                    This means you have unlimited access to our online as well as offline training.  
+                </p>
+            </div>
+        </div>
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <h4>  What is the Batch Timing?</h4>
+            </div>
+            <div class="panel-body">
+                <p>
+                    The course batch timing is  7.30 AM - 9:30 PM. This is the most convenient time for all the students. 
+                    Also with these timings even working professionals can attend the course.We also available on saturday and sunday specially for workign professionals. 
+                </p>
+            </div>
+        </div>
+
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <h4>What if I miss any Session? or What if I fall behind?</h4>
+            </div>
+            <div class="panel-body">
+                <p>
+                    Don't worry. We are recording all the sessions. 
+                    So even if you miss any session you can catch up with the help of the recorded video sessions. 
+                    This means you have freedom to take any opportunity or emergency off in the course period which is not possible in the classroom training. But you need to make sure to complete all assignments and submit to us.
+                    We are very serious and strict about these assignments.
+                </p>
+            </div>
+        </div>
+    </div>
+</div>
+</div>

@@ -1,13 +1,648 @@
 ﻿@{
-    ViewData["Title"] = "Home Page";
+    ViewBag.Title = "";
 }
+<style>
+    .placementstyle {
+        height: 150px;
+        width: 150px;
+    }
 
-<div class="container-fluid">
-    <div class="row">
-        <div class="col-md-7" style="height:700px;">
-           <h2>
-             @ViewBag.msg
-           </h2>
+    .coursestyle {
+        width: 100%;
+        height: 130px;
+    }
+</style>
+<style>
+
+    .scrollstyle {
+        height: 280px;
+        border-width: 2px;
+        overflow-x: scroll;
+    }
+    /* width */
+    ::-webkit-scrollbar {
+        width: 2px;
+    }
+
+    /* Track */
+    ::-webkit-scrollbar-track {
+        box-shadow: inset 0 0 1px grey;
+        border-radius: 1px;
+    }
+
+    /* Handle */
+    ::-webkit-scrollbar-thumb {
+        background-color: lightblue;
+        border-radius: 4px;
+    }
+
+    /* Handle on hover */
+
+    .scrollstyle::-webkit-scrollbar {
+        width: 4px;
+    }
+
+
+
+
+    /*#mySidenav a:hover {
+                right: 0;
+            }*/
+
+
+
+    #blog {
+        top: 50%;
+        background-color: #2196F3;
+    }
+
+</style>
+<script src="~/Scripts/angular.min.js"></script>
+<script>
+    var m = angular.module("MyApp", []);
+    m.controller("MyController", function ($scope, $http) {
+
+        $http({
+            url: "http://api.ciitinstitute.com/api/opening",
+            method: 'get',
+
+            contentType: 'application/json'
+        }).then(function (resp) {
+            var data = [];
+
+            $scope.openings = resp.data;
+        })
+
+        $scope.AddEnquiry = function (e) {
+            $http({
+                url: "http://api.ciitinstitute.com/api/weblead",
+                method: 'post',
+                data: e,
+                contentType: 'application/json'
+            }).then(function (resp) {
+
+                $scope.msg = "your rquest submitted successfully.Our representative will reach you soon";
+
+            })
+        }
+
+
+    })
+</script>
+<script>
+
+    $(document).ready(function () {
+        //        $("#advertisement").modal("show");
+        FetchOpenings();
+    })
+    function FetchOpenings() {
+
+        $.ajax({
+            url: "/api/job_opening",
+            method: 'get',
+            contentType: 'application/json',
+            success: function (resp) {
+                console.log(resp);
+                $("#tbldata").empty();
+                var st = resp[0];
+
+                $("#dvopenings").append("<div class='item active'><h4 style='color: #0275d8;font-weight:bold'>" + st.job_title + "</h4><br /><p><b>Qualification -</b>" + st.qualification + "<br /></p><p><b>Experience-</b> " + st.experience + "<br /><p><b>Job Location-</b> Pune<br /></p><p><b>Job Description -</b>" + st.job_description + "</p></div>");
+                for (var i = 1; i < resp.length; i++) {
+                    var d = resp[i];
+                    $("#dvopenings").append("<div class='item'><h4 style='color: #0275d8;font-weight:bold'>" + d.job_title + "</h4><br /><p><b>Qualification -</b>" + d.qualification + "<br /></p><p><b>Experience-</b> " + d.experience + "<br /><p><b>Job Location-</b> Pune<br /></p><p><b>Job Description -</b>" + d.job_description + "</p></div>");
+                }
+            }
+        })
+    }
+
+</script>
+<style>
+    .feedback {
+        /*background-color: #31B0D5;*/
+        color: white;
+        /*padding: 10px 20px;*/
+        /*border-radius: 4px;*/
+        border-color: #46b8da;
+    }
+
+    #blog {
+        position: fixed;
+        top: 50%;
+        font-weight: bold;
+        right: 1px;
+    }
+</style>
+<div style="padding-top:0%">
+    <div class="" style="margin-top:3.4%;padding-top:0.0%">
+        <div style="background-image: url('../images/1_1.png'); height: 350px; width: 100%;">
+            <div id="slideshow">
+                <div style="">
+                    <h3>Get Training on .NET Full Stack Development from Industry Experts</h3>
+                    <br />
+                    <ul style="font-size:14px">
+                        <li>Real time project</li>
+                        <li> Hands on Training</li>
+                        <li>Latest Topics</li>
+                        <li>Work with Development Team</li>
+
+                    </ul>
+                    <br />
+
+                    <h4>Get Training on .NET Full Stack Development from Industry Experts </h4>
+
+                </div>
+                <div style="padding-top:2%">
+                    <h2>Why CIIT?</h2>
+                    <br />
+                    <ul style="font-size:14px">
+                        <li>Highly Experienced Trainers</li>
+                        <li>Chance to work with our development team</li>
+                        <li>Experience letter after project completion</li>
+                        <li>Real time project Training</li>
+                        <li>100% Job assurance</li>
+                    </ul>
+                    <br />
+                    <h4>Every year 600+ Students get placed in IT industry</h4>
+                </div>
+
+            </div>
         </div>
-  </div>
+    </div>
+    <div class="modal" id="advertisement">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header" style="border-bottom:none">
+                    <button class="close" data-dismiss="modal"><span>&times;</span></button>
+                </div>
+                <div class="modal-body">
+                    <img style="height:500px;width:100%;" src="~/images/banners/banner1.jpg" />
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="boxstyle" style="background-color: yellow; color: black; padding-top: 5px">
+        <marquee>
+            <span style="padding-left:100px;color:darkblue;font-weight:bold;padding-top:5px">  Live project Training cum Job Assistance Program </span>
+            <span style="padding-left: 100px; color: darkblue; font-weight:bold"> Be a Full Stack Developer with Us and Become first choice of Industry </span>
+        </marquee>
+    </div>
+    <div style=" padding-top: 5px">
+
+        <div class="col-md-3">
+            <div style="height: 100px; width: 100%; border-right: 2px solid #2196F3; color: darkblue; text-align: center;font-weight:bold ">
+                <h3>20000+ </h3>
+                <h3>Students Trained</h3>
+            </div>
+        </div>
+        <div class="col-md-3">
+            <div style="height: 100px; width: 100%; border-right: 2px solid #2196F3; color: darkblue; text-align: center ">
+                <h3 style="text-align:center">18000+ </h3>
+                <h3>Successful Placements</h3>
+
+            </div>
+        </div>
+        <div class="col-md-3">
+            <div style="height: 100px; width: 100%; border-right: 2px solid #2196F3; color: darkblue; text-align: center">
+                <h3>14+ Years </h3>
+                <h3>Experienced Trainers</h3>
+
+            </div>
+        </div>
+
+        <div class="col-md-3">
+            <div style="height: 100px; width: 100%; border-right: 2px solid #2196F3; color: darkblue; text-align: center ">
+                <h3 style="text-align:center">200+ </h3>
+                <h3>Corporate Clients</h3>
+            </div>
+        </div>
+    </div>
+    <div style="margin-top:5%">
+        <div class="col-md-9">
+            <div style="text-align:center;">
+                <h3 style="color: #0275d8">Our Core Training Programs</h3>
+                <hr style="border: 1px solid red; width: 300px; margin-top: 10px" />
+            </div>
+            <div class="">
+                <div class="col-md-3">
+                    <div class="form-group">
+                        <div style="text-align:center;">
+                            <a href="/Dot-Net/job-guaranteed-dot-net-training-with-live-project">
+                                <img src="~/images/courses/dotnet1.png" class="img-thumbnail coursestyle" style="margin-bottom:4%" alt="dot training with live project" />
+
+                            </a>
+                        </div>
+
+
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="form-group">
+                        <div style="text-align:center;">
+
+
+                            <a href="/Java/job-oriented-java-training-with-live-project">
+                                <img src="~/images/courses/java2.jpg" class="img-thumbnail coursestyle" style="margin-bottom:4%" alt="java training with live project" />
+
+                            </a>
+
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-3">
+                    <div class="form-group">
+                        <div style="text-align:center;">
+                            <a href="/Python/job-oriented-python-training-with-live-project">
+                                <img src="~/images/courses/python2.png" class="img-thumbnail coursestyle" style="margin-bottom: 4%" alt="python training with live project" />
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-3">
+                    <div class="form-group">
+                        <div style="text-align:center;">
+                            <a href="/MEAN-Stack/job-oriented-mean-stack-training-with-live-project">
+                                <img src="~/images/courses/mean2.jpg" class="img-thumbnail coursestyle" style="margin-bottom: 4%" alt="mean stack training with live project" />
+
+                            </a>
+
+                        </div>
+                    </div>
+                </div>
+
+
+            </div>
+
+            <div class="">
+                <div class="col-md-3">
+                    <div class="form-group">
+                        <div style="text-align:center;">
+                            <a href="/Software-Testing/job-oriented-software-testing-training-with-live-project">
+                                <img src="~/images/courses/selenium2.jpeg" class="img-thumbnail coursestyle" style="margin-bottom: 4%" alt="selenium testing, software testing training with live project" />
+
+                            </a>
+
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="form-group">
+                        <div style="text-align:center;">
+                            <a href="/Angular/job-oriented-angular-js-training-with-live-project">
+                                <img src="~/images/courses/angular2.png" class="img-thumbnail coursestyle" style="margin-bottom: 4%" alt="angular training with live project" />
+
+                            </a>
+
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="col-md-3">
+                    <div class="form-group">
+                        <div style="text-align:center;">
+                            <a href="/DBA/job-oriented-dba-training-with-live-project">
+                                <img src="~/images/courses/oracle1.jpg" class="img-thumbnail coursestyle" style="margin-bottom: 4%" alt="dba training with live project" />
+
+                            </a>
+
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="form-group">
+                        <div style="text-align:center;">
+                            <a href="/Android-Development/job-oriented-android-development-training-with-live-project">
+                                <img src="~/images/courses/android1.png" class="img-thumbnail coursestyle" style="margin-bottom: 4%" alt="android development with real time project" />
+
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <div class="col-md-3" ng-app="MyApp" ng-controller="MyController">
+            <div style=" height: auto; width: 100%;">
+                <div style="text-align:center;">
+                    <h3 style="color: #0275d8">Current Openings</h3>
+                    <hr style="border: 1px solid red; width: 187px; margin-top: 10px" />
+
+                </div>
+
+                <div class="img-thumbnail scrollstyle">
+                    <div class="panel-body">
+
+                        <div id="myCarousel" class="carousel slide" data-interval="3000" data-ride="carousel">
+
+
+
+                            <div class="carousel-inner" id="dvopenings">
+                            </div>
+                        </div>
+
+
+
+                    </div>
+                </div>
+
+            </div>
+
+
+
+
+        </div>
+
+    </div>
+
+
+    <!-- <div class="visible-desktop"> -->
+    <div class="col-md-9" style="padding-top:2%">
+        <div>
+            <div style="margin:5px;text-align:center">
+
+                <h3 style="color: #0275d8">
+                    Some Reviews By Our Students
+                </h3>
+                <hr style="border:1px solid red;width:340px;margin-top:10px" />
+
+
+
+
+            </div>
+            <div id="myCarousel" class="carousel slide" data-ride="carousel" data-interval="5000">
+                <div class="carousel-inner" style="height:180px">
+
+
+                    <div class="item active">
+                        <div class="col-md-6">
+                            <div>
+                                <div class="col-md-4">
+                                    <div style="text-align:center;">
+                                        <img src="~/images/snehal Shivthare.png" class="img-circle" style="height: 100px; width: 100px;" alt="ciit training institute- top  student placement">
+                                        <br />
+                                        <br />
+
+                                        <h5>Shehal Shivtare  </h5>
+                                        <h6>(.NET Technology) </h6>
+                                    </div>
+                                </div>
+                                <div class="col-md-8">
+                                    <p style="text-align:justify;font-size:14px">
+                                        CIIT is the best training institute where one can truely get to learn each and everything about the technologies.. I joined the institute for .Net full stack course..Staff members are very supportive & and class environment is friendly also.. I am very thankful to Yuvraj sir for providing the best.. And i will suggest the students to join here only to get their best..
+
+                                    </p>
+
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6" style="border-left:1px solid red">
+                            <div>
+                                <div class="col-md-4">
+                                    <div style="text-align:center;">
+                                        <img src="~/images/satish.jpg" class="img-circle" style="height: 100px; width: 100px;" alt="ciit training institute- top  student placement">
+                                        <br />
+                                        <br />
+
+                                        <h5>Satish Adhavkar </h5>
+                                        <h6>(.NET Technology) </h6>
+                                    </div>
+                                </div>
+                                <div class="col-md-8">
+                                    <p style="text-align:justify;font-size:14px">
+
+                                        The best place you can find to study software languages is CIIT Training Institute. The CIIT is a fun and inclusive place to study. This is a wonderful place. The staff are very supportive and helpful! I have the best lecturers in any aspects. There is no place like the CIIT. I have loved my time here - best decision I made.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+
+
+                    <div class="item">
+                        <div class="col-md-6">
+                            <div>
+                                <div class="col-md-4">
+                                    <div style="text-align:center;">
+                                        <img src="~/images/PlacementPhotos/Mayur Mahadik.jpg" class="img-circle" style="height: 100px; width: 100px;" alt="ciit training institute- top  student placement">
+                                        <br />
+                                        <br />
+                                        <h4>Mayur Mahadik  </h4>
+                                        <h6>(.NET Technology) </h6>
+                                    </div>
+                                </div>
+                                <div class="col-md-8">
+                                    <p style="text-align:justify;font-size:14px">
+                                        I Enrolled CIIT Institute for my Dot Net Diploma Course.Trainer was too good to explain all the concepts and latest updates.Being B.E (Mechanical) I thought it would be difficult to understand but my Trainers really helped a lot with lot of patience and also provided best placements.
+
+                                    </p>
+
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6" style="border-left:1px solid red">
+                            <div>
+                                <div class="col-md-4">
+                                    <div style="text-align:center;">
+                                        <img src="~/images/PlacementPhotos/Neha Bali.JPG" class="img-circle" style="height: 100px; width: 100px;" alt="ciit training institute- top  student placement">
+                                        <br />
+                                        <br />
+
+                                        <h4>Neha Bali </h4>
+                                        <h6>(Java Technology) </h6>
+                                    </div>
+                                </div>
+                                <div class="col-md-8">
+                                    <p style="text-align:justify;font-size:14px">
+
+                                        I have joined this institute for as a Trainee in Java Platform.   This is not a training institute only, but a development environment where I learned how to convert my practical class knowledge into development skills in java.   Also, my trainer Mr. Yuvraj Gadadare is very helpful and dedicated towards students learning and their placements.  He combines experience with knowledge.   Here i learn a complete skill set in java, SQL, PL-SQL,Web Designing and angularjs as well. So, i recommend everyone to join this insitute. Today, i am placed because of this insitute and their support.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+
+                    <div class="item">
+                        <div class="col-md-6">
+                            <div>
+                                <div class="col-md-4" style="padding:2px">
+                                    <div style="text-align:center;">
+                                        <img src="~/images/PlacementPhotos/Avantika Malleshe.jpg" class="img-circle" style="height: 100px; width: 100px;" alt="ciit training institute- top  student placement">
+                                        <br />
+                                        <br />
+                                        <h5>Avantika Malleshe </h5>
+                                        <h6>(.NET Technology) </h6>
+
+                                    </div>
+
+                                </div>
+                                <div class="col-md-8">
+                                    <p style="text-align:justify;font-size:14px">
+                                        It was a great time with all of you. Great environment in classes a unique and friendly staff. I learnt many more new things here, it was a great contribution in developing my knowledge. It was a key to develop my self-confidence.Hope you also get lot of success in future
+                                    </p>
+                                </div>
+                            </div>
+
+
+                        </div>
+                        <div class="col-md-6" style="border-left:1px solid red">
+                            <div>
+                                <div class="col-md-4">
+                                    <div style="text-align:center;">
+                                        <img src="~/images/Rani Kankate.png" class="img-circle" style="height: 100px; width: 100px;" alt="ciit training institute- top  student placement">
+                                        <br />
+                                        <br />
+
+                                        <h4>Rani kankate  </h4>
+                                        <h6>(.NET Technology) </h6>
+
+                                    </div>
+
+                                </div>
+                                <div class="col-md-8">
+                                    <p style="text-align:justify;font-size:14px">
+
+                                        Best institute for .net and java training and gives live project..so this will be more helpful for fresher and experience person
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <br />
+                    <br />
+                    <div class="navbar navbar-inverse" style="border:none; background-color: #0275d8;">
+                        <div style="text-align:center;">
+                            <a href="/students-valuable-feedback" style="font-size: 22px; color: white">View All </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div style="padding-top:2%">
+            <div style="margin:5px;text-align:center">
+                <h3 style="color: #0275d8">Our Top Placements</h3>
+                <hr style="border:1px solid red;width:215px;margin-top:10px" />
+            </div>
+            <div id="myCarousel" class="carousel slide" data-ride="carousel" data-interval="2000">
+                <div class="carousel-inner" style="height:auto">
+                    <div class="item active">
+                        <div class="col-md-3">
+                            <div style="text-align:center;">
+                                <img src="~/images/PlacementPhotos/Mayur Mahadik.jpg" class="img-rounded placementstyle" alt="ciit training institute- top  student placement">
+                                <div style="margin: 1px; font-family: 'Bookman Old Style'">Mayur Mahadik </div>
+                                <div style="margin: 1px; font-family: 'Bookman Old Style'">(.NET Technology) </div>
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <div style="text-align:center;">
+                                <img src="~/images/PlacementPhotos/Sanjay Sharma.jpg" class="img-rounded placementstyle" alt="ciit training institute- top  student placement">
+
+                                <div style="margin: 1px; font-family: 'Bookman Old Style'">Sanjay Sharma </div>
+                                <div style="margin: 1px; font-family: 'Bookman Old Style'">(Java Technology) </div>
+                            </div>
+                        </div>
+
+                        <div class="col-md-3">
+                            <div style="text-align:center;">
+                                <img src="~/images/PlacementPhotos/Balaji.png" class="img-rounded placementstyle" alt="ciit training institute- top  student placement">
+                                <div style="margin: 1px; font-family: 'Bookman Old Style'">Balaji Patil </div>
+                                <div style="margin: 1px; font-family: 'Bookman Old Style'">(.NET Technology) </div>
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+
+                            <div style="text-align:center;">
+                                <img src="~/images/PlacementPhotos/Abhishek Badakwan.jpg" class="img-rounded placementstyle" alt="ciit training institute- top  student placement">
+                                <div style="margin: 1px; font-family: 'Bookman Old Style'">Abhishek Badakwan </div>
+                                <div style="margin: 1px; font-family: 'Bookman Old Style'">(.NET Technology) </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="item">
+                        <div class="col-md-3">
+                            <div style="text-align:center;">
+                                <img src="~/images/PlacementPhotos/charushila londhe-talekar.jpg" class="img-rounded placementstyle" alt="ciit training institute- top  student placement">
+                                <div style="margin: 1px; font-family: 'Bookman Old Style'">charushila londhe-talekar </div>
+                                <div style="margin: 1px; font-family: 'Bookman Old Style'">(.NET Technology) </div>
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <div style="text-align:center;">
+                                <img src="~/images/PlacementPhotos/Dnyneshwar Patil.jpg" class="img-rounded placementstyle" alt="ciit training institute- top  student placement">
+                                <div style="margin: 1px; font-family: 'Bookman Old Style'">Dnyneshwar Patil </div>
+                                <div style="margin: 1px; font-family: 'Bookman Old Style'">(Java Technology) </div>
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <div style="text-align:center;">
+                                <img src="~/images/PlacementPhotos/Piyush Dwivedi.jpg" class="img-rounded placementstyle" alt="ciit training institute- top  student placement">
+                                <div style="margin: 1px; font-family: 'Bookman Old Style'">Piyush Dwivedi </div>
+                                <div style="margin: 1px; font-family: 'Bookman Old Style'">(.NET Technology) </div>
+                            </div>
+
+                        </div>
+                        <div class="col-md-3">
+                            <div style="text-align:center;">
+                                <img src="~/images/PlacementPhotos/Avantika Malleshe.jpg" class="img-rounded placementstyle" alt="ciit training institute- top  student placement">
+                                <div style="margin: 1px; font-family: 'Bookman Old Style'">Avantika Malleshe </div>
+                                <div style="margin: 1px; font-family: 'Bookman Old Style'">(.NET Technology) </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <br />
+                <br />
+                <div class="navbar navbar-inverse" style="border:none; background-color: #0275d8;">
+                    <div style="text-align:center;">
+                        <a href="/our-top-placements" style="font-size: 22px; color: white">View All </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-3">
+        <div style=" height: auto; width: 100%;">
+            <div>
+                <img src="~/images/banners/pythonTraining.png" style="height:200px;width:100%" class="img-thumbnail" alt="best place for learning python with live project" />
+            </div>
+        </div>
+        <br /><br />
+        <div style=" height: auto; width: 100%;">
+            <div>
+                <img src="~/images/banners/finalbanner.png" style="height:auto;width:100%" class="img-thumbnail" alt="ciit offer you 6 months industrial training with 100% job guarantee" />
+            </div>
+        </div>
+        <br /><br />
+        <div style=" height: auto; width: 100%;">
+            <div>
+                <img src="~/images/slides/img5.png" style="height:auto;width:100%" class="img-thumbnail" alt="full stack development training will train student 100% practically and will make him/her job ready" />
+            </div>
+        </div>
+    </div>
+    <!-- </div> -->
+    <!--           for feedbacks                            -->
+    <div class="container" style="margin-top:40px;padding:20px;text-align:justify;border-radius:5%;font-size:14px">
+    </div>
+    <div class="col-md-3">
+        @*<div id="mybutton">
+        <a href="#" class="feedback"><img src="~/images/buttonstyle.png" height="50" width="120" style="border-radius:20px" /></a>
+        </div>*@
+        <!-- <a href="#" id="enquirybuttonstyle">
+            <img src="assets/images/buttonstyle.png" height="50" width="120" />
+        </a> -->
+    </div>
+</div>
+<div class="">
 </div>

@@ -546,3 +546,4 @@ F:\CIIT Projects\Own Projects\MVCCore_BatchManagementSystemProject\MVCCore_Batch
 F:\CIIT Projects\Own Projects\MVCCore_BatchManagementSystemProject\MVCCore_BatchManagementSystemProject\obj\Release\net6.0\MVCCore_BatchManagementSystemProject.pdb
 F:\CIIT Projects\Own Projects\MVCCore_BatchManagementSystemProject\MVCCore_BatchManagementSystemProject\obj\Release\net6.0\MVCCore_BatchManagementSystemProject.genruntimeconfig.cache
 F:\CIIT Projects\Own Projects\MVCCore_BatchManagementSystemProject\MVCCore_BatchManagementSystemProject\obj\Release\net6.0\ref\MVCCore_BatchManagementSystemProject.dll
+F:\CIIT Projects\Own Projects\MVCCore_BatchManagementSystemProject\MVCCore_BatchManagementSystemProject\obj\Release\net6.0\MVCCore_BatchManagementSystemProject.sourcelink.json

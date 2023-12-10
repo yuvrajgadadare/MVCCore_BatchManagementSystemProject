@@ -98,7 +98,7 @@ namespace MVCCore_BatchManagementSystemProject.Services.Implementations
 
         public void Send_Gmail_Email(string to, string subject, string body)
         {
-            var fromAddress = new MailAddress("yuvraj.gadadare@gmail.com", "CIIT Training Institute");
+            var fromAddress = new MailAddress("ciitpune@gmail.com", "CIIT Training Institute");
             var toAddress = new MailAddress(to, to);
             // const string fromPassword = ac.accountPassword;
             MailMessage message = new MailMessage(fromAddress, toAddress);
@@ -115,7 +115,7 @@ namespace MVCCore_BatchManagementSystemProject.Services.Implementations
                 EnableSsl = true,
                 DeliveryMethod = SmtpDeliveryMethod.Network,
                 UseDefaultCredentials = false,
-                Credentials = new NetworkCredential("yuvraj.gadadare@gmail.com", "fbsdaunsegxejlfa")
+                Credentials = new NetworkCredential("ciitpune@gmail.com", "afnrgsvazdyfyftn")
             };
             smtp.Send(message);
 

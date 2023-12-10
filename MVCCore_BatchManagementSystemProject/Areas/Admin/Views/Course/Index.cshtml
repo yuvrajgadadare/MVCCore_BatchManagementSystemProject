@@ -251,7 +251,7 @@
                                     @foreach (var fee in item.TbltrainingCourseFees)
                                     {
                                         float totalfees = (float)(fee.FeesAmount + (fee.FeesAmount * fee.Gst / 100));
-                                        <table class="table">
+                                        <table>
                                             <tr>
                                                 <td>Fees - @fee.FeesAmount<span> (@fee.FeeMode)</td>
                                                 <td>GST - @fee.Gst</td>
@@ -270,6 +270,7 @@
 
                                         </div>
                                         <button class='btn btn-primary' onclick="AddCourseTopic(@item.CourseId)">Add Topic</button>
+                                        <a class='btn btn-primary' href="/Admin/Course/CourseSyllabus?course_id=@item.CourseId">View Syllabus</a>
 
                                     </div>
 

@@ -5,6 +5,414 @@
       "PackagePath": "staticwebassets\\MVCCore_BatchManagementSystemProject.bundle.scp.css"
     },
     {
+      "Id": "F:\\CIIT Projects\\Own Projects\\MVCCore_BatchManagementSystemProject\\MVCCore_BatchManagementSystemProject\\wwwroot\\Content\\Site.css",
+      "PackagePath": "staticwebassets\\Content\\Site.css"
+    },
+    {
+      "Id": "F:\\CIIT Projects\\Own Projects\\MVCCore_BatchManagementSystemProject\\MVCCore_BatchManagementSystemProject\\wwwroot\\Content\\animate.min.css",
+      "PackagePath": "staticwebassets\\Content\\animate.min.css"
+    },
+    {
+      "Id": "F:\\CIIT Projects\\Own Projects\\MVCCore_BatchManagementSystemProject\\MVCCore_BatchManagementSystemProject\\wwwroot\\Content\\bootstrap-responsive.css",
+      "PackagePath": "staticwebassets\\Content\\bootstrap-responsive.css"
+    },
+    {
+      "Id": "F:\\CIIT Projects\\Own Projects\\MVCCore_BatchManagementSystemProject\\MVCCore_BatchManagementSystemProject\\wwwroot\\Content\\bootstrap-responsive.min.css",
+      "PackagePath": "staticwebassets\\Content\\bootstrap-responsive.min.css"
+    },
+    {
+      "Id": "F:\\CIIT Projects\\Own Projects\\MVCCore_BatchManagementSystemProject\\MVCCore_BatchManagementSystemProject\\wwwroot\\Content\\bootstrap-theme.css",
+      "PackagePath": "staticwebassets\\Content\\bootstrap-theme.css"
+    },
+    {
+      "Id": "F:\\CIIT Projects\\Own Projects\\MVCCore_BatchManagementSystemProject\\MVCCore_BatchManagementSystemProject\\wwwroot\\Content\\bootstrap-theme.css.map",
+      "PackagePath": "staticwebassets\\Content\\bootstrap-theme.css.map"
+    },
+    {
+      "Id": "F:\\CIIT Projects\\Own Projects\\MVCCore_BatchManagementSystemProject\\MVCCore_BatchManagementSystemProject\\wwwroot\\Content\\bootstrap-theme.min.css",
+      "PackagePath": "staticwebassets\\Content\\bootstrap-theme.min.css"
+    },
+    {
+      "Id": "F:\\CIIT Projects\\Own Projects\\MVCCore_BatchManagementSystemProject\\MVCCore_BatchManagementSystemProject\\wwwroot\\Content\\bootstrap-theme.min.css.map",
+      "PackagePath": "staticwebassets\\Content\\bootstrap-theme.min.css.map"
+    },
+    {
+      "Id": "F:\\CIIT Projects\\Own Projects\\MVCCore_BatchManagementSystemProject\\MVCCore_BatchManagementSystemProject\\wwwroot\\Content\\bootstrap.css",
+      "PackagePath": "staticwebassets\\Content\\bootstrap.css"
+    },
+    {
+      "Id": "F:\\CIIT Projects\\Own Projects\\MVCCore_BatchManagementSystemProject\\MVCCore_BatchManagementSystemProject\\wwwroot\\Content\\bootstrap.css.map",
+      "PackagePath": "staticwebassets\\Content\\bootstrap.css.map"
+    },
+    {
+      "Id": "F:\\CIIT Projects\\Own Projects\\MVCCore_BatchManagementSystemProject\\MVCCore_BatchManagementSystemProject\\wwwroot\\Content\\bootstrap.min.css",
+      "PackagePath": "staticwebassets\\Content\\bootstrap.min.css"
+    },
+    {
+      "Id": "F:\\CIIT Projects\\Own Projects\\MVCCore_BatchManagementSystemProject\\MVCCore_BatchManagementSystemProject\\wwwroot\\Content\\bootstrap.min.css.map",
+      "PackagePath": "staticwebassets\\Content\\bootstrap.min.css.map"
+    },
+    {
+      "Id": "F:\\CIIT Projects\\Own Projects\\MVCCore_BatchManagementSystemProject\\MVCCore_BatchManagementSystemProject\\wwwroot\\Content\\css\\bootstrap-grid.css",
+      "PackagePath": "staticwebassets\\Content\\css\\bootstrap-grid.css"
+    },
+    {
+      "Id": "F:\\CIIT Projects\\Own Projects\\MVCCore_BatchManagementSystemProject\\MVCCore_BatchManagementSystemProject\\wwwroot\\Content\\css\\bootstrap-grid.css.map",
+      "PackagePath": "staticwebassets\\Content\\css\\bootstrap-grid.css.map"
+    },
+    {
+      "Id": "F:\\CIIT Projects\\Own Projects\\MVCCore_BatchManagementSystemProject\\MVCCore_BatchManagementSystemProject\\wwwroot\\Content\\css\\bootstrap-grid.min.css",
+      "PackagePath": "staticwebassets\\Content\\css\\bootstrap-grid.min.css"
+    },
+    {
+      "Id": "F:\\CIIT Projects\\Own Projects\\MVCCore_BatchManagementSystemProject\\MVCCore_BatchManagementSystemProject\\wwwroot\\Content\\css\\bootstrap-grid.min.css.map",
+      "PackagePath": "staticwebassets\\Content\\css\\bootstrap-grid.min.css.map"
+    },
+    {
+      "Id": "F:\\CIIT Projects\\Own Projects\\MVCCore_BatchManagementSystemProject\\MVCCore_BatchManagementSystemProject\\wwwroot\\Content\\css\\bootstrap-grid.rtl.css",
+      "PackagePath": "staticwebassets\\Content\\css\\bootstrap-grid.rtl.css"
+    },
+    {
+      "Id": "F:\\CIIT Projects\\Own Projects\\MVCCore_BatchManagementSystemProject\\MVCCore_BatchManagementSystemProject\\wwwroot\\Content\\css\\bootstrap-grid.rtl.css.map",
+      "PackagePath": "staticwebassets\\Content\\css\\bootstrap-grid.rtl.css.map"
+    },
+    {
+      "Id": "F:\\CIIT Projects\\Own Projects\\MVCCore_BatchManagementSystemProject\\MVCCore_BatchManagementSystemProject\\wwwroot\\Content\\css\\bootstrap-grid.rtl.min.css",
+      "PackagePath": "staticwebassets\\Content\\css\\bootstrap-grid.rtl.min.css"
+    },
+    {
+      "Id": "F:\\CIIT Projects\\Own Projects\\MVCCore_BatchManagementSystemProject\\MVCCore_BatchManagementSystemProject\\wwwroot\\Content\\css\\bootstrap-grid.rtl.min.css.map",
+      "PackagePath": "staticwebassets\\Content\\css\\bootstrap-grid.rtl.min.css.map"
+    },
+    {
+      "Id": "F:\\CIIT Projects\\Own Projects\\MVCCore_BatchManagementSystemProject\\MVCCore_BatchManagementSystemProject\\wwwroot\\Content\\css\\bootstrap-reboot.css",
+      "PackagePath": "staticwebassets\\Content\\css\\bootstrap-reboot.css"
+    },
+    {
+      "Id": "F:\\CIIT Projects\\Own Projects\\MVCCore_BatchManagementSystemProject\\MVCCore_BatchManagementSystemProject\\wwwroot\\Content\\css\\bootstrap-reboot.css.map",
+      "PackagePath": "staticwebassets\\Content\\css\\bootstrap-reboot.css.map"
+    },
+    {
+      "Id": "F:\\CIIT Projects\\Own Projects\\MVCCore_BatchManagementSystemProject\\MVCCore_BatchManagementSystemProject\\wwwroot\\Content\\css\\bootstrap-reboot.min.css",
+      "PackagePath": "staticwebassets\\Content\\css\\bootstrap-reboot.min.css"
+    },
+    {
+      "Id": "F:\\CIIT Projects\\Own Projects\\MVCCore_BatchManagementSystemProject\\MVCCore_BatchManagementSystemProject\\wwwroot\\Content\\css\\bootstrap-reboot.min.css.map",
+      "PackagePath": "staticwebassets\\Content\\css\\bootstrap-reboot.min.css.map"
+    },
+    {
+      "Id": "F:\\CIIT Projects\\Own Projects\\MVCCore_BatchManagementSystemProject\\MVCCore_BatchManagementSystemProject\\wwwroot\\Content\\css\\bootstrap-reboot.rtl.css",
+      "PackagePath": "staticwebassets\\Content\\css\\bootstrap-reboot.rtl.css"
+    },
+    {
+      "Id": "F:\\CIIT Projects\\Own Projects\\MVCCore_BatchManagementSystemProject\\MVCCore_BatchManagementSystemProject\\wwwroot\\Content\\css\\bootstrap-reboot.rtl.css.map",
+      "PackagePath": "staticwebassets\\Content\\css\\bootstrap-reboot.rtl.css.map"
+    },
+    {
+      "Id": "F:\\CIIT Projects\\Own Projects\\MVCCore_BatchManagementSystemProject\\MVCCore_BatchManagementSystemProject\\wwwroot\\Content\\css\\bootstrap-reboot.rtl.min.css",
+      "PackagePath": "staticwebassets\\Content\\css\\bootstrap-reboot.rtl.min.css"
+    },
+    {
+      "Id": "F:\\CIIT Projects\\Own Projects\\MVCCore_BatchManagementSystemProject\\MVCCore_BatchManagementSystemProject\\wwwroot\\Content\\css\\bootstrap-reboot.rtl.min.css.map",
+      "PackagePath": "staticwebassets\\Content\\css\\bootstrap-reboot.rtl.min.css.map"
+    },
+    {
+      "Id": "F:\\CIIT Projects\\Own Projects\\MVCCore_BatchManagementSystemProject\\MVCCore_BatchManagementSystemProject\\wwwroot\\Content\\css\\bootstrap-utilities.css",
+      "PackagePath": "staticwebassets\\Content\\css\\bootstrap-utilities.css"
+    },
+    {
+      "Id": "F:\\CIIT Projects\\Own Projects\\MVCCore_BatchManagementSystemProject\\MVCCore_BatchManagementSystemProject\\wwwroot\\Content\\css\\bootstrap-utilities.css.map",
+      "PackagePath": "staticwebassets\\Content\\css\\bootstrap-utilities.css.map"
+    },
+    {
+      "Id": "F:\\CIIT Projects\\Own Projects\\MVCCore_BatchManagementSystemProject\\MVCCore_BatchManagementSystemProject\\wwwroot\\Content\\css\\bootstrap-utilities.min.css",
+      "PackagePath": "staticwebassets\\Content\\css\\bootstrap-utilities.min.css"
+    },
+    {
+      "Id": "F:\\CIIT Projects\\Own Projects\\MVCCore_BatchManagementSystemProject\\MVCCore_BatchManagementSystemProject\\wwwroot\\Content\\css\\bootstrap-utilities.min.css.map",
+      "PackagePath": "staticwebassets\\Content\\css\\bootstrap-utilities.min.css.map"
+    },
+    {
+      "Id": "F:\\CIIT Projects\\Own Projects\\MVCCore_BatchManagementSystemProject\\MVCCore_BatchManagementSystemProject\\wwwroot\\Content\\css\\bootstrap-utilities.rtl.css",
+      "PackagePath": "staticwebassets\\Content\\css\\bootstrap-utilities.rtl.css"
+    },
+    {
+      "Id": "F:\\CIIT Projects\\Own Projects\\MVCCore_BatchManagementSystemProject\\MVCCore_BatchManagementSystemProject\\wwwroot\\Content\\css\\bootstrap-utilities.rtl.css.map",
+      "PackagePath": "staticwebassets\\Content\\css\\bootstrap-utilities.rtl.css.map"
+    },
+    {
+      "Id": "F:\\CIIT Projects\\Own Projects\\MVCCore_BatchManagementSystemProject\\MVCCore_BatchManagementSystemProject\\wwwroot\\Content\\css\\bootstrap-utilities.rtl.min.css",
+      "PackagePath": "staticwebassets\\Content\\css\\bootstrap-utilities.rtl.min.css"
+    },
+    {
+      "Id": "F:\\CIIT Projects\\Own Projects\\MVCCore_BatchManagementSystemProject\\MVCCore_BatchManagementSystemProject\\wwwroot\\Content\\css\\bootstrap-utilities.rtl.min.css.map",
+      "PackagePath": "staticwebassets\\Content\\css\\bootstrap-utilities.rtl.min.css.map"
+    },
+    {
+      "Id": "F:\\CIIT Projects\\Own Projects\\MVCCore_BatchManagementSystemProject\\MVCCore_BatchManagementSystemProject\\wwwroot\\Content\\css\\bootstrap.css",
+      "PackagePath": "staticwebassets\\Content\\css\\bootstrap.css"
+    },
+    {
+      "Id": "F:\\CIIT Projects\\Own Projects\\MVCCore_BatchManagementSystemProject\\MVCCore_BatchManagementSystemProject\\wwwroot\\Content\\css\\bootstrap.css.map",
+      "PackagePath": "staticwebassets\\Content\\css\\bootstrap.css.map"
+    },
+    {
+      "Id": "F:\\CIIT Projects\\Own Projects\\MVCCore_BatchManagementSystemProject\\MVCCore_BatchManagementSystemProject\\wwwroot\\Content\\css\\bootstrap.min.css",
+      "PackagePath": "staticwebassets\\Content\\css\\bootstrap.min.css"
+    },
+    {
+      "Id": "F:\\CIIT Projects\\Own Projects\\MVCCore_BatchManagementSystemProject\\MVCCore_BatchManagementSystemProject\\wwwroot\\Content\\css\\bootstrap.min.css.map",
+      "PackagePath": "staticwebassets\\Content\\css\\bootstrap.min.css.map"
+    },
+    {
+      "Id": "F:\\CIIT Projects\\Own Projects\\MVCCore_BatchManagementSystemProject\\MVCCore_BatchManagementSystemProject\\wwwroot\\Content\\css\\bootstrap.rtl.css",
+      "PackagePath": "staticwebassets\\Content\\css\\bootstrap.rtl.css"
+    },
+    {
+      "Id": "F:\\CIIT Projects\\Own Projects\\MVCCore_BatchManagementSystemProject\\MVCCore_BatchManagementSystemProject\\wwwroot\\Content\\css\\bootstrap.rtl.css.map",
+      "PackagePath": "staticwebassets\\Content\\css\\bootstrap.rtl.css.map"
+    },
+    {
+      "Id": "F:\\CIIT Projects\\Own Projects\\MVCCore_BatchManagementSystemProject\\MVCCore_BatchManagementSystemProject\\wwwroot\\Content\\css\\bootstrap.rtl.min.css",
+      "PackagePath": "staticwebassets\\Content\\css\\bootstrap.rtl.min.css"
+    },
+    {
+      "Id": "F:\\CIIT Projects\\Own Projects\\MVCCore_BatchManagementSystemProject\\MVCCore_BatchManagementSystemProject\\wwwroot\\Content\\css\\bootstrap.rtl.min.css.map",
+      "PackagePath": "staticwebassets\\Content\\css\\bootstrap.rtl.min.css.map"
+    },
+    {
+      "Id": "F:\\CIIT Projects\\Own Projects\\MVCCore_BatchManagementSystemProject\\MVCCore_BatchManagementSystemProject\\wwwroot\\Content\\custom.css",
+      "PackagePath": "staticwebassets\\Content\\custom.css"
+    },
+    {
+      "Id": "F:\\CIIT Projects\\Own Projects\\MVCCore_BatchManagementSystemProject\\MVCCore_BatchManagementSystemProject\\wwwroot\\Content\\gridstyle.css",
+      "PackagePath": "staticwebassets\\Content\\gridstyle.css"
+    },
+    {
+      "Id": "F:\\CIIT Projects\\Own Projects\\MVCCore_BatchManagementSystemProject\\MVCCore_BatchManagementSystemProject\\wwwroot\\Content\\jquery-ui.css",
+      "PackagePath": "staticwebassets\\Content\\jquery-ui.css"
+    },
+    {
+      "Id": "F:\\CIIT Projects\\Own Projects\\MVCCore_BatchManagementSystemProject\\MVCCore_BatchManagementSystemProject\\wwwroot\\Content\\js\\bootstrap.bundle.js",
+      "PackagePath": "staticwebassets\\Content\\js\\bootstrap.bundle.js"
+    },
+    {
+      "Id": "F:\\CIIT Projects\\Own Projects\\MVCCore_BatchManagementSystemProject\\MVCCore_BatchManagementSystemProject\\wwwroot\\Content\\js\\bootstrap.bundle.js.map",
+      "PackagePath": "staticwebassets\\Content\\js\\bootstrap.bundle.js.map"
+    },
+    {
+      "Id": "F:\\CIIT Projects\\Own Projects\\MVCCore_BatchManagementSystemProject\\MVCCore_BatchManagementSystemProject\\wwwroot\\Content\\js\\bootstrap.bundle.min.js",
+      "PackagePath": "staticwebassets\\Content\\js\\bootstrap.bundle.min.js"
+    },
+    {
+      "Id": "F:\\CIIT Projects\\Own Projects\\MVCCore_BatchManagementSystemProject\\MVCCore_BatchManagementSystemProject\\wwwroot\\Content\\js\\bootstrap.bundle.min.js.map",
+      "PackagePath": "staticwebassets\\Content\\js\\bootstrap.bundle.min.js.map"
+    },
+    {
+      "Id": "F:\\CIIT Projects\\Own Projects\\MVCCore_BatchManagementSystemProject\\MVCCore_BatchManagementSystemProject\\wwwroot\\Content\\js\\bootstrap.esm.js",
+      "PackagePath": "staticwebassets\\Content\\js\\bootstrap.esm.js"
+    },
+    {
+      "Id": "F:\\CIIT Projects\\Own Projects\\MVCCore_BatchManagementSystemProject\\MVCCore_BatchManagementSystemProject\\wwwroot\\Content\\js\\bootstrap.esm.js.map",
+      "PackagePath": "staticwebassets\\Content\\js\\bootstrap.esm.js.map"
+    },
+    {
+      "Id": "F:\\CIIT Projects\\Own Projects\\MVCCore_BatchManagementSystemProject\\MVCCore_BatchManagementSystemProject\\wwwroot\\Content\\js\\bootstrap.esm.min.js",
+      "PackagePath": "staticwebassets\\Content\\js\\bootstrap.esm.min.js"
+    },
+    {
+      "Id": "F:\\CIIT Projects\\Own Projects\\MVCCore_BatchManagementSystemProject\\MVCCore_BatchManagementSystemProject\\wwwroot\\Content\\js\\bootstrap.esm.min.js.map",
+      "PackagePath": "staticwebassets\\Content\\js\\bootstrap.esm.min.js.map"
+    },
+    {
+      "Id": "F:\\CIIT Projects\\Own Projects\\MVCCore_BatchManagementSystemProject\\MVCCore_BatchManagementSystemProject\\wwwroot\\Content\\js\\bootstrap.js",
+      "PackagePath": "staticwebassets\\Content\\js\\bootstrap.js"
+    },
+    {
+      "Id": "F:\\CIIT Projects\\Own Projects\\MVCCore_BatchManagementSystemProject\\MVCCore_BatchManagementSystemProject\\wwwroot\\Content\\js\\bootstrap.js.map",
+      "PackagePath": "staticwebassets\\Content\\js\\bootstrap.js.map"
+    },
+    {
+      "Id": "F:\\CIIT Projects\\Own Projects\\MVCCore_BatchManagementSystemProject\\MVCCore_BatchManagementSystemProject\\wwwroot\\Content\\js\\bootstrap.min.js",
+      "PackagePath": "staticwebassets\\Content\\js\\bootstrap.min.js"
+    },
+    {
+      "Id": "F:\\CIIT Projects\\Own Projects\\MVCCore_BatchManagementSystemProject\\MVCCore_BatchManagementSystemProject\\wwwroot\\Content\\js\\bootstrap.min.js.map",
+      "PackagePath": "staticwebassets\\Content\\js\\bootstrap.min.js.map"
+    },
+    {
+      "Id": "F:\\CIIT Projects\\Own Projects\\MVCCore_BatchManagementSystemProject\\MVCCore_BatchManagementSystemProject\\wwwroot\\Content\\sidebarstyle.css",
+      "PackagePath": "staticwebassets\\Content\\sidebarstyle.css"
+    },
+    {
+      "Id": "F:\\CIIT Projects\\Own Projects\\MVCCore_BatchManagementSystemProject\\MVCCore_BatchManagementSystemProject\\wwwroot\\Content\\style.css",
+      "PackagePath": "staticwebassets\\Content\\style.css"
+    },
+    {
+      "Id": "F:\\CIIT Projects\\Own Projects\\MVCCore_BatchManagementSystemProject\\MVCCore_BatchManagementSystemProject\\wwwroot\\Content\\swipebox.css",
+      "PackagePath": "staticwebassets\\Content\\swipebox.css"
+    },
+    {
+      "Id": "F:\\CIIT Projects\\Own Projects\\MVCCore_BatchManagementSystemProject\\MVCCore_BatchManagementSystemProject\\wwwroot\\Content\\tabstyle.css",
+      "PackagePath": "staticwebassets\\Content\\tabstyle.css"
+    },
+    {
+      "Id": "F:\\CIIT Projects\\Own Projects\\MVCCore_BatchManagementSystemProject\\MVCCore_BatchManagementSystemProject\\wwwroot\\Content\\ui-grid.css",
+      "PackagePath": "staticwebassets\\Content\\ui-grid.css"
+    },
+    {
+      "Id": "F:\\CIIT Projects\\Own Projects\\MVCCore_BatchManagementSystemProject\\MVCCore_BatchManagementSystemProject\\wwwroot\\Content\\ui-grid.min.css",
+      "PackagePath": "staticwebassets\\Content\\ui-grid.min.css"
+    },
+    {
+      "Id": "F:\\CIIT Projects\\Own Projects\\MVCCore_BatchManagementSystemProject\\MVCCore_BatchManagementSystemProject\\wwwroot\\Scripts\\angular-animate.min.js",
+      "PackagePath": "staticwebassets\\Scripts\\angular-animate.min.js"
+    },
+    {
+      "Id": "F:\\CIIT Projects\\Own Projects\\MVCCore_BatchManagementSystemProject\\MVCCore_BatchManagementSystemProject\\wwwroot\\Scripts\\angular-touch.min.js",
+      "PackagePath": "staticwebassets\\Scripts\\angular-touch.min.js"
+    },
+    {
+      "Id": "F:\\CIIT Projects\\Own Projects\\MVCCore_BatchManagementSystemProject\\MVCCore_BatchManagementSystemProject\\wwwroot\\Scripts\\angular.min.js",
+      "PackagePath": "staticwebassets\\Scripts\\angular.min.js"
+    },
+    {
+      "Id": "F:\\CIIT Projects\\Own Projects\\MVCCore_BatchManagementSystemProject\\MVCCore_BatchManagementSystemProject\\wwwroot\\Scripts\\bootstrap.bundle.min.js",
+      "PackagePath": "staticwebassets\\Scripts\\bootstrap.bundle.min.js"
+    },
+    {
+      "Id": "F:\\CIIT Projects\\Own Projects\\MVCCore_BatchManagementSystemProject\\MVCCore_BatchManagementSystemProject\\wwwroot\\Scripts\\bootstrap.js",
+      "PackagePath": "staticwebassets\\Scripts\\bootstrap.js"
+    },
+    {
+      "Id": "F:\\CIIT Projects\\Own Projects\\MVCCore_BatchManagementSystemProject\\MVCCore_BatchManagementSystemProject\\wwwroot\\Scripts\\bootstrap.min.js",
+      "PackagePath": "staticwebassets\\Scripts\\bootstrap.min.js"
+    },
+    {
+      "Id": "F:\\CIIT Projects\\Own Projects\\MVCCore_BatchManagementSystemProject\\MVCCore_BatchManagementSystemProject\\wwwroot\\Scripts\\custom.js",
+      "PackagePath": "staticwebassets\\Scripts\\custom.js"
+    },
+    {
+      "Id": "F:\\CIIT Projects\\Own Projects\\MVCCore_BatchManagementSystemProject\\MVCCore_BatchManagementSystemProject\\wwwroot\\Scripts\\easing.js",
+      "PackagePath": "staticwebassets\\Scripts\\easing.js"
+    },
+    {
+      "Id": "F:\\CIIT Projects\\Own Projects\\MVCCore_BatchManagementSystemProject\\MVCCore_BatchManagementSystemProject\\wwwroot\\Scripts\\jquery-1.12.4.min.js",
+      "PackagePath": "staticwebassets\\Scripts\\jquery-1.12.4.min.js"
+    },
+    {
+      "Id": "F:\\CIIT Projects\\Own Projects\\MVCCore_BatchManagementSystemProject\\MVCCore_BatchManagementSystemProject\\wwwroot\\Scripts\\jquery-1.12.4.min.map",
+      "PackagePath": "staticwebassets\\Scripts\\jquery-1.12.4.min.map"
+    },
+    {
+      "Id": "F:\\CIIT Projects\\Own Projects\\MVCCore_BatchManagementSystemProject\\MVCCore_BatchManagementSystemProject\\wwwroot\\Scripts\\jquery-3.4.1.intellisense.js",
+      "PackagePath": "staticwebassets\\Scripts\\jquery-3.4.1.intellisense.js"
+    },
+    {
+      "Id": "F:\\CIIT Projects\\Own Projects\\MVCCore_BatchManagementSystemProject\\MVCCore_BatchManagementSystemProject\\wwwroot\\Scripts\\jquery-3.4.1.js",
+      "PackagePath": "staticwebassets\\Scripts\\jquery-3.4.1.js"
+    },
+    {
+      "Id": "F:\\CIIT Projects\\Own Projects\\MVCCore_BatchManagementSystemProject\\MVCCore_BatchManagementSystemProject\\wwwroot\\Scripts\\jquery-3.4.1.min.js",
+      "PackagePath": "staticwebassets\\Scripts\\jquery-3.4.1.min.js"
+    },
+    {
+      "Id": "F:\\CIIT Projects\\Own Projects\\MVCCore_BatchManagementSystemProject\\MVCCore_BatchManagementSystemProject\\wwwroot\\Scripts\\jquery-3.4.1.min.map",
+      "PackagePath": "staticwebassets\\Scripts\\jquery-3.4.1.min.map"
+    },
+    {
+      "Id": "F:\\CIIT Projects\\Own Projects\\MVCCore_BatchManagementSystemProject\\MVCCore_BatchManagementSystemProject\\wwwroot\\Scripts\\jquery-3.4.1.slim.js",
+      "PackagePath": "staticwebassets\\Scripts\\jquery-3.4.1.slim.js"
+    },
+    {
+      "Id": "F:\\CIIT Projects\\Own Projects\\MVCCore_BatchManagementSystemProject\\MVCCore_BatchManagementSystemProject\\wwwroot\\Scripts\\jquery-3.4.1.slim.min.js",
+      "PackagePath": "staticwebassets\\Scripts\\jquery-3.4.1.slim.min.js"
+    },
+    {
+      "Id": "F:\\CIIT Projects\\Own Projects\\MVCCore_BatchManagementSystemProject\\MVCCore_BatchManagementSystemProject\\wwwroot\\Scripts\\jquery-3.4.1.slim.min.map",
+      "PackagePath": "staticwebassets\\Scripts\\jquery-3.4.1.slim.min.map"
+    },
+    {
+      "Id": "F:\\CIIT Projects\\Own Projects\\MVCCore_BatchManagementSystemProject\\MVCCore_BatchManagementSystemProject\\wwwroot\\Scripts\\jquery.min.js",
+      "PackagePath": "staticwebassets\\Scripts\\jquery.min.js"
+    },
+    {
+      "Id": "F:\\CIIT Projects\\Own Projects\\MVCCore_BatchManagementSystemProject\\MVCCore_BatchManagementSystemProject\\wwwroot\\Scripts\\jquery.swipebox.min.js",
+      "PackagePath": "staticwebassets\\Scripts\\jquery.swipebox.min.js"
+    },
+    {
+      "Id": "F:\\CIIT Projects\\Own Projects\\MVCCore_BatchManagementSystemProject\\MVCCore_BatchManagementSystemProject\\wwwroot\\Scripts\\js\\bootstrap.bundle.js",
+      "PackagePath": "staticwebassets\\Scripts\\js\\bootstrap.bundle.js"
+    },
+    {
+      "Id": "F:\\CIIT Projects\\Own Projects\\MVCCore_BatchManagementSystemProject\\MVCCore_BatchManagementSystemProject\\wwwroot\\Scripts\\js\\bootstrap.bundle.js.map",
+      "PackagePath": "staticwebassets\\Scripts\\js\\bootstrap.bundle.js.map"
+    },
+    {
+      "Id": "F:\\CIIT Projects\\Own Projects\\MVCCore_BatchManagementSystemProject\\MVCCore_BatchManagementSystemProject\\wwwroot\\Scripts\\js\\bootstrap.bundle.min.js",
+      "PackagePath": "staticwebassets\\Scripts\\js\\bootstrap.bundle.min.js"
+    },
+    {
+      "Id": "F:\\CIIT Projects\\Own Projects\\MVCCore_BatchManagementSystemProject\\MVCCore_BatchManagementSystemProject\\wwwroot\\Scripts\\js\\bootstrap.bundle.min.js.map",
+      "PackagePath": "staticwebassets\\Scripts\\js\\bootstrap.bundle.min.js.map"
+    },
+    {
+      "Id": "F:\\CIIT Projects\\Own Projects\\MVCCore_BatchManagementSystemProject\\MVCCore_BatchManagementSystemProject\\wwwroot\\Scripts\\js\\bootstrap.esm.js",
+      "PackagePath": "staticwebassets\\Scripts\\js\\bootstrap.esm.js"
+    },
+    {
+      "Id": "F:\\CIIT Projects\\Own Projects\\MVCCore_BatchManagementSystemProject\\MVCCore_BatchManagementSystemProject\\wwwroot\\Scripts\\js\\bootstrap.esm.js.map",
+      "PackagePath": "staticwebassets\\Scripts\\js\\bootstrap.esm.js.map"
+    },
+    {
+      "Id": "F:\\CIIT Projects\\Own Projects\\MVCCore_BatchManagementSystemProject\\MVCCore_BatchManagementSystemProject\\wwwroot\\Scripts\\js\\bootstrap.esm.min.js",
+      "PackagePath": "staticwebassets\\Scripts\\js\\bootstrap.esm.min.js"
+    },
+    {
+      "Id": "F:\\CIIT Projects\\Own Projects\\MVCCore_BatchManagementSystemProject\\MVCCore_BatchManagementSystemProject\\wwwroot\\Scripts\\js\\bootstrap.esm.min.js.map",
+      "PackagePath": "staticwebassets\\Scripts\\js\\bootstrap.esm.min.js.map"
+    },
+    {
+      "Id": "F:\\CIIT Projects\\Own Projects\\MVCCore_BatchManagementSystemProject\\MVCCore_BatchManagementSystemProject\\wwwroot\\Scripts\\js\\bootstrap.js",
+      "PackagePath": "staticwebassets\\Scripts\\js\\bootstrap.js"
+    },
+    {
+      "Id": "F:\\CIIT Projects\\Own Projects\\MVCCore_BatchManagementSystemProject\\MVCCore_BatchManagementSystemProject\\wwwroot\\Scripts\\js\\bootstrap.js.map",
+      "PackagePath": "staticwebassets\\Scripts\\js\\bootstrap.js.map"
+    },
+    {
+      "Id": "F:\\CIIT Projects\\Own Projects\\MVCCore_BatchManagementSystemProject\\MVCCore_BatchManagementSystemProject\\wwwroot\\Scripts\\js\\bootstrap.min.js",
+      "PackagePath": "staticwebassets\\Scripts\\js\\bootstrap.min.js"
+    },
+    {
+      "Id": "F:\\CIIT Projects\\Own Projects\\MVCCore_BatchManagementSystemProject\\MVCCore_BatchManagementSystemProject\\wwwroot\\Scripts\\js\\bootstrap.min.js.map",
+      "PackagePath": "staticwebassets\\Scripts\\js\\bootstrap.min.js.map"
+    },
+    {
+      "Id": "F:\\CIIT Projects\\Own Projects\\MVCCore_BatchManagementSystemProject\\MVCCore_BatchManagementSystemProject\\wwwroot\\Scripts\\jspdf.debug.js",
+      "PackagePath": "staticwebassets\\Scripts\\jspdf.debug.js"
+    },
+    {
+      "Id": "F:\\CIIT Projects\\Own Projects\\MVCCore_BatchManagementSystemProject\\MVCCore_BatchManagementSystemProject\\wwwroot\\Scripts\\jspdf.min.js",
+      "PackagePath": "staticwebassets\\Scripts\\jspdf.min.js"
+    },
+    {
+      "Id": "F:\\CIIT Projects\\Own Projects\\MVCCore_BatchManagementSystemProject\\MVCCore_BatchManagementSystemProject\\wwwroot\\Scripts\\modernizr-2.8.3.js",
+      "PackagePath": "staticwebassets\\Scripts\\modernizr-2.8.3.js"
+    },
+    {
+      "Id": "F:\\CIIT Projects\\Own Projects\\MVCCore_BatchManagementSystemProject\\MVCCore_BatchManagementSystemProject\\wwwroot\\Scripts\\move-top.js",
+      "PackagePath": "staticwebassets\\Scripts\\move-top.js"
+    },
+    {
+      "Id": "F:\\CIIT Projects\\Own Projects\\MVCCore_BatchManagementSystemProject\\MVCCore_BatchManagementSystemProject\\wwwroot\\Scripts\\ui-bootstrap-tpls-0.13.4.js",
+      "PackagePath": "staticwebassets\\Scripts\\ui-bootstrap-tpls-0.13.4.js"
+    },
+    {
+      "Id": "F:\\CIIT Projects\\Own Projects\\MVCCore_BatchManagementSystemProject\\MVCCore_BatchManagementSystemProject\\wwwroot\\Scripts\\ui-grid.js",
+      "PackagePath": "staticwebassets\\Scripts\\ui-grid.js"
+    },
+    {
       "Id": "F:\\CIIT Projects\\Own Projects\\MVCCore_BatchManagementSystemProject\\MVCCore_BatchManagementSystemProject\\wwwroot\\css\\site.css",
       "PackagePath": "staticwebassets\\css\\site.css"
     },
@@ -13,12 +421,528 @@
       "PackagePath": "staticwebassets\\favicon.ico"
     },
     {
+      "Id": "F:\\CIIT Projects\\Own Projects\\MVCCore_BatchManagementSystemProject\\MVCCore_BatchManagementSystemProject\\wwwroot\\images\\1_1.png",
+      "PackagePath": "staticwebassets\\images\\1_1.png"
+    },
+    {
+      "Id": "F:\\CIIT Projects\\Own Projects\\MVCCore_BatchManagementSystemProject\\MVCCore_BatchManagementSystemProject\\wwwroot\\images\\Career.jpg",
+      "PackagePath": "staticwebassets\\images\\Career.jpg"
+    },
+    {
+      "Id": "F:\\CIIT Projects\\Own Projects\\MVCCore_BatchManagementSystemProject\\MVCCore_BatchManagementSystemProject\\wwwroot\\images\\PlacementPhotos\\Aarti Bhise.png",
+      "PackagePath": "staticwebassets\\images\\PlacementPhotos\\Aarti Bhise.png"
+    },
+    {
+      "Id": "F:\\CIIT Projects\\Own Projects\\MVCCore_BatchManagementSystemProject\\MVCCore_BatchManagementSystemProject\\wwwroot\\images\\PlacementPhotos\\Abhishek Badakwan.jpg",
+      "PackagePath": "staticwebassets\\images\\PlacementPhotos\\Abhishek Badakwan.jpg"
+    },
+    {
+      "Id": "F:\\CIIT Projects\\Own Projects\\MVCCore_BatchManagementSystemProject\\MVCCore_BatchManagementSystemProject\\wwwroot\\images\\PlacementPhotos\\Aishwarya Khabile.jpg",
+      "PackagePath": "staticwebassets\\images\\PlacementPhotos\\Aishwarya Khabile.jpg"
+    },
+    {
+      "Id": "F:\\CIIT Projects\\Own Projects\\MVCCore_BatchManagementSystemProject\\MVCCore_BatchManagementSystemProject\\wwwroot\\images\\PlacementPhotos\\Ankit Gupta.png",
+      "PackagePath": "staticwebassets\\images\\PlacementPhotos\\Ankit Gupta.png"
+    },
+    {
+      "Id": "F:\\CIIT Projects\\Own Projects\\MVCCore_BatchManagementSystemProject\\MVCCore_BatchManagementSystemProject\\wwwroot\\images\\PlacementPhotos\\Avantika Malleshe.jpg",
+      "PackagePath": "staticwebassets\\images\\PlacementPhotos\\Avantika Malleshe.jpg"
+    },
+    {
+      "Id": "F:\\CIIT Projects\\Own Projects\\MVCCore_BatchManagementSystemProject\\MVCCore_BatchManagementSystemProject\\wwwroot\\images\\PlacementPhotos\\Balaji Masal.jpg",
+      "PackagePath": "staticwebassets\\images\\PlacementPhotos\\Balaji Masal.jpg"
+    },
+    {
+      "Id": "F:\\CIIT Projects\\Own Projects\\MVCCore_BatchManagementSystemProject\\MVCCore_BatchManagementSystemProject\\wwwroot\\images\\PlacementPhotos\\Balaji.png",
+      "PackagePath": "staticwebassets\\images\\PlacementPhotos\\Balaji.png"
+    },
+    {
+      "Id": "F:\\CIIT Projects\\Own Projects\\MVCCore_BatchManagementSystemProject\\MVCCore_BatchManagementSystemProject\\wwwroot\\images\\PlacementPhotos\\Deepak Kumar.png",
+      "PackagePath": "staticwebassets\\images\\PlacementPhotos\\Deepak Kumar.png"
+    },
+    {
+      "Id": "F:\\CIIT Projects\\Own Projects\\MVCCore_BatchManagementSystemProject\\MVCCore_BatchManagementSystemProject\\wwwroot\\images\\PlacementPhotos\\Dhananjay Jaiswal.jpeg",
+      "PackagePath": "staticwebassets\\images\\PlacementPhotos\\Dhananjay Jaiswal.jpeg"
+    },
+    {
+      "Id": "F:\\CIIT Projects\\Own Projects\\MVCCore_BatchManagementSystemProject\\MVCCore_BatchManagementSystemProject\\wwwroot\\images\\PlacementPhotos\\Diksha Rahangade.jpg",
+      "PackagePath": "staticwebassets\\images\\PlacementPhotos\\Diksha Rahangade.jpg"
+    },
+    {
+      "Id": "F:\\CIIT Projects\\Own Projects\\MVCCore_BatchManagementSystemProject\\MVCCore_BatchManagementSystemProject\\wwwroot\\images\\PlacementPhotos\\Dnyneshwar Patil.jpg",
+      "PackagePath": "staticwebassets\\images\\PlacementPhotos\\Dnyneshwar Patil.jpg"
+    },
+    {
+      "Id": "F:\\CIIT Projects\\Own Projects\\MVCCore_BatchManagementSystemProject\\MVCCore_BatchManagementSystemProject\\wwwroot\\images\\PlacementPhotos\\Ganesh.jpeg",
+      "PackagePath": "staticwebassets\\images\\PlacementPhotos\\Ganesh.jpeg"
+    },
+    {
+      "Id": "F:\\CIIT Projects\\Own Projects\\MVCCore_BatchManagementSystemProject\\MVCCore_BatchManagementSystemProject\\wwwroot\\images\\PlacementPhotos\\Mayur Mahadik.jpg",
+      "PackagePath": "staticwebassets\\images\\PlacementPhotos\\Mayur Mahadik.jpg"
+    },
+    {
+      "Id": "F:\\CIIT Projects\\Own Projects\\MVCCore_BatchManagementSystemProject\\MVCCore_BatchManagementSystemProject\\wwwroot\\images\\PlacementPhotos\\Megha Savner.jpg",
+      "PackagePath": "staticwebassets\\images\\PlacementPhotos\\Megha Savner.jpg"
+    },
+    {
+      "Id": "F:\\CIIT Projects\\Own Projects\\MVCCore_BatchManagementSystemProject\\MVCCore_BatchManagementSystemProject\\wwwroot\\images\\PlacementPhotos\\Neha Bali.JPG",
+      "PackagePath": "staticwebassets\\images\\PlacementPhotos\\Neha Bali.JPG"
+    },
+    {
+      "Id": "F:\\CIIT Projects\\Own Projects\\MVCCore_BatchManagementSystemProject\\MVCCore_BatchManagementSystemProject\\wwwroot\\images\\PlacementPhotos\\Pallavi Raut.jpg",
+      "PackagePath": "staticwebassets\\images\\PlacementPhotos\\Pallavi Raut.jpg"
+    },
+    {
+      "Id": "F:\\CIIT Projects\\Own Projects\\MVCCore_BatchManagementSystemProject\\MVCCore_BatchManagementSystemProject\\wwwroot\\images\\PlacementPhotos\\Piyush Dwivedi.jpg",
+      "PackagePath": "staticwebassets\\images\\PlacementPhotos\\Piyush Dwivedi.jpg"
+    },
+    {
+      "Id": "F:\\CIIT Projects\\Own Projects\\MVCCore_BatchManagementSystemProject\\MVCCore_BatchManagementSystemProject\\wwwroot\\images\\PlacementPhotos\\Prajakta Lonkar.png",
+      "PackagePath": "staticwebassets\\images\\PlacementPhotos\\Prajakta Lonkar.png"
+    },
+    {
+      "Id": "F:\\CIIT Projects\\Own Projects\\MVCCore_BatchManagementSystemProject\\MVCCore_BatchManagementSystemProject\\wwwroot\\images\\PlacementPhotos\\Prajkta Lonkar.jpg",
+      "PackagePath": "staticwebassets\\images\\PlacementPhotos\\Prajkta Lonkar.jpg"
+    },
+    {
+      "Id": "F:\\CIIT Projects\\Own Projects\\MVCCore_BatchManagementSystemProject\\MVCCore_BatchManagementSystemProject\\wwwroot\\images\\PlacementPhotos\\Pritam Phalande.jpg",
+      "PackagePath": "staticwebassets\\images\\PlacementPhotos\\Pritam Phalande.jpg"
+    },
+    {
+      "Id": "F:\\CIIT Projects\\Own Projects\\MVCCore_BatchManagementSystemProject\\MVCCore_BatchManagementSystemProject\\wwwroot\\images\\PlacementPhotos\\Rani Kankate.png",
+      "PackagePath": "staticwebassets\\images\\PlacementPhotos\\Rani Kankate.png"
+    },
+    {
+      "Id": "F:\\CIIT Projects\\Own Projects\\MVCCore_BatchManagementSystemProject\\MVCCore_BatchManagementSystemProject\\wwwroot\\images\\PlacementPhotos\\Sandhya Sangshetti.jpg",
+      "PackagePath": "staticwebassets\\images\\PlacementPhotos\\Sandhya Sangshetti.jpg"
+    },
+    {
+      "Id": "F:\\CIIT Projects\\Own Projects\\MVCCore_BatchManagementSystemProject\\MVCCore_BatchManagementSystemProject\\wwwroot\\images\\PlacementPhotos\\Sanjay Sharma.jpg",
+      "PackagePath": "staticwebassets\\images\\PlacementPhotos\\Sanjay Sharma.jpg"
+    },
+    {
+      "Id": "F:\\CIIT Projects\\Own Projects\\MVCCore_BatchManagementSystemProject\\MVCCore_BatchManagementSystemProject\\wwwroot\\images\\PlacementPhotos\\Shraddha Mukhta.png",
+      "PackagePath": "staticwebassets\\images\\PlacementPhotos\\Shraddha Mukhta.png"
+    },
+    {
+      "Id": "F:\\CIIT Projects\\Own Projects\\MVCCore_BatchManagementSystemProject\\MVCCore_BatchManagementSystemProject\\wwwroot\\images\\PlacementPhotos\\Snehal Shivathare.png",
+      "PackagePath": "staticwebassets\\images\\PlacementPhotos\\Snehal Shivathare.png"
+    },
+    {
+      "Id": "F:\\CIIT Projects\\Own Projects\\MVCCore_BatchManagementSystemProject\\MVCCore_BatchManagementSystemProject\\wwwroot\\images\\PlacementPhotos\\Snehal.jpg",
+      "PackagePath": "staticwebassets\\images\\PlacementPhotos\\Snehal.jpg"
+    },
+    {
+      "Id": "F:\\CIIT Projects\\Own Projects\\MVCCore_BatchManagementSystemProject\\MVCCore_BatchManagementSystemProject\\wwwroot\\images\\PlacementPhotos\\Sourav Ghosh.jpg",
+      "PackagePath": "staticwebassets\\images\\PlacementPhotos\\Sourav Ghosh.jpg"
+    },
+    {
+      "Id": "F:\\CIIT Projects\\Own Projects\\MVCCore_BatchManagementSystemProject\\MVCCore_BatchManagementSystemProject\\wwwroot\\images\\PlacementPhotos\\Tushar Mahadik.jpg",
+      "PackagePath": "staticwebassets\\images\\PlacementPhotos\\Tushar Mahadik.jpg"
+    },
+    {
+      "Id": "F:\\CIIT Projects\\Own Projects\\MVCCore_BatchManagementSystemProject\\MVCCore_BatchManagementSystemProject\\wwwroot\\images\\PlacementPhotos\\Vaibhav Mulik.jpg",
+      "PackagePath": "staticwebassets\\images\\PlacementPhotos\\Vaibhav Mulik.jpg"
+    },
+    {
+      "Id": "F:\\CIIT Projects\\Own Projects\\MVCCore_BatchManagementSystemProject\\MVCCore_BatchManagementSystemProject\\wwwroot\\images\\PlacementPhotos\\Varsha Nagtilak.png",
+      "PackagePath": "staticwebassets\\images\\PlacementPhotos\\Varsha Nagtilak.png"
+    },
+    {
+      "Id": "F:\\CIIT Projects\\Own Projects\\MVCCore_BatchManagementSystemProject\\MVCCore_BatchManagementSystemProject\\wwwroot\\images\\PlacementPhotos\\Virendra Kamble.jpg",
+      "PackagePath": "staticwebassets\\images\\PlacementPhotos\\Virendra Kamble.jpg"
+    },
+    {
+      "Id": "F:\\CIIT Projects\\Own Projects\\MVCCore_BatchManagementSystemProject\\MVCCore_BatchManagementSystemProject\\wwwroot\\images\\PlacementPhotos\\Vitthal Chikte.jpg",
+      "PackagePath": "staticwebassets\\images\\PlacementPhotos\\Vitthal Chikte.jpg"
+    },
+    {
+      "Id": "F:\\CIIT Projects\\Own Projects\\MVCCore_BatchManagementSystemProject\\MVCCore_BatchManagementSystemProject\\wwwroot\\images\\PlacementPhotos\\aditya.jpg",
+      "PackagePath": "staticwebassets\\images\\PlacementPhotos\\aditya.jpg"
+    },
+    {
+      "Id": "F:\\CIIT Projects\\Own Projects\\MVCCore_BatchManagementSystemProject\\MVCCore_BatchManagementSystemProject\\wwwroot\\images\\PlacementPhotos\\ankit gupta.jpg",
+      "PackagePath": "staticwebassets\\images\\PlacementPhotos\\ankit gupta.jpg"
+    },
+    {
+      "Id": "F:\\CIIT Projects\\Own Projects\\MVCCore_BatchManagementSystemProject\\MVCCore_BatchManagementSystemProject\\wwwroot\\images\\PlacementPhotos\\balajimasal.jpg",
+      "PackagePath": "staticwebassets\\images\\PlacementPhotos\\balajimasal.jpg"
+    },
+    {
+      "Id": "F:\\CIIT Projects\\Own Projects\\MVCCore_BatchManagementSystemProject\\MVCCore_BatchManagementSystemProject\\wwwroot\\images\\PlacementPhotos\\charushila londhe-talekar.jpg",
+      "PackagePath": "staticwebassets\\images\\PlacementPhotos\\charushila londhe-talekar.jpg"
+    },
+    {
+      "Id": "F:\\CIIT Projects\\Own Projects\\MVCCore_BatchManagementSystemProject\\MVCCore_BatchManagementSystemProject\\wwwroot\\images\\PlacementPhotos\\en.png",
+      "PackagePath": "staticwebassets\\images\\PlacementPhotos\\en.png"
+    },
+    {
+      "Id": "F:\\CIIT Projects\\Own Projects\\MVCCore_BatchManagementSystemProject\\MVCCore_BatchManagementSystemProject\\wwwroot\\images\\PlacementPhotos\\female.png",
+      "PackagePath": "staticwebassets\\images\\PlacementPhotos\\female.png"
+    },
+    {
+      "Id": "F:\\CIIT Projects\\Own Projects\\MVCCore_BatchManagementSystemProject\\MVCCore_BatchManagementSystemProject\\wwwroot\\images\\PlacementPhotos\\male.png",
+      "PackagePath": "staticwebassets\\images\\PlacementPhotos\\male.png"
+    },
+    {
+      "Id": "F:\\CIIT Projects\\Own Projects\\MVCCore_BatchManagementSystemProject\\MVCCore_BatchManagementSystemProject\\wwwroot\\images\\PlacementPhotos\\neha patel.jpeg",
+      "PackagePath": "staticwebassets\\images\\PlacementPhotos\\neha patel.jpeg"
+    },
+    {
+      "Id": "F:\\CIIT Projects\\Own Projects\\MVCCore_BatchManagementSystemProject\\MVCCore_BatchManagementSystemProject\\wwwroot\\images\\PlacementPhotos\\neha.jpg",
+      "PackagePath": "staticwebassets\\images\\PlacementPhotos\\neha.jpg"
+    },
+    {
+      "Id": "F:\\CIIT Projects\\Own Projects\\MVCCore_BatchManagementSystemProject\\MVCCore_BatchManagementSystemProject\\wwwroot\\images\\PlacementPhotos\\nilesh.jpg",
+      "PackagePath": "staticwebassets\\images\\PlacementPhotos\\nilesh.jpg"
+    },
+    {
+      "Id": "F:\\CIIT Projects\\Own Projects\\MVCCore_BatchManagementSystemProject\\MVCCore_BatchManagementSystemProject\\wwwroot\\images\\PlacementPhotos\\piyush Dwivedi.jpeg",
+      "PackagePath": "staticwebassets\\images\\PlacementPhotos\\piyush Dwivedi.jpeg"
+    },
+    {
+      "Id": "F:\\CIIT Projects\\Own Projects\\MVCCore_BatchManagementSystemProject\\MVCCore_BatchManagementSystemProject\\wwwroot\\images\\PlacementPhotos\\placement.jpg",
+      "PackagePath": "staticwebassets\\images\\PlacementPhotos\\placement.jpg"
+    },
+    {
+      "Id": "F:\\CIIT Projects\\Own Projects\\MVCCore_BatchManagementSystemProject\\MVCCore_BatchManagementSystemProject\\wwwroot\\images\\PlacementPhotos\\rahulpaul.jpeg",
+      "PackagePath": "staticwebassets\\images\\PlacementPhotos\\rahulpaul.jpeg"
+    },
+    {
+      "Id": "F:\\CIIT Projects\\Own Projects\\MVCCore_BatchManagementSystemProject\\MVCCore_BatchManagementSystemProject\\wwwroot\\images\\PlacementPhotos\\sanket bhujbal.jpeg",
+      "PackagePath": "staticwebassets\\images\\PlacementPhotos\\sanket bhujbal.jpeg"
+    },
+    {
+      "Id": "F:\\CIIT Projects\\Own Projects\\MVCCore_BatchManagementSystemProject\\MVCCore_BatchManagementSystemProject\\wwwroot\\images\\PlacementPhotos\\satish.jpg",
+      "PackagePath": "staticwebassets\\images\\PlacementPhotos\\satish.jpg"
+    },
+    {
+      "Id": "F:\\CIIT Projects\\Own Projects\\MVCCore_BatchManagementSystemProject\\MVCCore_BatchManagementSystemProject\\wwwroot\\images\\PlacementPhotos\\snehal Shivthare.png",
+      "PackagePath": "staticwebassets\\images\\PlacementPhotos\\snehal Shivthare.png"
+    },
+    {
+      "Id": "F:\\CIIT Projects\\Own Projects\\MVCCore_BatchManagementSystemProject\\MVCCore_BatchManagementSystemProject\\wwwroot\\images\\PlacementPhotos\\swapnita.jpeg",
+      "PackagePath": "staticwebassets\\images\\PlacementPhotos\\swapnita.jpeg"
+    },
+    {
+      "Id": "F:\\CIIT Projects\\Own Projects\\MVCCore_BatchManagementSystemProject\\MVCCore_BatchManagementSystemProject\\wwwroot\\images\\PlacementPhotos\\unnamed.png",
+      "PackagePath": "staticwebassets\\images\\PlacementPhotos\\unnamed.png"
+    },
+    {
+      "Id": "F:\\CIIT Projects\\Own Projects\\MVCCore_BatchManagementSystemProject\\MVCCore_BatchManagementSystemProject\\wwwroot\\images\\PlacementPhotos\\vaishali chudhari.jpeg",
+      "PackagePath": "staticwebassets\\images\\PlacementPhotos\\vaishali chudhari.jpeg"
+    },
+    {
+      "Id": "F:\\CIIT Projects\\Own Projects\\MVCCore_BatchManagementSystemProject\\MVCCore_BatchManagementSystemProject\\wwwroot\\images\\PlacementPhotos\\virendra parade.jpeg",
+      "PackagePath": "staticwebassets\\images\\PlacementPhotos\\virendra parade.jpeg"
+    },
+    {
+      "Id": "F:\\CIIT Projects\\Own Projects\\MVCCore_BatchManagementSystemProject\\MVCCore_BatchManagementSystemProject\\wwwroot\\images\\PlacementPhotos\\vitthal.jpeg",
+      "PackagePath": "staticwebassets\\images\\PlacementPhotos\\vitthal.jpeg"
+    },
+    {
       "Id": "F:\\CIIT Projects\\Own Projects\\MVCCore_BatchManagementSystemProject\\MVCCore_BatchManagementSystemProject\\wwwroot\\images\\aboutus.png",
       "PackagePath": "staticwebassets\\images\\aboutus.png"
     },
     {
+      "Id": "F:\\CIIT Projects\\Own Projects\\MVCCore_BatchManagementSystemProject\\MVCCore_BatchManagementSystemProject\\wwwroot\\images\\banners\\BigData.jpg",
+      "PackagePath": "staticwebassets\\images\\banners\\BigData.jpg"
+    },
+    {
+      "Id": "F:\\CIIT Projects\\Own Projects\\MVCCore_BatchManagementSystemProject\\MVCCore_BatchManagementSystemProject\\wwwroot\\images\\banners\\DigitalMarketing.png",
+      "PackagePath": "staticwebassets\\images\\banners\\DigitalMarketing.png"
+    },
+    {
+      "Id": "F:\\CIIT Projects\\Own Projects\\MVCCore_BatchManagementSystemProject\\MVCCore_BatchManagementSystemProject\\wwwroot\\images\\banners\\Hadoop-big-data-banner.jpg",
+      "PackagePath": "staticwebassets\\images\\banners\\Hadoop-big-data-banner.jpg"
+    },
+    {
+      "Id": "F:\\CIIT Projects\\Own Projects\\MVCCore_BatchManagementSystemProject\\MVCCore_BatchManagementSystemProject\\wwwroot\\images\\banners\\Hadoop_logo.svg.png",
+      "PackagePath": "staticwebassets\\images\\banners\\Hadoop_logo.svg.png"
+    },
+    {
+      "Id": "F:\\CIIT Projects\\Own Projects\\MVCCore_BatchManagementSystemProject\\MVCCore_BatchManagementSystemProject\\wwwroot\\images\\banners\\Java_logo_icon.png",
+      "PackagePath": "staticwebassets\\images\\banners\\Java_logo_icon.png"
+    },
+    {
+      "Id": "F:\\CIIT Projects\\Own Projects\\MVCCore_BatchManagementSystemProject\\MVCCore_BatchManagementSystemProject\\wwwroot\\images\\banners\\androidlogo.png",
+      "PackagePath": "staticwebassets\\images\\banners\\androidlogo.png"
+    },
+    {
+      "Id": "F:\\CIIT Projects\\Own Projects\\MVCCore_BatchManagementSystemProject\\MVCCore_BatchManagementSystemProject\\wwwroot\\images\\banners\\angular.png",
+      "PackagePath": "staticwebassets\\images\\banners\\angular.png"
+    },
+    {
+      "Id": "F:\\CIIT Projects\\Own Projects\\MVCCore_BatchManagementSystemProject\\MVCCore_BatchManagementSystemProject\\wwwroot\\images\\banners\\banner1.jpg",
+      "PackagePath": "staticwebassets\\images\\banners\\banner1.jpg"
+    },
+    {
+      "Id": "F:\\CIIT Projects\\Own Projects\\MVCCore_BatchManagementSystemProject\\MVCCore_BatchManagementSystemProject\\wwwroot\\images\\banners\\banner2.jpg",
+      "PackagePath": "staticwebassets\\images\\banners\\banner2.jpg"
+    },
+    {
+      "Id": "F:\\CIIT Projects\\Own Projects\\MVCCore_BatchManagementSystemProject\\MVCCore_BatchManagementSystemProject\\wwwroot\\images\\banners\\bigdata&hadoop.jpg",
+      "PackagePath": "staticwebassets\\images\\banners\\bigdata&hadoop.jpg"
+    },
+    {
+      "Id": "F:\\CIIT Projects\\Own Projects\\MVCCore_BatchManagementSystemProject\\MVCCore_BatchManagementSystemProject\\wwwroot\\images\\banners\\bighadoop.png",
+      "PackagePath": "staticwebassets\\images\\banners\\bighadoop.png"
+    },
+    {
+      "Id": "F:\\CIIT Projects\\Own Projects\\MVCCore_BatchManagementSystemProject\\MVCCore_BatchManagementSystemProject\\wwwroot\\images\\banners\\data science logo.png",
+      "PackagePath": "staticwebassets\\images\\banners\\data science logo.png"
+    },
+    {
+      "Id": "F:\\CIIT Projects\\Own Projects\\MVCCore_BatchManagementSystemProject\\MVCCore_BatchManagementSystemProject\\wwwroot\\images\\banners\\dbalogos-1.png",
+      "PackagePath": "staticwebassets\\images\\banners\\dbalogos-1.png"
+    },
+    {
+      "Id": "F:\\CIIT Projects\\Own Projects\\MVCCore_BatchManagementSystemProject\\MVCCore_BatchManagementSystemProject\\wwwroot\\images\\banners\\dot-net.png",
+      "PackagePath": "staticwebassets\\images\\banners\\dot-net.png"
+    },
+    {
+      "Id": "F:\\CIIT Projects\\Own Projects\\MVCCore_BatchManagementSystemProject\\MVCCore_BatchManagementSystemProject\\wwwroot\\images\\banners\\dotnetbanner.png",
+      "PackagePath": "staticwebassets\\images\\banners\\dotnetbanner.png"
+    },
+    {
+      "Id": "F:\\CIIT Projects\\Own Projects\\MVCCore_BatchManagementSystemProject\\MVCCore_BatchManagementSystemProject\\wwwroot\\images\\banners\\dotnetlogo.png",
+      "PackagePath": "staticwebassets\\images\\banners\\dotnetlogo.png"
+    },
+    {
+      "Id": "F:\\CIIT Projects\\Own Projects\\MVCCore_BatchManagementSystemProject\\MVCCore_BatchManagementSystemProject\\wwwroot\\images\\banners\\finalbanner.png",
+      "PackagePath": "staticwebassets\\images\\banners\\finalbanner.png"
+    },
+    {
+      "Id": "F:\\CIIT Projects\\Own Projects\\MVCCore_BatchManagementSystemProject\\MVCCore_BatchManagementSystemProject\\wwwroot\\images\\banners\\frontend.png",
+      "PackagePath": "staticwebassets\\images\\banners\\frontend.png"
+    },
+    {
+      "Id": "F:\\CIIT Projects\\Own Projects\\MVCCore_BatchManagementSystemProject\\MVCCore_BatchManagementSystemProject\\wwwroot\\images\\banners\\graphicslogo.png",
+      "PackagePath": "staticwebassets\\images\\banners\\graphicslogo.png"
+    },
+    {
+      "Id": "F:\\CIIT Projects\\Own Projects\\MVCCore_BatchManagementSystemProject\\MVCCore_BatchManagementSystemProject\\wwwroot\\images\\banners\\hardwarenetworking.png",
+      "PackagePath": "staticwebassets\\images\\banners\\hardwarenetworking.png"
+    },
+    {
+      "Id": "F:\\CIIT Projects\\Own Projects\\MVCCore_BatchManagementSystemProject\\MVCCore_BatchManagementSystemProject\\wwwroot\\images\\banners\\java-logo.png",
+      "PackagePath": "staticwebassets\\images\\banners\\java-logo.png"
+    },
+    {
+      "Id": "F:\\CIIT Projects\\Own Projects\\MVCCore_BatchManagementSystemProject\\MVCCore_BatchManagementSystemProject\\wwwroot\\images\\banners\\java.jpg",
+      "PackagePath": "staticwebassets\\images\\banners\\java.jpg"
+    },
+    {
+      "Id": "F:\\CIIT Projects\\Own Projects\\MVCCore_BatchManagementSystemProject\\MVCCore_BatchManagementSystemProject\\wwwroot\\images\\banners\\javalogo.png",
+      "PackagePath": "staticwebassets\\images\\banners\\javalogo.png"
+    },
+    {
+      "Id": "F:\\CIIT Projects\\Own Projects\\MVCCore_BatchManagementSystemProject\\MVCCore_BatchManagementSystemProject\\wwwroot\\images\\banners\\mean2.png",
+      "PackagePath": "staticwebassets\\images\\banners\\mean2.png"
+    },
+    {
+      "Id": "F:\\CIIT Projects\\Own Projects\\MVCCore_BatchManagementSystemProject\\MVCCore_BatchManagementSystemProject\\wwwroot\\images\\banners\\meanlogo.png",
+      "PackagePath": "staticwebassets\\images\\banners\\meanlogo.png"
+    },
+    {
+      "Id": "F:\\CIIT Projects\\Own Projects\\MVCCore_BatchManagementSystemProject\\MVCCore_BatchManagementSystemProject\\wwwroot\\images\\banners\\meanlogo1.png",
+      "PackagePath": "staticwebassets\\images\\banners\\meanlogo1.png"
+    },
+    {
+      "Id": "F:\\CIIT Projects\\Own Projects\\MVCCore_BatchManagementSystemProject\\MVCCore_BatchManagementSystemProject\\wwwroot\\images\\banners\\microsofttech.png",
+      "PackagePath": "staticwebassets\\images\\banners\\microsofttech.png"
+    },
+    {
+      "Id": "F:\\CIIT Projects\\Own Projects\\MVCCore_BatchManagementSystemProject\\MVCCore_BatchManagementSystemProject\\wwwroot\\images\\banners\\nodejslogo.png",
+      "PackagePath": "staticwebassets\\images\\banners\\nodejslogo.png"
+    },
+    {
+      "Id": "F:\\CIIT Projects\\Own Projects\\MVCCore_BatchManagementSystemProject\\MVCCore_BatchManagementSystemProject\\wwwroot\\images\\banners\\oracle-dba.png",
+      "PackagePath": "staticwebassets\\images\\banners\\oracle-dba.png"
+    },
+    {
+      "Id": "F:\\CIIT Projects\\Own Projects\\MVCCore_BatchManagementSystemProject\\MVCCore_BatchManagementSystemProject\\wwwroot\\images\\banners\\oracledba.png",
+      "PackagePath": "staticwebassets\\images\\banners\\oracledba.png"
+    },
+    {
+      "Id": "F:\\CIIT Projects\\Own Projects\\MVCCore_BatchManagementSystemProject\\MVCCore_BatchManagementSystemProject\\wwwroot\\images\\banners\\php.png",
+      "PackagePath": "staticwebassets\\images\\banners\\php.png"
+    },
+    {
+      "Id": "F:\\CIIT Projects\\Own Projects\\MVCCore_BatchManagementSystemProject\\MVCCore_BatchManagementSystemProject\\wwwroot\\images\\banners\\phplogo.png",
+      "PackagePath": "staticwebassets\\images\\banners\\phplogo.png"
+    },
+    {
+      "Id": "F:\\CIIT Projects\\Own Projects\\MVCCore_BatchManagementSystemProject\\MVCCore_BatchManagementSystemProject\\wwwroot\\images\\banners\\pythonTraining.png",
+      "PackagePath": "staticwebassets\\images\\banners\\pythonTraining.png"
+    },
+    {
+      "Id": "F:\\CIIT Projects\\Own Projects\\MVCCore_BatchManagementSystemProject\\MVCCore_BatchManagementSystemProject\\wwwroot\\images\\banners\\pythonlogo.png",
+      "PackagePath": "staticwebassets\\images\\banners\\pythonlogo.png"
+    },
+    {
+      "Id": "F:\\CIIT Projects\\Own Projects\\MVCCore_BatchManagementSystemProject\\MVCCore_BatchManagementSystemProject\\wwwroot\\images\\banners\\reactjs.png",
+      "PackagePath": "staticwebassets\\images\\banners\\reactjs.png"
+    },
+    {
+      "Id": "F:\\CIIT Projects\\Own Projects\\MVCCore_BatchManagementSystemProject\\MVCCore_BatchManagementSystemProject\\wwwroot\\images\\banners\\software-testing.png",
+      "PackagePath": "staticwebassets\\images\\banners\\software-testing.png"
+    },
+    {
+      "Id": "F:\\CIIT Projects\\Own Projects\\MVCCore_BatchManagementSystemProject\\MVCCore_BatchManagementSystemProject\\wwwroot\\images\\banners\\testinglogo.png",
+      "PackagePath": "staticwebassets\\images\\banners\\testinglogo.png"
+    },
+    {
+      "Id": "F:\\CIIT Projects\\Own Projects\\MVCCore_BatchManagementSystemProject\\MVCCore_BatchManagementSystemProject\\wwwroot\\images\\banners\\testinglogo1.png",
+      "PackagePath": "staticwebassets\\images\\banners\\testinglogo1.png"
+    },
+    {
+      "Id": "F:\\CIIT Projects\\Own Projects\\MVCCore_BatchManagementSystemProject\\MVCCore_BatchManagementSystemProject\\wwwroot\\images\\ciit-banner.jpg",
+      "PackagePath": "staticwebassets\\images\\ciit-banner.jpg"
+    },
+    {
+      "Id": "F:\\CIIT Projects\\Own Projects\\MVCCore_BatchManagementSystemProject\\MVCCore_BatchManagementSystemProject\\wwwroot\\images\\courses\\1_1.png",
+      "PackagePath": "staticwebassets\\images\\courses\\1_1.png"
+    },
+    {
+      "Id": "F:\\CIIT Projects\\Own Projects\\MVCCore_BatchManagementSystemProject\\MVCCore_BatchManagementSystemProject\\wwwroot\\images\\courses\\Python-banner.png",
+      "PackagePath": "staticwebassets\\images\\courses\\Python-banner.png"
+    },
+    {
+      "Id": "F:\\CIIT Projects\\Own Projects\\MVCCore_BatchManagementSystemProject\\MVCCore_BatchManagementSystemProject\\wwwroot\\images\\courses\\Python-banner1.png",
+      "PackagePath": "staticwebassets\\images\\courses\\Python-banner1.png"
+    },
+    {
+      "Id": "F:\\CIIT Projects\\Own Projects\\MVCCore_BatchManagementSystemProject\\MVCCore_BatchManagementSystemProject\\wwwroot\\images\\courses\\Python.svg",
+      "PackagePath": "staticwebassets\\images\\courses\\Python.svg"
+    },
+    {
+      "Id": "F:\\CIIT Projects\\Own Projects\\MVCCore_BatchManagementSystemProject\\MVCCore_BatchManagementSystemProject\\wwwroot\\images\\courses\\android.jpg",
+      "PackagePath": "staticwebassets\\images\\courses\\android.jpg"
+    },
+    {
+      "Id": "F:\\CIIT Projects\\Own Projects\\MVCCore_BatchManagementSystemProject\\MVCCore_BatchManagementSystemProject\\wwwroot\\images\\courses\\android1.png",
+      "PackagePath": "staticwebassets\\images\\courses\\android1.png"
+    },
+    {
+      "Id": "F:\\CIIT Projects\\Own Projects\\MVCCore_BatchManagementSystemProject\\MVCCore_BatchManagementSystemProject\\wwwroot\\images\\courses\\angular copy.png",
+      "PackagePath": "staticwebassets\\images\\courses\\angular copy.png"
+    },
+    {
+      "Id": "F:\\CIIT Projects\\Own Projects\\MVCCore_BatchManagementSystemProject\\MVCCore_BatchManagementSystemProject\\wwwroot\\images\\courses\\angular1.png",
+      "PackagePath": "staticwebassets\\images\\courses\\angular1.png"
+    },
+    {
+      "Id": "F:\\CIIT Projects\\Own Projects\\MVCCore_BatchManagementSystemProject\\MVCCore_BatchManagementSystemProject\\wwwroot\\images\\courses\\angular2.png",
+      "PackagePath": "staticwebassets\\images\\courses\\angular2.png"
+    },
+    {
+      "Id": "F:\\CIIT Projects\\Own Projects\\MVCCore_BatchManagementSystemProject\\MVCCore_BatchManagementSystemProject\\wwwroot\\images\\courses\\angular2.webp",
+      "PackagePath": "staticwebassets\\images\\courses\\angular2.webp"
+    },
+    {
+      "Id": "F:\\CIIT Projects\\Own Projects\\MVCCore_BatchManagementSystemProject\\MVCCore_BatchManagementSystemProject\\wwwroot\\images\\courses\\dba.jpg",
+      "PackagePath": "staticwebassets\\images\\courses\\dba.jpg"
+    },
+    {
+      "Id": "F:\\CIIT Projects\\Own Projects\\MVCCore_BatchManagementSystemProject\\MVCCore_BatchManagementSystemProject\\wwwroot\\images\\courses\\dot net.jpg",
+      "PackagePath": "staticwebassets\\images\\courses\\dot net.jpg"
+    },
+    {
+      "Id": "F:\\CIIT Projects\\Own Projects\\MVCCore_BatchManagementSystemProject\\MVCCore_BatchManagementSystemProject\\wwwroot\\images\\courses\\dotnet.png",
+      "PackagePath": "staticwebassets\\images\\courses\\dotnet.png"
+    },
+    {
+      "Id": "F:\\CIIT Projects\\Own Projects\\MVCCore_BatchManagementSystemProject\\MVCCore_BatchManagementSystemProject\\wwwroot\\images\\courses\\dotnet1.png",
+      "PackagePath": "staticwebassets\\images\\courses\\dotnet1.png"
+    },
+    {
+      "Id": "F:\\CIIT Projects\\Own Projects\\MVCCore_BatchManagementSystemProject\\MVCCore_BatchManagementSystemProject\\wwwroot\\images\\courses\\java.jpeg",
+      "PackagePath": "staticwebassets\\images\\courses\\java.jpeg"
+    },
+    {
+      "Id": "F:\\CIIT Projects\\Own Projects\\MVCCore_BatchManagementSystemProject\\MVCCore_BatchManagementSystemProject\\wwwroot\\images\\courses\\java1.png",
+      "PackagePath": "staticwebassets\\images\\courses\\java1.png"
+    },
+    {
+      "Id": "F:\\CIIT Projects\\Own Projects\\MVCCore_BatchManagementSystemProject\\MVCCore_BatchManagementSystemProject\\wwwroot\\images\\courses\\java2.jpg",
+      "PackagePath": "staticwebassets\\images\\courses\\java2.jpg"
+    },
+    {
+      "Id": "F:\\CIIT Projects\\Own Projects\\MVCCore_BatchManagementSystemProject\\MVCCore_BatchManagementSystemProject\\wwwroot\\images\\courses\\mean-stacks.jpg",
+      "PackagePath": "staticwebassets\\images\\courses\\mean-stacks.jpg"
+    },
+    {
+      "Id": "F:\\CIIT Projects\\Own Projects\\MVCCore_BatchManagementSystemProject\\MVCCore_BatchManagementSystemProject\\wwwroot\\images\\courses\\mean1.png",
+      "PackagePath": "staticwebassets\\images\\courses\\mean1.png"
+    },
+    {
+      "Id": "F:\\CIIT Projects\\Own Projects\\MVCCore_BatchManagementSystemProject\\MVCCore_BatchManagementSystemProject\\wwwroot\\images\\courses\\mean2.jpg",
+      "PackagePath": "staticwebassets\\images\\courses\\mean2.jpg"
+    },
+    {
+      "Id": "F:\\CIIT Projects\\Own Projects\\MVCCore_BatchManagementSystemProject\\MVCCore_BatchManagementSystemProject\\wwwroot\\images\\courses\\meanlogo.png",
+      "PackagePath": "staticwebassets\\images\\courses\\meanlogo.png"
+    },
+    {
+      "Id": "F:\\CIIT Projects\\Own Projects\\MVCCore_BatchManagementSystemProject\\MVCCore_BatchManagementSystemProject\\wwwroot\\images\\courses\\node-js.jpg",
+      "PackagePath": "staticwebassets\\images\\courses\\node-js.jpg"
+    },
+    {
+      "Id": "F:\\CIIT Projects\\Own Projects\\MVCCore_BatchManagementSystemProject\\MVCCore_BatchManagementSystemProject\\wwwroot\\images\\courses\\oracle1.jpg",
+      "PackagePath": "staticwebassets\\images\\courses\\oracle1.jpg"
+    },
+    {
+      "Id": "F:\\CIIT Projects\\Own Projects\\MVCCore_BatchManagementSystemProject\\MVCCore_BatchManagementSystemProject\\wwwroot\\images\\courses\\php.png",
+      "PackagePath": "staticwebassets\\images\\courses\\php.png"
+    },
+    {
+      "Id": "F:\\CIIT Projects\\Own Projects\\MVCCore_BatchManagementSystemProject\\MVCCore_BatchManagementSystemProject\\wwwroot\\images\\courses\\php2.png",
+      "PackagePath": "staticwebassets\\images\\courses\\php2.png"
+    },
+    {
+      "Id": "F:\\CIIT Projects\\Own Projects\\MVCCore_BatchManagementSystemProject\\MVCCore_BatchManagementSystemProject\\wwwroot\\images\\courses\\php3.png",
+      "PackagePath": "staticwebassets\\images\\courses\\php3.png"
+    },
+    {
+      "Id": "F:\\CIIT Projects\\Own Projects\\MVCCore_BatchManagementSystemProject\\MVCCore_BatchManagementSystemProject\\wwwroot\\images\\courses\\python-development.jpg",
+      "PackagePath": "staticwebassets\\images\\courses\\python-development.jpg"
+    },
+    {
+      "Id": "F:\\CIIT Projects\\Own Projects\\MVCCore_BatchManagementSystemProject\\MVCCore_BatchManagementSystemProject\\wwwroot\\images\\courses\\python.jpg",
+      "PackagePath": "staticwebassets\\images\\courses\\python.jpg"
+    },
+    {
+      "Id": "F:\\CIIT Projects\\Own Projects\\MVCCore_BatchManagementSystemProject\\MVCCore_BatchManagementSystemProject\\wwwroot\\images\\courses\\python122.jpg",
+      "PackagePath": "staticwebassets\\images\\courses\\python122.jpg"
+    },
+    {
+      "Id": "F:\\CIIT Projects\\Own Projects\\MVCCore_BatchManagementSystemProject\\MVCCore_BatchManagementSystemProject\\wwwroot\\images\\courses\\python2.png",
+      "PackagePath": "staticwebassets\\images\\courses\\python2.png"
+    },
+    {
+      "Id": "F:\\CIIT Projects\\Own Projects\\MVCCore_BatchManagementSystemProject\\MVCCore_BatchManagementSystemProject\\wwwroot\\images\\courses\\reactjs2.png",
+      "PackagePath": "staticwebassets\\images\\courses\\reactjs2.png"
+    },
+    {
+      "Id": "F:\\CIIT Projects\\Own Projects\\MVCCore_BatchManagementSystemProject\\MVCCore_BatchManagementSystemProject\\wwwroot\\images\\courses\\selenium2.jpeg",
+      "PackagePath": "staticwebassets\\images\\courses\\selenium2.jpeg"
+    },
+    {
+      "Id": "F:\\CIIT Projects\\Own Projects\\MVCCore_BatchManagementSystemProject\\MVCCore_BatchManagementSystemProject\\wwwroot\\images\\courses\\software-testing copy.png",
+      "PackagePath": "staticwebassets\\images\\courses\\software-testing copy.png"
+    },
+    {
       "Id": "F:\\CIIT Projects\\Own Projects\\MVCCore_BatchManagementSystemProject\\MVCCore_BatchManagementSystemProject\\wwwroot\\images\\download.png",
       "PackagePath": "staticwebassets\\images\\download.png"
+    },
+    {
+      "Id": "F:\\CIIT Projects\\Own Projects\\MVCCore_BatchManagementSystemProject\\MVCCore_BatchManagementSystemProject\\wwwroot\\images\\enquiry.png",
+      "PackagePath": "staticwebassets\\images\\enquiry.png"
+    },
+    {
+      "Id": "F:\\CIIT Projects\\Own Projects\\MVCCore_BatchManagementSystemProject\\MVCCore_BatchManagementSystemProject\\wwwroot\\images\\feedback.jpg",
+      "PackagePath": "staticwebassets\\images\\feedback.jpg"
     },
     {
       "Id": "F:\\CIIT Projects\\Own Projects\\MVCCore_BatchManagementSystemProject\\MVCCore_BatchManagementSystemProject\\wwwroot\\images\\home.png",
@@ -29,12 +953,300 @@
       "PackagePath": "staticwebassets\\images\\mainlogo.png"
     },
     {
+      "Id": "F:\\CIIT Projects\\Own Projects\\MVCCore_BatchManagementSystemProject\\MVCCore_BatchManagementSystemProject\\wwwroot\\images\\placement.jpg",
+      "PackagePath": "staticwebassets\\images\\placement.jpg"
+    },
+    {
+      "Id": "F:\\CIIT Projects\\Own Projects\\MVCCore_BatchManagementSystemProject\\MVCCore_BatchManagementSystemProject\\wwwroot\\images\\slides\\1.jpg",
+      "PackagePath": "staticwebassets\\images\\slides\\1.jpg"
+    },
+    {
+      "Id": "F:\\CIIT Projects\\Own Projects\\MVCCore_BatchManagementSystemProject\\MVCCore_BatchManagementSystemProject\\wwwroot\\images\\slides\\10.jpg",
+      "PackagePath": "staticwebassets\\images\\slides\\10.jpg"
+    },
+    {
+      "Id": "F:\\CIIT Projects\\Own Projects\\MVCCore_BatchManagementSystemProject\\MVCCore_BatchManagementSystemProject\\wwwroot\\images\\slides\\11.jpg",
+      "PackagePath": "staticwebassets\\images\\slides\\11.jpg"
+    },
+    {
+      "Id": "F:\\CIIT Projects\\Own Projects\\MVCCore_BatchManagementSystemProject\\MVCCore_BatchManagementSystemProject\\wwwroot\\images\\slides\\12.jpg",
+      "PackagePath": "staticwebassets\\images\\slides\\12.jpg"
+    },
+    {
+      "Id": "F:\\CIIT Projects\\Own Projects\\MVCCore_BatchManagementSystemProject\\MVCCore_BatchManagementSystemProject\\wwwroot\\images\\slides\\13.jpg",
+      "PackagePath": "staticwebassets\\images\\slides\\13.jpg"
+    },
+    {
+      "Id": "F:\\CIIT Projects\\Own Projects\\MVCCore_BatchManagementSystemProject\\MVCCore_BatchManagementSystemProject\\wwwroot\\images\\slides\\14.jpg",
+      "PackagePath": "staticwebassets\\images\\slides\\14.jpg"
+    },
+    {
+      "Id": "F:\\CIIT Projects\\Own Projects\\MVCCore_BatchManagementSystemProject\\MVCCore_BatchManagementSystemProject\\wwwroot\\images\\slides\\15.jpg",
+      "PackagePath": "staticwebassets\\images\\slides\\15.jpg"
+    },
+    {
+      "Id": "F:\\CIIT Projects\\Own Projects\\MVCCore_BatchManagementSystemProject\\MVCCore_BatchManagementSystemProject\\wwwroot\\images\\slides\\16.jpg",
+      "PackagePath": "staticwebassets\\images\\slides\\16.jpg"
+    },
+    {
+      "Id": "F:\\CIIT Projects\\Own Projects\\MVCCore_BatchManagementSystemProject\\MVCCore_BatchManagementSystemProject\\wwwroot\\images\\slides\\17.jpg",
+      "PackagePath": "staticwebassets\\images\\slides\\17.jpg"
+    },
+    {
+      "Id": "F:\\CIIT Projects\\Own Projects\\MVCCore_BatchManagementSystemProject\\MVCCore_BatchManagementSystemProject\\wwwroot\\images\\slides\\18.jpg",
+      "PackagePath": "staticwebassets\\images\\slides\\18.jpg"
+    },
+    {
+      "Id": "F:\\CIIT Projects\\Own Projects\\MVCCore_BatchManagementSystemProject\\MVCCore_BatchManagementSystemProject\\wwwroot\\images\\slides\\19.jpeg",
+      "PackagePath": "staticwebassets\\images\\slides\\19.jpeg"
+    },
+    {
+      "Id": "F:\\CIIT Projects\\Own Projects\\MVCCore_BatchManagementSystemProject\\MVCCore_BatchManagementSystemProject\\wwwroot\\images\\slides\\2.jpg",
+      "PackagePath": "staticwebassets\\images\\slides\\2.jpg"
+    },
+    {
+      "Id": "F:\\CIIT Projects\\Own Projects\\MVCCore_BatchManagementSystemProject\\MVCCore_BatchManagementSystemProject\\wwwroot\\images\\slides\\20.jpg",
+      "PackagePath": "staticwebassets\\images\\slides\\20.jpg"
+    },
+    {
+      "Id": "F:\\CIIT Projects\\Own Projects\\MVCCore_BatchManagementSystemProject\\MVCCore_BatchManagementSystemProject\\wwwroot\\images\\slides\\21.JPG",
+      "PackagePath": "staticwebassets\\images\\slides\\21.JPG"
+    },
+    {
+      "Id": "F:\\CIIT Projects\\Own Projects\\MVCCore_BatchManagementSystemProject\\MVCCore_BatchManagementSystemProject\\wwwroot\\images\\slides\\22.JPG",
+      "PackagePath": "staticwebassets\\images\\slides\\22.JPG"
+    },
+    {
+      "Id": "F:\\CIIT Projects\\Own Projects\\MVCCore_BatchManagementSystemProject\\MVCCore_BatchManagementSystemProject\\wwwroot\\images\\slides\\23.JPG",
+      "PackagePath": "staticwebassets\\images\\slides\\23.JPG"
+    },
+    {
+      "Id": "F:\\CIIT Projects\\Own Projects\\MVCCore_BatchManagementSystemProject\\MVCCore_BatchManagementSystemProject\\wwwroot\\images\\slides\\24.JPG",
+      "PackagePath": "staticwebassets\\images\\slides\\24.JPG"
+    },
+    {
+      "Id": "F:\\CIIT Projects\\Own Projects\\MVCCore_BatchManagementSystemProject\\MVCCore_BatchManagementSystemProject\\wwwroot\\images\\slides\\25.jpg",
+      "PackagePath": "staticwebassets\\images\\slides\\25.jpg"
+    },
+    {
+      "Id": "F:\\CIIT Projects\\Own Projects\\MVCCore_BatchManagementSystemProject\\MVCCore_BatchManagementSystemProject\\wwwroot\\images\\slides\\26.jpg",
+      "PackagePath": "staticwebassets\\images\\slides\\26.jpg"
+    },
+    {
+      "Id": "F:\\CIIT Projects\\Own Projects\\MVCCore_BatchManagementSystemProject\\MVCCore_BatchManagementSystemProject\\wwwroot\\images\\slides\\27.jpg",
+      "PackagePath": "staticwebassets\\images\\slides\\27.jpg"
+    },
+    {
+      "Id": "F:\\CIIT Projects\\Own Projects\\MVCCore_BatchManagementSystemProject\\MVCCore_BatchManagementSystemProject\\wwwroot\\images\\slides\\28.jpg",
+      "PackagePath": "staticwebassets\\images\\slides\\28.jpg"
+    },
+    {
+      "Id": "F:\\CIIT Projects\\Own Projects\\MVCCore_BatchManagementSystemProject\\MVCCore_BatchManagementSystemProject\\wwwroot\\images\\slides\\29.jpg",
+      "PackagePath": "staticwebassets\\images\\slides\\29.jpg"
+    },
+    {
+      "Id": "F:\\CIIT Projects\\Own Projects\\MVCCore_BatchManagementSystemProject\\MVCCore_BatchManagementSystemProject\\wwwroot\\images\\slides\\3.jpg",
+      "PackagePath": "staticwebassets\\images\\slides\\3.jpg"
+    },
+    {
+      "Id": "F:\\CIIT Projects\\Own Projects\\MVCCore_BatchManagementSystemProject\\MVCCore_BatchManagementSystemProject\\wwwroot\\images\\slides\\30.png",
+      "PackagePath": "staticwebassets\\images\\slides\\30.png"
+    },
+    {
+      "Id": "F:\\CIIT Projects\\Own Projects\\MVCCore_BatchManagementSystemProject\\MVCCore_BatchManagementSystemProject\\wwwroot\\images\\slides\\31.png",
+      "PackagePath": "staticwebassets\\images\\slides\\31.png"
+    },
+    {
+      "Id": "F:\\CIIT Projects\\Own Projects\\MVCCore_BatchManagementSystemProject\\MVCCore_BatchManagementSystemProject\\wwwroot\\images\\slides\\32.jpeg",
+      "PackagePath": "staticwebassets\\images\\slides\\32.jpeg"
+    },
+    {
+      "Id": "F:\\CIIT Projects\\Own Projects\\MVCCore_BatchManagementSystemProject\\MVCCore_BatchManagementSystemProject\\wwwroot\\images\\slides\\33.jpeg",
+      "PackagePath": "staticwebassets\\images\\slides\\33.jpeg"
+    },
+    {
+      "Id": "F:\\CIIT Projects\\Own Projects\\MVCCore_BatchManagementSystemProject\\MVCCore_BatchManagementSystemProject\\wwwroot\\images\\slides\\34.jpeg",
+      "PackagePath": "staticwebassets\\images\\slides\\34.jpeg"
+    },
+    {
+      "Id": "F:\\CIIT Projects\\Own Projects\\MVCCore_BatchManagementSystemProject\\MVCCore_BatchManagementSystemProject\\wwwroot\\images\\slides\\35.jpeg",
+      "PackagePath": "staticwebassets\\images\\slides\\35.jpeg"
+    },
+    {
+      "Id": "F:\\CIIT Projects\\Own Projects\\MVCCore_BatchManagementSystemProject\\MVCCore_BatchManagementSystemProject\\wwwroot\\images\\slides\\36.jpeg",
+      "PackagePath": "staticwebassets\\images\\slides\\36.jpeg"
+    },
+    {
+      "Id": "F:\\CIIT Projects\\Own Projects\\MVCCore_BatchManagementSystemProject\\MVCCore_BatchManagementSystemProject\\wwwroot\\images\\slides\\37.jpeg",
+      "PackagePath": "staticwebassets\\images\\slides\\37.jpeg"
+    },
+    {
+      "Id": "F:\\CIIT Projects\\Own Projects\\MVCCore_BatchManagementSystemProject\\MVCCore_BatchManagementSystemProject\\wwwroot\\images\\slides\\39.jpg",
+      "PackagePath": "staticwebassets\\images\\slides\\39.jpg"
+    },
+    {
+      "Id": "F:\\CIIT Projects\\Own Projects\\MVCCore_BatchManagementSystemProject\\MVCCore_BatchManagementSystemProject\\wwwroot\\images\\slides\\4.jpg",
+      "PackagePath": "staticwebassets\\images\\slides\\4.jpg"
+    },
+    {
+      "Id": "F:\\CIIT Projects\\Own Projects\\MVCCore_BatchManagementSystemProject\\MVCCore_BatchManagementSystemProject\\wwwroot\\images\\slides\\40.jpg",
+      "PackagePath": "staticwebassets\\images\\slides\\40.jpg"
+    },
+    {
+      "Id": "F:\\CIIT Projects\\Own Projects\\MVCCore_BatchManagementSystemProject\\MVCCore_BatchManagementSystemProject\\wwwroot\\images\\slides\\41.jpg",
+      "PackagePath": "staticwebassets\\images\\slides\\41.jpg"
+    },
+    {
+      "Id": "F:\\CIIT Projects\\Own Projects\\MVCCore_BatchManagementSystemProject\\MVCCore_BatchManagementSystemProject\\wwwroot\\images\\slides\\42.jpg",
+      "PackagePath": "staticwebassets\\images\\slides\\42.jpg"
+    },
+    {
+      "Id": "F:\\CIIT Projects\\Own Projects\\MVCCore_BatchManagementSystemProject\\MVCCore_BatchManagementSystemProject\\wwwroot\\images\\slides\\43.jpg",
+      "PackagePath": "staticwebassets\\images\\slides\\43.jpg"
+    },
+    {
+      "Id": "F:\\CIIT Projects\\Own Projects\\MVCCore_BatchManagementSystemProject\\MVCCore_BatchManagementSystemProject\\wwwroot\\images\\slides\\44.jpg",
+      "PackagePath": "staticwebassets\\images\\slides\\44.jpg"
+    },
+    {
+      "Id": "F:\\CIIT Projects\\Own Projects\\MVCCore_BatchManagementSystemProject\\MVCCore_BatchManagementSystemProject\\wwwroot\\images\\slides\\5.jpg",
+      "PackagePath": "staticwebassets\\images\\slides\\5.jpg"
+    },
+    {
+      "Id": "F:\\CIIT Projects\\Own Projects\\MVCCore_BatchManagementSystemProject\\MVCCore_BatchManagementSystemProject\\wwwroot\\images\\slides\\50.jpeg",
+      "PackagePath": "staticwebassets\\images\\slides\\50.jpeg"
+    },
+    {
+      "Id": "F:\\CIIT Projects\\Own Projects\\MVCCore_BatchManagementSystemProject\\MVCCore_BatchManagementSystemProject\\wwwroot\\images\\slides\\55.jpeg",
+      "PackagePath": "staticwebassets\\images\\slides\\55.jpeg"
+    },
+    {
+      "Id": "F:\\CIIT Projects\\Own Projects\\MVCCore_BatchManagementSystemProject\\MVCCore_BatchManagementSystemProject\\wwwroot\\images\\slides\\57.jpeg",
+      "PackagePath": "staticwebassets\\images\\slides\\57.jpeg"
+    },
+    {
+      "Id": "F:\\CIIT Projects\\Own Projects\\MVCCore_BatchManagementSystemProject\\MVCCore_BatchManagementSystemProject\\wwwroot\\images\\slides\\6.jpg",
+      "PackagePath": "staticwebassets\\images\\slides\\6.jpg"
+    },
+    {
+      "Id": "F:\\CIIT Projects\\Own Projects\\MVCCore_BatchManagementSystemProject\\MVCCore_BatchManagementSystemProject\\wwwroot\\images\\slides\\60.jpeg",
+      "PackagePath": "staticwebassets\\images\\slides\\60.jpeg"
+    },
+    {
+      "Id": "F:\\CIIT Projects\\Own Projects\\MVCCore_BatchManagementSystemProject\\MVCCore_BatchManagementSystemProject\\wwwroot\\images\\slides\\61.jpg",
+      "PackagePath": "staticwebassets\\images\\slides\\61.jpg"
+    },
+    {
+      "Id": "F:\\CIIT Projects\\Own Projects\\MVCCore_BatchManagementSystemProject\\MVCCore_BatchManagementSystemProject\\wwwroot\\images\\slides\\62.jpeg",
+      "PackagePath": "staticwebassets\\images\\slides\\62.jpeg"
+    },
+    {
+      "Id": "F:\\CIIT Projects\\Own Projects\\MVCCore_BatchManagementSystemProject\\MVCCore_BatchManagementSystemProject\\wwwroot\\images\\slides\\63.jpeg",
+      "PackagePath": "staticwebassets\\images\\slides\\63.jpeg"
+    },
+    {
+      "Id": "F:\\CIIT Projects\\Own Projects\\MVCCore_BatchManagementSystemProject\\MVCCore_BatchManagementSystemProject\\wwwroot\\images\\slides\\64.jpeg",
+      "PackagePath": "staticwebassets\\images\\slides\\64.jpeg"
+    },
+    {
+      "Id": "F:\\CIIT Projects\\Own Projects\\MVCCore_BatchManagementSystemProject\\MVCCore_BatchManagementSystemProject\\wwwroot\\images\\slides\\65.jpeg",
+      "PackagePath": "staticwebassets\\images\\slides\\65.jpeg"
+    },
+    {
+      "Id": "F:\\CIIT Projects\\Own Projects\\MVCCore_BatchManagementSystemProject\\MVCCore_BatchManagementSystemProject\\wwwroot\\images\\slides\\69.jpeg",
+      "PackagePath": "staticwebassets\\images\\slides\\69.jpeg"
+    },
+    {
+      "Id": "F:\\CIIT Projects\\Own Projects\\MVCCore_BatchManagementSystemProject\\MVCCore_BatchManagementSystemProject\\wwwroot\\images\\slides\\7.jpg",
+      "PackagePath": "staticwebassets\\images\\slides\\7.jpg"
+    },
+    {
+      "Id": "F:\\CIIT Projects\\Own Projects\\MVCCore_BatchManagementSystemProject\\MVCCore_BatchManagementSystemProject\\wwwroot\\images\\slides\\70.jpeg",
+      "PackagePath": "staticwebassets\\images\\slides\\70.jpeg"
+    },
+    {
+      "Id": "F:\\CIIT Projects\\Own Projects\\MVCCore_BatchManagementSystemProject\\MVCCore_BatchManagementSystemProject\\wwwroot\\images\\slides\\71.jpeg",
+      "PackagePath": "staticwebassets\\images\\slides\\71.jpeg"
+    },
+    {
+      "Id": "F:\\CIIT Projects\\Own Projects\\MVCCore_BatchManagementSystemProject\\MVCCore_BatchManagementSystemProject\\wwwroot\\images\\slides\\72.jpeg",
+      "PackagePath": "staticwebassets\\images\\slides\\72.jpeg"
+    },
+    {
+      "Id": "F:\\CIIT Projects\\Own Projects\\MVCCore_BatchManagementSystemProject\\MVCCore_BatchManagementSystemProject\\wwwroot\\images\\slides\\8.jpg",
+      "PackagePath": "staticwebassets\\images\\slides\\8.jpg"
+    },
+    {
+      "Id": "F:\\CIIT Projects\\Own Projects\\MVCCore_BatchManagementSystemProject\\MVCCore_BatchManagementSystemProject\\wwwroot\\images\\slides\\9.jpg",
+      "PackagePath": "staticwebassets\\images\\slides\\9.jpg"
+    },
+    {
+      "Id": "F:\\CIIT Projects\\Own Projects\\MVCCore_BatchManagementSystemProject\\MVCCore_BatchManagementSystemProject\\wwwroot\\images\\slides\\img1.png",
+      "PackagePath": "staticwebassets\\images\\slides\\img1.png"
+    },
+    {
+      "Id": "F:\\CIIT Projects\\Own Projects\\MVCCore_BatchManagementSystemProject\\MVCCore_BatchManagementSystemProject\\wwwroot\\images\\slides\\img2.png",
+      "PackagePath": "staticwebassets\\images\\slides\\img2.png"
+    },
+    {
+      "Id": "F:\\CIIT Projects\\Own Projects\\MVCCore_BatchManagementSystemProject\\MVCCore_BatchManagementSystemProject\\wwwroot\\images\\slides\\img3.png",
+      "PackagePath": "staticwebassets\\images\\slides\\img3.png"
+    },
+    {
+      "Id": "F:\\CIIT Projects\\Own Projects\\MVCCore_BatchManagementSystemProject\\MVCCore_BatchManagementSystemProject\\wwwroot\\images\\slides\\img5.png",
+      "PackagePath": "staticwebassets\\images\\slides\\img5.png"
+    },
+    {
+      "Id": "F:\\CIIT Projects\\Own Projects\\MVCCore_BatchManagementSystemProject\\MVCCore_BatchManagementSystemProject\\wwwroot\\images\\slides\\pic2.jpg",
+      "PackagePath": "staticwebassets\\images\\slides\\pic2.jpg"
+    },
+    {
+      "Id": "F:\\CIIT Projects\\Own Projects\\MVCCore_BatchManagementSystemProject\\MVCCore_BatchManagementSystemProject\\wwwroot\\images\\slides\\pic3.jpg",
+      "PackagePath": "staticwebassets\\images\\slides\\pic3.jpg"
+    },
+    {
+      "Id": "F:\\CIIT Projects\\Own Projects\\MVCCore_BatchManagementSystemProject\\MVCCore_BatchManagementSystemProject\\wwwroot\\images\\slides\\pic4.jpg",
+      "PackagePath": "staticwebassets\\images\\slides\\pic4.jpg"
+    },
+    {
+      "Id": "F:\\CIIT Projects\\Own Projects\\MVCCore_BatchManagementSystemProject\\MVCCore_BatchManagementSystemProject\\wwwroot\\images\\slides\\pic5.jpg",
+      "PackagePath": "staticwebassets\\images\\slides\\pic5.jpg"
+    },
+    {
+      "Id": "F:\\CIIT Projects\\Own Projects\\MVCCore_BatchManagementSystemProject\\MVCCore_BatchManagementSystemProject\\wwwroot\\images\\slides\\pic6.jpg",
+      "PackagePath": "staticwebassets\\images\\slides\\pic6.jpg"
+    },
+    {
+      "Id": "F:\\CIIT Projects\\Own Projects\\MVCCore_BatchManagementSystemProject\\MVCCore_BatchManagementSystemProject\\wwwroot\\images\\slides\\pic7.jpg",
+      "PackagePath": "staticwebassets\\images\\slides\\pic7.jpg"
+    },
+    {
+      "Id": "F:\\CIIT Projects\\Own Projects\\MVCCore_BatchManagementSystemProject\\MVCCore_BatchManagementSystemProject\\wwwroot\\images\\slides\\pic8.jpg",
+      "PackagePath": "staticwebassets\\images\\slides\\pic8.jpg"
+    },
+    {
+      "Id": "F:\\CIIT Projects\\Own Projects\\MVCCore_BatchManagementSystemProject\\MVCCore_BatchManagementSystemProject\\wwwroot\\images\\slides\\pic9.jpg",
+      "PackagePath": "staticwebassets\\images\\slides\\pic9.jpg"
+    },
+    {
+      "Id": "F:\\CIIT Projects\\Own Projects\\MVCCore_BatchManagementSystemProject\\MVCCore_BatchManagementSystemProject\\wwwroot\\images\\testb.png",
+      "PackagePath": "staticwebassets\\images\\testb.png"
+    },
+    {
+      "Id": "F:\\CIIT Projects\\Own Projects\\MVCCore_BatchManagementSystemProject\\MVCCore_BatchManagementSystemProject\\wwwroot\\images\\testg.png",
+      "PackagePath": "staticwebassets\\images\\testg.png"
+    },
+    {
       "Id": "F:\\CIIT Projects\\Own Projects\\MVCCore_BatchManagementSystemProject\\MVCCore_BatchManagementSystemProject\\wwwroot\\images\\trainers\\Akash Barage.jpg",
       "PackagePath": "staticwebassets\\images\\trainers\\Akash Barage.jpg"
     },
     {
       "Id": "F:\\CIIT Projects\\Own Projects\\MVCCore_BatchManagementSystemProject\\MVCCore_BatchManagementSystemProject\\wwwroot\\images\\trainers\\CIIT Institute.jpeg",
       "PackagePath": "staticwebassets\\images\\trainers\\CIIT Institute.jpeg"
+    },
+    {
+      "Id": "F:\\CIIT Projects\\Own Projects\\MVCCore_BatchManagementSystemProject\\MVCCore_BatchManagementSystemProject\\wwwroot\\images\\trainers\\Chetan Sonwalkar.png",
+      "PackagePath": "staticwebassets\\images\\trainers\\Chetan Sonwalkar.png"
     },
     {
       "Id": "F:\\CIIT Projects\\Own Projects\\MVCCore_BatchManagementSystemProject\\MVCCore_BatchManagementSystemProject\\wwwroot\\images\\trainers\\Gayatri Gadadare.png",
@@ -55,6 +1267,18 @@
     {
       "Id": "F:\\CIIT Projects\\Own Projects\\MVCCore_BatchManagementSystemProject\\MVCCore_BatchManagementSystemProject\\wwwroot\\images\\users\\Amit Sharma.jfif",
       "PackagePath": "staticwebassets\\images\\users\\Amit Sharma.jfif"
+    },
+    {
+      "Id": "F:\\CIIT Projects\\Own Projects\\MVCCore_BatchManagementSystemProject\\MVCCore_BatchManagementSystemProject\\wwwroot\\images\\users\\Chetan Sonawalkar.png",
+      "PackagePath": "staticwebassets\\images\\users\\Chetan Sonawalkar.png"
+    },
+    {
+      "Id": "F:\\CIIT Projects\\Own Projects\\MVCCore_BatchManagementSystemProject\\MVCCore_BatchManagementSystemProject\\wwwroot\\images\\users\\Chetan Sonwalkar.png",
+      "PackagePath": "staticwebassets\\images\\users\\Chetan Sonwalkar.png"
+    },
+    {
+      "Id": "F:\\CIIT Projects\\Own Projects\\MVCCore_BatchManagementSystemProject\\MVCCore_BatchManagementSystemProject\\wwwroot\\images\\users\\Gayatri Gadadare.png",
+      "PackagePath": "staticwebassets\\images\\users\\Gayatri Gadadare.png"
     },
     {
       "Id": "F:\\CIIT Projects\\Own Projects\\MVCCore_BatchManagementSystemProject\\MVCCore_BatchManagementSystemProject\\wwwroot\\images\\users\\Mahesh Gholap.jpg",

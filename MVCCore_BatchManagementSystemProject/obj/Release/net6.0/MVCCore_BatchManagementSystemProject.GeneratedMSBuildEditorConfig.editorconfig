@@ -10,6 +10,8 @@ build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = MVCCore_BatchManagementSystemProject
 build_property.RootNamespace = MVCCore_BatchManagementSystemProject
 build_property.ProjectDir = F:\CIIT Projects\Own Projects\MVCCore_BatchManagementSystemProject\MVCCore_BatchManagementSystemProject\
+build_property.EnableComHosting = 
+build_property.EnableGeneratedComInterfaceComImportInterop = 
 build_property.RazorLangVersion = 6.0
 build_property.SupportLocalizedComponentNames = 
 build_property.GenerateRazorMetadataSourceChecksumAttributes = true
@@ -30,6 +32,14 @@ build_metadata.AdditionalFiles.CssScope =
 
 [F:/CIIT Projects/Own Projects/MVCCore_BatchManagementSystemProject/MVCCore_BatchManagementSystemProject/Areas/Admin/Views/Content/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcQ29udGVudFxJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[F:/CIIT Projects/Own Projects/MVCCore_BatchManagementSystemProject/MVCCore_BatchManagementSystemProject/Areas/Admin/Views/Course/CourseSyllabus.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcQ291cnNlXENvdXJzZVN5bGxhYnVzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[F:/CIIT Projects/Own Projects/MVCCore_BatchManagementSystemProject/MVCCore_BatchManagementSystemProject/Areas/Admin/Views/Course/CreatePDFDocument.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcQ291cnNlXENyZWF0ZVBERkRvY3VtZW50LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
 [F:/CIIT Projects/Own Projects/MVCCore_BatchManagementSystemProject/MVCCore_BatchManagementSystemProject/Areas/Admin/Views/Course/Index.cshtml]
@@ -152,8 +162,104 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcVHJhaW5lclxWaWV3c1xUcmFpbmVyUHJvZmlsZVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
+[F:/CIIT Projects/Own Projects/MVCCore_BatchManagementSystemProject/MVCCore_BatchManagementSystemProject/Views/About/CIIT.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWJvdXRcQ0lJVC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[F:/CIIT Projects/Own Projects/MVCCore_BatchManagementSystemProject/MVCCore_BatchManagementSystemProject/Views/About/Contact.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWJvdXRcQ29udGFjdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[F:/CIIT Projects/Own Projects/MVCCore_BatchManagementSystemProject/MVCCore_BatchManagementSystemProject/Views/About/Founder.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWJvdXRcRm91bmRlci5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[F:/CIIT Projects/Own Projects/MVCCore_BatchManagementSystemProject/MVCCore_BatchManagementSystemProject/Views/About/Mentors.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWJvdXRcTWVudG9ycy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[F:/CIIT Projects/Own Projects/MVCCore_BatchManagementSystemProject/MVCCore_BatchManagementSystemProject/Views/About/WhyCIIT.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWJvdXRcV2h5Q0lJVC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
 [F:/CIIT Projects/Own Projects/MVCCore_BatchManagementSystemProject/MVCCore_BatchManagementSystemProject/Views/Account/Login.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjb3VudFxMb2dpbi5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[F:/CIIT Projects/Own Projects/MVCCore_BatchManagementSystemProject/MVCCore_BatchManagementSystemProject/Views/Career/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2FyZWVyXEluZGV4LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[F:/CIIT Projects/Own Projects/MVCCore_BatchManagementSystemProject/MVCCore_BatchManagementSystemProject/Views/ContactUs/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ29udGFjdFVzXEluZGV4LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[F:/CIIT Projects/Own Projects/MVCCore_BatchManagementSystemProject/MVCCore_BatchManagementSystemProject/Views/CorporateTraining/Failed.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ29ycG9yYXRlVHJhaW5pbmdcRmFpbGVkLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[F:/CIIT Projects/Own Projects/MVCCore_BatchManagementSystemProject/MVCCore_BatchManagementSystemProject/Views/CorporateTraining/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ29ycG9yYXRlVHJhaW5pbmdcSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[F:/CIIT Projects/Own Projects/MVCCore_BatchManagementSystemProject/MVCCore_BatchManagementSystemProject/Views/CorporateTraining/Payment.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ29ycG9yYXRlVHJhaW5pbmdcUGF5bWVudC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[F:/CIIT Projects/Own Projects/MVCCore_BatchManagementSystemProject/MVCCore_BatchManagementSystemProject/Views/CorporateTraining/PaymentPage.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ29ycG9yYXRlVHJhaW5pbmdcUGF5bWVudFBhZ2UuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[F:/CIIT Projects/Own Projects/MVCCore_BatchManagementSystemProject/MVCCore_BatchManagementSystemProject/Views/CorporateTraining/Success.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ29ycG9yYXRlVHJhaW5pbmdcU3VjY2Vzcy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[F:/CIIT Projects/Own Projects/MVCCore_BatchManagementSystemProject/MVCCore_BatchManagementSystemProject/Views/Course/Android_Development.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ291cnNlXEFuZHJvaWRfRGV2ZWxvcG1lbnQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[F:/CIIT Projects/Own Projects/MVCCore_BatchManagementSystemProject/MVCCore_BatchManagementSystemProject/Views/Developer/Course_Modules.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRGV2ZWxvcGVyXENvdXJzZV9Nb2R1bGVzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[F:/CIIT Projects/Own Projects/MVCCore_BatchManagementSystemProject/MVCCore_BatchManagementSystemProject/Views/Dummy/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRHVtbXlcSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[F:/CIIT Projects/Own Projects/MVCCore_BatchManagementSystemProject/MVCCore_BatchManagementSystemProject/Views/ELearning/Content.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRUxlYXJuaW5nXENvbnRlbnQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[F:/CIIT Projects/Own Projects/MVCCore_BatchManagementSystemProject/MVCCore_BatchManagementSystemProject/Views/ELearning/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRUxlYXJuaW5nXEluZGV4LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[F:/CIIT Projects/Own Projects/MVCCore_BatchManagementSystemProject/MVCCore_BatchManagementSystemProject/Views/ELearning/Modules.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRUxlYXJuaW5nXE1vZHVsZXMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[F:/CIIT Projects/Own Projects/MVCCore_BatchManagementSystemProject/MVCCore_BatchManagementSystemProject/Views/ELearning/Topic_wise_contents.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRUxlYXJuaW5nXFRvcGljX3dpc2VfY29udGVudHMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[F:/CIIT Projects/Own Projects/MVCCore_BatchManagementSystemProject/MVCCore_BatchManagementSystemProject/Views/EnquiryForm/DemoForm.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRW5xdWlyeUZvcm1cRGVtb0Zvcm0uY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[F:/CIIT Projects/Own Projects/MVCCore_BatchManagementSystemProject/MVCCore_BatchManagementSystemProject/Views/EnquiryForm/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRW5xdWlyeUZvcm1cSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[F:/CIIT Projects/Own Projects/MVCCore_BatchManagementSystemProject/MVCCore_BatchManagementSystemProject/Views/Events/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRXZlbnRzXEluZGV4LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[F:/CIIT Projects/Own Projects/MVCCore_BatchManagementSystemProject/MVCCore_BatchManagementSystemProject/Views/Events/Slide.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRXZlbnRzXFNsaWRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[F:/CIIT Projects/Own Projects/MVCCore_BatchManagementSystemProject/MVCCore_BatchManagementSystemProject/Views/Feedbacks/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRmVlZGJhY2tzXEluZGV4LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
 [F:/CIIT Projects/Own Projects/MVCCore_BatchManagementSystemProject/MVCCore_BatchManagementSystemProject/Views/Home/Index.cshtml]
@@ -162,6 +268,30 @@ build_metadata.AdditionalFiles.CssScope =
 
 [F:/CIIT Projects/Own Projects/MVCCore_BatchManagementSystemProject/MVCCore_BatchManagementSystemProject/Views/Home/Privacy.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQcml2YWN5LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[F:/CIIT Projects/Own Projects/MVCCore_BatchManagementSystemProject/MVCCore_BatchManagementSystemProject/Views/Interview/AddQuestion.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSW50ZXJ2aWV3XEFkZFF1ZXN0aW9uLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[F:/CIIT Projects/Own Projects/MVCCore_BatchManagementSystemProject/MVCCore_BatchManagementSystemProject/Views/Interview/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSW50ZXJ2aWV3XEluZGV4LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[F:/CIIT Projects/Own Projects/MVCCore_BatchManagementSystemProject/MVCCore_BatchManagementSystemProject/Views/Login/Accountant.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTG9naW5cQWNjb3VudGFudC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[F:/CIIT Projects/Own Projects/MVCCore_BatchManagementSystemProject/MVCCore_BatchManagementSystemProject/Views/Login/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTG9naW5cSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[F:/CIIT Projects/Own Projects/MVCCore_BatchManagementSystemProject/MVCCore_BatchManagementSystemProject/Views/Placements/Demo.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGxhY2VtZW50c1xEZW1vLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[F:/CIIT Projects/Own Projects/MVCCore_BatchManagementSystemProject/MVCCore_BatchManagementSystemProject/Views/Placements/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGxhY2VtZW50c1xJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
 [F:/CIIT Projects/Own Projects/MVCCore_BatchManagementSystemProject/MVCCore_BatchManagementSystemProject/Views/Registration/Failed.cshtml]
@@ -180,12 +310,140 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUmVnaXN0cmF0aW9uXFN1Y2Nlc3MuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
+[F:/CIIT Projects/Own Projects/MVCCore_BatchManagementSystemProject/MVCCore_BatchManagementSystemProject/Views/Sample/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2FtcGxlXEluZGV4LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
 [F:/CIIT Projects/Own Projects/MVCCore_BatchManagementSystemProject/MVCCore_BatchManagementSystemProject/Views/Shared/Error.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEVycm9yLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
+[F:/CIIT Projects/Own Projects/MVCCore_BatchManagementSystemProject/MVCCore_BatchManagementSystemProject/Views/Shared/MainLayout.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXE1haW5MYXlvdXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[F:/CIIT Projects/Own Projects/MVCCore_BatchManagementSystemProject/MVCCore_BatchManagementSystemProject/Views/Shared/TrainingMenus.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXFRyYWluaW5nTWVudXMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
 [F:/CIIT Projects/Own Projects/MVCCore_BatchManagementSystemProject/MVCCore_BatchManagementSystemProject/Views/Shared/_ValidationScriptsPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[F:/CIIT Projects/Own Projects/MVCCore_BatchManagementSystemProject/MVCCore_BatchManagementSystemProject/Views/Student/Login.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU3R1ZGVudFxMb2dpbi5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[F:/CIIT Projects/Own Projects/MVCCore_BatchManagementSystemProject/MVCCore_BatchManagementSystemProject/Views/Student/RegistrationForm.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU3R1ZGVudFxSZWdpc3RyYXRpb25Gb3JtLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[F:/CIIT Projects/Own Projects/MVCCore_BatchManagementSystemProject/MVCCore_BatchManagementSystemProject/Views/Training/Android_Development.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVHJhaW5pbmdcQW5kcm9pZF9EZXZlbG9wbWVudC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[F:/CIIT Projects/Own Projects/MVCCore_BatchManagementSystemProject/MVCCore_BatchManagementSystemProject/Views/Training/Angular.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVHJhaW5pbmdcQW5ndWxhci5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[F:/CIIT Projects/Own Projects/MVCCore_BatchManagementSystemProject/MVCCore_BatchManagementSystemProject/Views/Training/AwzDeops.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVHJhaW5pbmdcQXd6RGVvcHMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[F:/CIIT Projects/Own Projects/MVCCore_BatchManagementSystemProject/MVCCore_BatchManagementSystemProject/Views/Training/AzureDeops.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVHJhaW5pbmdcQXp1cmVEZW9wcy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[F:/CIIT Projects/Own Projects/MVCCore_BatchManagementSystemProject/MVCCore_BatchManagementSystemProject/Views/Training/BigData_Hadoop.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVHJhaW5pbmdcQmlnRGF0YV9IYWRvb3AuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[F:/CIIT Projects/Own Projects/MVCCore_BatchManagementSystemProject/MVCCore_BatchManagementSystemProject/Views/Training/Corporate_Training.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVHJhaW5pbmdcQ29ycG9yYXRlX1RyYWluaW5nLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[F:/CIIT Projects/Own Projects/MVCCore_BatchManagementSystemProject/MVCCore_BatchManagementSystemProject/Views/Training/DataAnalytics.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVHJhaW5pbmdcRGF0YUFuYWx5dGljcy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[F:/CIIT Projects/Own Projects/MVCCore_BatchManagementSystemProject/MVCCore_BatchManagementSystemProject/Views/Training/Data_Science.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVHJhaW5pbmdcRGF0YV9TY2llbmNlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[F:/CIIT Projects/Own Projects/MVCCore_BatchManagementSystemProject/MVCCore_BatchManagementSystemProject/Views/Training/DBA.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVHJhaW5pbmdcREJBLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[F:/CIIT Projects/Own Projects/MVCCore_BatchManagementSystemProject/MVCCore_BatchManagementSystemProject/Views/Training/Digital_Marketing.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVHJhaW5pbmdcRGlnaXRhbF9NYXJrZXRpbmcuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[F:/CIIT Projects/Own Projects/MVCCore_BatchManagementSystemProject/MVCCore_BatchManagementSystemProject/Views/Training/DotNet.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVHJhaW5pbmdcRG90TmV0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[F:/CIIT Projects/Own Projects/MVCCore_BatchManagementSystemProject/MVCCore_BatchManagementSystemProject/Views/Training/Front_End_Development.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVHJhaW5pbmdcRnJvbnRfRW5kX0RldmVsb3BtZW50LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[F:/CIIT Projects/Own Projects/MVCCore_BatchManagementSystemProject/MVCCore_BatchManagementSystemProject/Views/Training/Graphics_Designing.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVHJhaW5pbmdcR3JhcGhpY3NfRGVzaWduaW5nLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[F:/CIIT Projects/Own Projects/MVCCore_BatchManagementSystemProject/MVCCore_BatchManagementSystemProject/Views/Training/Hardware_Networking.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVHJhaW5pbmdcSGFyZHdhcmVfTmV0d29ya2luZy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[F:/CIIT Projects/Own Projects/MVCCore_BatchManagementSystemProject/MVCCore_BatchManagementSystemProject/Views/Training/HybridAppDevelopment.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVHJhaW5pbmdcSHlicmlkQXBwRGV2ZWxvcG1lbnQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[F:/CIIT Projects/Own Projects/MVCCore_BatchManagementSystemProject/MVCCore_BatchManagementSystemProject/Views/Training/IEEE_College_Projects.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVHJhaW5pbmdcSUVFRV9Db2xsZWdlX1Byb2plY3RzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[F:/CIIT Projects/Own Projects/MVCCore_BatchManagementSystemProject/MVCCore_BatchManagementSystemProject/Views/Training/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVHJhaW5pbmdcSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[F:/CIIT Projects/Own Projects/MVCCore_BatchManagementSystemProject/MVCCore_BatchManagementSystemProject/Views/Training/IndustryProject.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVHJhaW5pbmdcSW5kdXN0cnlQcm9qZWN0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[F:/CIIT Projects/Own Projects/MVCCore_BatchManagementSystemProject/MVCCore_BatchManagementSystemProject/Views/Training/Java.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVHJhaW5pbmdcSmF2YS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[F:/CIIT Projects/Own Projects/MVCCore_BatchManagementSystemProject/MVCCore_BatchManagementSystemProject/Views/Training/Mean_Stack.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVHJhaW5pbmdcTWVhbl9TdGFjay5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[F:/CIIT Projects/Own Projects/MVCCore_BatchManagementSystemProject/MVCCore_BatchManagementSystemProject/Views/Training/MERNStack.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVHJhaW5pbmdcTUVSTlN0YWNrLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[F:/CIIT Projects/Own Projects/MVCCore_BatchManagementSystemProject/MVCCore_BatchManagementSystemProject/Views/Training/NodeJs.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVHJhaW5pbmdcTm9kZUpzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[F:/CIIT Projects/Own Projects/MVCCore_BatchManagementSystemProject/MVCCore_BatchManagementSystemProject/Views/Training/Php.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVHJhaW5pbmdcUGhwLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[F:/CIIT Projects/Own Projects/MVCCore_BatchManagementSystemProject/MVCCore_BatchManagementSystemProject/Views/Training/Python.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVHJhaW5pbmdcUHl0aG9uLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[F:/CIIT Projects/Own Projects/MVCCore_BatchManagementSystemProject/MVCCore_BatchManagementSystemProject/Views/Training/ReactJs.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVHJhaW5pbmdcUmVhY3RKcy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[F:/CIIT Projects/Own Projects/MVCCore_BatchManagementSystemProject/MVCCore_BatchManagementSystemProject/Views/Training/SeleniumWithLiveProject.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVHJhaW5pbmdcU2VsZW5pdW1XaXRoTGl2ZVByb2plY3QuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[F:/CIIT Projects/Own Projects/MVCCore_BatchManagementSystemProject/MVCCore_BatchManagementSystemProject/Views/Training/Software_Testing.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVHJhaW5pbmdcU29mdHdhcmVfVGVzdGluZy5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
 [F:/CIIT Projects/Own Projects/MVCCore_BatchManagementSystemProject/MVCCore_BatchManagementSystemProject/Views/_ViewImports.cshtml]

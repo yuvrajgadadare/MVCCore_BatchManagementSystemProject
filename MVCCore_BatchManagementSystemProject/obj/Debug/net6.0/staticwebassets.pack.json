@@ -37,6 +37,10 @@
       "PackagePath": "staticwebassets\\images\\trainers\\CIIT Institute.jpeg"
     },
     {
+      "Id": "F:\\CIIT Projects\\Own Projects\\MVCCore_BatchManagementSystemProject\\MVCCore_BatchManagementSystemProject\\wwwroot\\images\\trainers\\Chetan Sonwalkar.png",
+      "PackagePath": "staticwebassets\\images\\trainers\\Chetan Sonwalkar.png"
+    },
+    {
       "Id": "F:\\CIIT Projects\\Own Projects\\MVCCore_BatchManagementSystemProject\\MVCCore_BatchManagementSystemProject\\wwwroot\\images\\trainers\\Gayatri Gadadare.png",
       "PackagePath": "staticwebassets\\images\\trainers\\Gayatri Gadadare.png"
     },
@@ -55,6 +59,10 @@
     {
       "Id": "F:\\CIIT Projects\\Own Projects\\MVCCore_BatchManagementSystemProject\\MVCCore_BatchManagementSystemProject\\wwwroot\\images\\users\\Amit Sharma.jfif",
       "PackagePath": "staticwebassets\\images\\users\\Amit Sharma.jfif"
+    },
+    {
+      "Id": "F:\\CIIT Projects\\Own Projects\\MVCCore_BatchManagementSystemProject\\MVCCore_BatchManagementSystemProject\\wwwroot\\images\\users\\Chetan Sonwalkar.png",
+      "PackagePath": "staticwebassets\\images\\users\\Chetan Sonwalkar.png"
     },
     {
       "Id": "F:\\CIIT Projects\\Own Projects\\MVCCore_BatchManagementSystemProject\\MVCCore_BatchManagementSystemProject\\wwwroot\\images\\users\\Gayatri Gadadare.png",

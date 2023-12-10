@@ -1,0 +1,22 @@
+﻿
+@{
+    ViewBag.Title = "Modules";
+    Layout = "~/Views/Shared/eLearningLayout.cshtml";
+}
+
+<h2>Modules</h2>
+<div class="row">
+    @foreach (var item in Model)
+    {
+        <div class='col-md-4'>
+            <a href='/ELearning/Index/@item.module_name'>
+                <p style='height:100px;width:100%;background-color:#1097ad;color:white;font-size:20px;text-align:center;padding-top:10%'>
+                    @item.module_name
+                </p>
+            </a>
+        </div>
+    }
+</div>
+
+
+

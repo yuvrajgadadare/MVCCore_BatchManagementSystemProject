@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("MVCCore_BatchManagementSystemProject")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Release")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+f791f16770db23005e2dd99a3fe9281bae5c1cdd")]
 [assembly: System.Reflection.AssemblyProductAttribute("MVCCore_BatchManagementSystemProject")]
 [assembly: System.Reflection.AssemblyTitleAttribute("MVCCore_BatchManagementSystemProject")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

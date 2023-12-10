@@ -1,0 +1,148 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
+    <title>Index</title>
+    <link href="~/Content/bootstrap.min.css" rel="stylesheet" />
+    <script src="~/Scripts/jquery.min.js"></script>
+    <script>
+        //  var apiurl = "https://localhost:44371";
+        var apiurl = ""
+        $(document).ready(function () {
+
+                
+            $("#btnlogin").click(function () {
+                CheckLogin();
+            })
+         })
+
+        function CheckLogin() {
+
+            var ecode = $("#txtempcode").val();
+            var pass = $("#txtpassword").val();
+           
+
+            $.ajax({
+                url: '/token',
+                method: 'post',
+                data: "grant_type=password&username="+ecode+"&password="+pass,
+                headers: {
+                    'content-type': 'application/raw'
+                },
+                error: function (err) {
+                   
+                    
+                    $("#msg").html("Invalid Employee Code or Password")
+                },
+               
+
+                success: function (resp) {
+                 
+                    localStorage.setItem("token", resp.access_token);
+                    console.log(resp.access_token)
+                    var token = resp.access_token;
+                    $.ajax({
+                        url: apiurl + '/api/employeebycode/' + ecode,
+                        method: 'get',
+
+                        headers: {
+                            // 'Content-Type': 'application/raw',
+                            'Authorization': 'Bearer ' + token
+                        },
+                        success: function (empresp) {
+                            console.log(empresp)
+                            localStorage.setItem("role", empresp.role);
+                            localStorage.setItem("employee_code", empresp.employee_code);
+                            var url = "";
+                            //alert(empresp.role);
+                            switch (empresp.role) {
+                                case "Developer": {
+                                    url = url + "/Developer/Course/Dashboard";
+                                    break;
+                                }
+                                case "SuperUser": {
+                                    url = url + "/SuperUser/Dashboard";
+                                    break;
+                                }
+                                case "Admin": {
+                                    url = url + "/Admin/Master/Dashboard";
+                                    break;
+                                }
+                                case "Accountant": {
+                                    url = url + "/Accountant/Dashboard";
+                                    break;
+                                }
+                                case "Counselor": {
+                                    url = url + "/Counselor/Dashboard";
+                                    break;
+                                }
+                                case "HR": {
+                                    url = url + "/HR/Dashboard";
+                                    break;
+                                }
+                                case "Manager": {
+                                    url = url + "/Manager/Dashboard";
+                                    break;
+                                }
+                                default: {
+                                    url = url + "/Admin/Dashboard";
+
+                                }
+                            }
+
+                            console.log(url)
+                            window.location.href = url;
+                        }
+
+                    })
+
+                }
+
+            })
+        }
+
+    </script>
+
+</head>
+<body>
+    <div> 
+        <div class="container">
+            <div class="col-md-4">
+
+            </div>
+            <div class="col-md-4" style="padding-top:10%">
+<div class="panel panel-primary">
+    <div class="panel-heading">
+        <h4>Login Here</h4>
+        
+    </div>
+    <div class="panel-body">
+        <div class="form-group">
+            <label>Employee Code</label>
+            <input type="text" id="txtempcode" class="form-control" placeholder="Employee Code " />
+        </div>
+        <div class="form-group">
+            <label>Password</label>
+            <input type="password" id="txtpassword" class="form-control" placeholder="Password " />
+        </div>
+
+    </div>
+    <div class="panel-footer">
+        <input  type="button" value="Login" id="btnlogin" class="btn btn-primary" />
+        <a href="/" class="btn btn-danger">Cancle</a>
+        <h4 style="color:red;" id="msg"></h4>
+    </div>
+</div>
+            </div>
+
+        </div>
+    </div>
+</body>
+</html>

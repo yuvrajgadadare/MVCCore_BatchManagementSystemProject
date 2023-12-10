@@ -1,48 +1,314 @@
-﻿<!DOCTYPE html>
-<html lang="en">
+﻿﻿
+<!DOCTYPE html>
+<html>
 <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>@ViewData["Title"] - MVCCore_BatchManagementSystemProject</title>
-    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
-    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
-    <link rel="stylesheet" href="~/MVCCore_BatchManagementSystemProject.styles.css" asp-append-version="true" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title CIIT Training Institute</title>
+    <link rel="icon" href="/images/mainlogo.png" type="image/gif" sizes="56x46">
+    <meta name="description" content="CIIT is a leading Skills and Talent Development Corporation that is building a manpower pool for global industry requirements. CIIT is a global leader in Skills and Talent Development, offers multi-disciplinary learning management and training delivery solutions to corporations, institutions, and individuals on various technologies. CIIT has three main lines of business – Corporate Training, Skills and Careers, and School/College Learning.">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="keywords" content="Software training institute,Best software training institute in pune,IT training institute in pune, Programming Language Training in Hadapsar,Classroom training,Online training,Hand-on training,Live projects,100% placement calls,Real time projects, 100% job guarantee,Software Training with live projects,Software Training and certificate,IT training institute in Hadapsar,Full stack development, .Net full stack training in Hadapsar,.net training,.net training in pune,.net training in Hadapsar,Online java training,Online php training,Online python training,Online dot net training,Online .ne training,Online angular training.net course,Best dot net training,Dot net training,Asp.net with MVC Training,Mvc training,C# training and certification,Best dot net training,Wcf training,Dot net training near me,.net full stack development, Dot net development,.net core training in Hadapsar,.net core training,Java training,Java course,Java classes near me, Java training in Hadapsar,Java training in pune,Java full stack training,Java developer course,Java programming course,Spring boot course,Java full course,Advance java course,Java institute near me,Java full stack developer, Core java training,Java spring course,Java web development course,Spring framework training,Hibernate course,Spring and Hibernate training,Python programming language training,Python full stack development,Python training in Hadapsar,Python training in pune,Full stack python,Python full stack developer,Dejango framework,Full stack development with python,Mango DB training,MEAN Stack Development,MEAN stack,Mean stack developer,Mean developer,MEAN and MERN stack development,MEAN stack training in pune,MEAN stack training in Hadapsar,MERN full stack developer,Node js training,Learning MEAN stack,MEAN stack and MERN stack,Data science training,Data science course,Machine learning training,Artificial Intelligence training,Python for data science and machine learning,Front end development,UI developer,Front end developer,Front end development in pune, Front end development in Hadapsar,Web designing training,Web designing classes,Web designing course,UI designing,Angular training,Angular course,Angular training in pune,Angular training in Hadapsar,Angular classes near me,Angular training institute,Angular classroom training,Angular course,Best angular training institute,Angular 8 and Angular 9,Oracle DBA,Database Course,Database Training in Hadapsar,SQL training,PLSQL Training,Linux Training,Shell Scripting Training,Advance Database Training ,React Js Training for professionals,MERN stack Development,MERN Stack Training,Advance Web Development ,Backend Development,Backend Developer,Career Oriented Guidance,Job Oriented Training,Job Oriented Training Programs,Job Oriented Training Course,Make your Career in IT Sector," />
+    <link href="~/Content/bootstrap.min.css" rel="stylesheet" />
+    <link href="~/Content/bootstrap-responsive.min.css" rel="stylesheet" />
+    <link href="~/Content/style.css" rel="stylesheet" />
+    <link href="~/Content/animate.min.css" rel="stylesheet" />
+    <link href="~/Content/tabstyle.css" rel="stylesheet" />
+    <link href="~/Content/custom.css" rel="stylesheet" />
+    <script src="~/Scripts/jquery-1.12.4.min.js"></script>
+    <script src="~/Scripts/bootstrap.min.js"></script>
+    <script src="~/Scripts/move-top.js"></script>
+    <script src="~/Scripts/easing.js"></script>
+    <script src="~/Scripts/custom.js"></script>
+    <style>
+        body {
+            padding-left: 0px;
+            padding-right: 0px;
+        }
+
+        #mySidenav a {
+            /*position: absolute;*/
+            /*left: -80px;*/
+            right: 0px;
+            padding: 7px;
+            width: 40px;
+            height: auto;
+            font-size: 16px;
+            border-radius: 20px;
+            position: fixed;
+            top: 50%;
+            writing-mode: vertical-rl;
+        }
+    </style>
 </head>
-<body style="background-color:#fbfdff;">
-    <header>
-        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-primary border-bottom box-shadow mb-3">
-            <div class="container-fluid">
-                <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">
-                    <a asp-area="" asp-controller="Home" asp-action="Index" style="font-size:32px;;font-family:'Bookman Old Style';font-weight:bold;color:white;text-decoration:none;">CIIT DESK</a>
-                </a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target=".navbar-collapse" aria-controls="navbarSupportedContent"
-                        aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
-                    <ul class="navbar-nav ms-auto">
-                        <li class="nav-item">
-                            <a class="nav-link text-white" asp-area="" asp-controller="Home" asp-action="Index">Login</a>
+<body>
+    <div class="" style="">
+        <div class="visible-desktop">
+            <nav class="navbar navbar-default navbar-fixed-top" style="background-color: #f4f4f4; height: 100px; border: none">
+                <div class="navbar-inverse" style="border: none; padding-top: 5px">
+                    <marquee>
+                        <span style="color:white">Welcome to CIIT Training Institute</span>
+                    </marquee>
+                </div>
+                <div class="container" style="margin-left:5%;margin-right:0px">
+                    <div class="navbar-header" data-wow-delay=".5s" style="visibility: visible; animation-delay: 0.5s; animation-name: fadeInLeft;">
+                        <h1><a style="padding:5px 15px" class="navbar-brand" href="/"><img style="height:60px; width:auto;opacity:0.8" src="~/images/mainlogo.png" /></a></h1>
+                    </div>
+                    <div id="navbarCollapse1" class="collapse navbar-collapse">
+                        <ul class="nav navbar-nav" style="margin-top:6px;">
+                            <li><a href="/about-ciit">About Us</a></li>
+                            <li class="dropdown">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">Training Programs<span class="caret"></span></a>
+                                <div class="dropdown-menu dropdown-content" style="right: auto; height: auto; width: 700px; background-color: #ebebeb">
+                                    <div class="col-md-12"><br /></div>
+                                    <div class="col-md-4"><a href="/Java/job-oriented-java-training-with-live-project">Java Full Stack Development</a> <hr /></div>
+                                    <div class="col-md-4"><a href="/Dot-Net/job-guaranteed-dot-net-training-with-live-project">.Net Full Stack Development</a><hr /></div>
+                                    <div class="col-md-4"><a href="/Python/job-oriented-python-training-with-live-project">Python Full Stack Development</a><hr /></div>
+                                    <div class="col-md-4"><a href="/MERN-Stack/job-oriented-mean-stack-training-with-live-project">MERN Stack Development</a><hr /></div>
+                                    <div class="col-md-4"><a href="/MEAN-Stack/job-oriented-mean-stack-training-with-live-project">MEAN Stack Development</a><hr /></div>
+                                    <div class="col-md-4"><a href="/NodeJs/job-oriented-node-js-training-with-live-project">NodeJs</a><hr /></div>
+                                    <div class="col-md-4"><a href="/Angular/job-oriented-angular-js-training-with-live-project">Angular Latest Training</a><hr /></div>
+                                    <div class="col-md-4"><a href="/Php/job-oriented-php-training-with-live-project">PHP Full Stack Development</a><hr /></div>
+                                    <div class="col-md-4"><a href="/Big-Data-Hadoop/job-oriented-big-data-hadoop-training-with-live-project">Big Data & Hadoop</a><hr /></div>
+                                    <div class="col-md-4"><a href="/Data-Science/job-oriented-data-science-training-with-live-project ">Data Science</a><hr /></div>
+                                    <div class="col-md-4"><a href="/React-Js/job-oriented-react-js-training-with-live-project">ReactJs</a><hr /></div>
+                                    <div class="col-md-4"><a href="/Front-End-Development/job-oriented-front-end-development-training-with-live-project">Front End Development</a><hr /></div>
+                                    <div class="col-md-4"><a href="/Android-Development/job-oriented-android-development-training-with-live-project">Android Development</a><hr /></div>
+                                    <div class="col-md-4"><a href="/DBA/job-oriented-dba-training-with-live-project">DBA</a><hr /></div>
+                                    <div class="col-md-4"><a href="/Software-Testing/job-oriented-software-testing-training-with-live-project">Software Testing</a><hr /></div>
+                                    <div class="col-md-4"><a href="/Graphics_Designing/job-oriented-graphics-designing-training-with-live-project">Graphics Designing</a><hr /></div>
+                                    <div class="col-md-4"><a href="/Digital-Marketing/job-oriented-digital-marketing-training-with-live-project">Digital Marketing</a><hr /></div>
+                                    <div class="col-md-4"><a href="/Corporate-Training/corporate-training-with-live-project">Corporate Training</a><hr /></div>
+                                    <div class="col-md-4"><a href="/Hardware-Networking/job-oriented-hardware-networking-training-with-live-project">Hardware Networking</a><hr /></div>
+                                    <div class="col-md-4"><a href="/Data-Analytics/Job-Oriented-Data-Analytics">Data Analytics</a><hr /></div>
+                                    <div class="col-md-4"><a href="/Software-Testing/Selenium-Automation-Testing-With-Live-Project">Selenium Automation Testing</a><hr /></div>
+                                    <div class="col-md-4"><a href="/Devops/DevOps-With-Azure-With-Placement-Assurance">DevOps With Azure</a><hr /></div>
+                                    <div class="col-md-4"><a href="/Devops/DevOps-With-AWS-With-Placement-Assurance">DevOps With AWS</a><hr /></div>
+                                    <div class="col-md-4"><a href="/App-Development/Hybrid-App-Development-With-Real-Time-Project">Hybdrid App Development</a><hr /></div>
+                                    <div class="col-md-4"><a href="/Industry/Live-Project-Training-By-Industry-Expert">Live Project Training </a><hr /></div>
+                                    <div class="col-md-4"><a href="/College-Project/IEEE-Based-project-For-College-Student">IEEE Based Projects</a><hr /></div>
+                                </div>
+                            </li>
+                            <li>
+                                <a href="/our-top-placements">Placements</a>
+                            </li>
+                            <li><a href="/students-valuable-feedback">Student Feedback</a></li>
+                            <li><a href="/celebration-at-ciit">Events</a></li>
+                            <li><a href="/career">Career</a></li>
+                            <li><a href="/contact-us">Contact Us</a></li>
+
+                        </ul>
+
+                    </div>
+                </div>
+
+
+
+
+            </nav>
+        </div>
+        <div class="visible-phone">
+            <nav class="navbar navbar-default navbar-fixed-top" style="padding: 1px; background-color: #ebebeb; border-color: #f4f4f4; margin-left: 10px; margin-right:0px">
+                <div class="navbar-header">
+                    <button type="button" data-target="#navbarCollapseMenus" data-toggle="collapse" class="navbar-toggle">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+
+                    <a class="navbar-brand" href="/" style="padding: 10px 15px"><img style="height:40px; width:auto;opacity:0.8;" src="~/images/mainlogo.png" /></a>
+                </div>
+                <div id="navbarCollapseMenus" class="collapse navbar-collapse">
+                    <ul class="nav navbar-nav" style="margin-top: 6px; color: #0275d8;">
+                        <li><a href="/about-ciit">About Us</a></li>
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">Training Programs<span class="caret"></span></a>
+                            <ul class="dropdown-menu nav navbar-nav ">
+                                <li><a href="/Java/job-oriented-java-training-with-live-project" style="color: #337ab7;">Java Training</a></li>
+                                <li><a href="/Dot-Net/job-guaranteed-dot-net-training-with-live-project" style="color: #337ab7;">.Net Training</a></li>
+                                <li><a href="/Python/job-oriented-python-training-with-live-project" style="color: #337ab7;">Python Training</a></li>
+                                <li><a href="/MEAN-Stack/job-oriented-mean-stack-training-with-live-project" style="color: #337ab7;">MEAN Stack</a></li>
+                                <li><a href="/NodeJs/job-oriented-node-js-training-with-live-project" style="color: #337ab7;">NodeJs</a></li>
+                                <li><a href="/Angular/job-oriented-angular-js-training-with-live-project" style="color: #337ab7;">Angular Training</a></li>
+                                <li><a href="/Php/job-oriented-php-training-with-live-project" style="color: #337ab7;">Php Training</a></li>
+                                <li><a href="/Big-Data-Hadoop/job-oriented-big-data-hadoop-training-with-live-project" style="color: #337ab7;">Big Data & Hadoop</a></li>
+                                <li><a href="/Data-Science/job-oriented-data-science-training-with-live-project  " style="color: #337ab7;">Data Science</a></li>
+                                <li><a href="/React-Js/job-oriented-react-js-training-with-live-project" style="color: #337ab7;">ReactJs</a></li>
+                                <li><a href="/Front-End-Development/job-oriented-front-end-development-training-with-live-project" style="color: #337ab7;">Front End Development</a></li>
+                                <li><a href="/Android-Development/job-oriented-android-development-training-with-live-project" style="color: #337ab7;">Android Development</a></li>
+                                <li><a href="/DBA/job-oriented-dba-training-with-live-project" style="color: #337ab7;">DBA</a></li>
+                                <li><a href="/Software-Testing/job-oriented-software-testing-training-with-live-project" style="color: #337ab7;">Software Testing</a></li>
+                                <li><a href="/Graphics_Designing/job-oriented-graphics-designing-training-with-live-project" style="color: #337ab7;">Graphics Designing</a></li>
+                                <li><a href="/Digital-Marketing/job-oriented-digital-marketing-training-with-live-project" style="color: #337ab7;">Digital Marketing</a></li>
+                                <li><a href="/Corporate-Training/corporate-training-with-live-project" style="color: #337ab7;">Corporate Training</a></li>
+                                <li><a href="/Hardware-Networking/job-oriented-hardware-networking-training-with-live-project" style="color: #337ab7;">Hardware Networking</a></li>
+                            </ul>
                         </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-white" asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
-                        </li>
+                        <li> <a href="/our-top-placements">Placements</a></li>
+                        <li><a href="/students-valuable-feedback">Student Feedback</a></li>
+                        <li><a href="/celebration-at-ciit">Events</a></li>
+                        <li><a href="/career">Career</a></li>
+                        <li><a href="/contact-us">Contact Us</a></li>
                     </ul>
                 </div>
-            </div>
-        </nav>
-    </header>
-    <div class="container-fluid" style="min-height:700px;">
-            @RenderBody()
-    </div>
-    <footer class="border-top footer text-muted">
-        <div class="container">
-            &copy; 2023 - MVCCore_BatchManagementSystemProject - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
+            </nav>
         </div>
-    </footer>
-    <script src="~/lib/jquery/dist/jquery.min.js"></script>
-    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="~/js/site.js" asp-append-version="true"></script>
-    @await RenderSectionAsync("Scripts", required: false)
+    </div>
+    <div style="padding-top:2%;">
+        @RenderBody()
+    </div>
+    <div id="mySidenav">
+         <a id="blog" href="/EnquiryForm/Index" class="btn btn-primary">Enquiry Form</a>
+    </div>
+    <div class="footer wow fadeInDown" data-wow-duration=".8s" data-wow-delay=".2s">
+        <div style="background-color: #283645; color: white; font-size: 12px">
+            <div class="col-md-3">
+                <h3>
+                    Hadapsar
+                </h3>
+                <br />
+                <div class="contact-btm" style="text-align:left">
+                    <p>
+                        Office #2, 1st floor, manisha blitz , hadapsar, near shankar math, pune, maharashtra 411028
+                    </p>
+                </div>
+                <div class="contact-btm" style="text-align:left">
+                    &nbsp; &nbsp; <span class="glyphicon glyphicon-earphone" aria-hidden="true"></span>
+                    <p>
+                        7028565830/ 7028561830
+                    </p>
+                    <br />
+                    &nbsp; &nbsp;<span class="glyphicon glyphicon-envelope" aria-hidden="true"></span>
+                    <p>
+                        <a href="mailto:example@email.com">enquiry@ciitinstitute.com</a>
+                    </p>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <h3>
+                    VimanNagar
+                </h3>
+                <br />
+                <div class="contact-btm">
+                    <p>
+                        Office #3A,1st floor, Above MRF tyre showroom,pune nagar road vimanNagar corner, near pheonix mall, kargil vijay nagar, wadgaon sheri, pune, maharashtra 411014
+                    </p>
+                </div>
+                <div class="contact-btm" style="text-align:left">
+                    &nbsp;      &nbsp;                          <span class="glyphicon glyphicon-earphone" aria-hidden="true"></span>
+                    <p>
+                        7028694477/ 7028036611
+                    </p>
+                    <br />
+                    &nbsp;&nbsp; <span class="glyphicon glyphicon-envelope" aria-hidden="true"></span>
+                    <p>
+                        <a href="mailto:example@email.com">enquiry@ciitinstitute.com</a>
+                    </p>
+                </div>
+            </div>
+
+            <div class="col-md-3">
+                <h3>
+                    Baramati
+                </h3>
+                <br />
+                <div class="contact-btm">
+                    <p>
+                        Bhori complex Patas road Below footwear museum, near morya graphics, Baramati, Maharashtra 413102
+                    </p>
+
+                </div>
+                <div class="contact-btm" style="text-align:left">
+                    &nbsp;      &nbsp;                          <span class="glyphicon glyphicon-earphone" aria-hidden="true"></span>
+                    <p>
+                        074101 08740
+                    </p>
+                    <br />
+                    &nbsp;      &nbsp;                          <span class="glyphicon glyphicon-envelope" aria-hidden="true"></span>
+                    <p>
+                        <a href="mailto:example@email.com">enquiry@ciitinstitute.com</a>
+                    </p>
+                </div>
+            </div>
+            <div class="col-md-3" style="color:white">
+                <div class="contact-btm" style="color: #a3b1bf">
+                    <div style="text-align:center;">
+                        <h3>
+                            WORKING HOUR
+                        </h3>
+                        <br />
+                    </div>
+
+                    <div class="col-md-5">
+                        Monday
+                    </div>
+                    <div class="col-md-7">
+
+                        6 AM - 10 PM
+                    </div>
+                    <div class="col-md-5">
+                        Tuesday
+                    </div>
+                    <div class="col-md-7">
+
+                        6 AM - 10 PM
+                    </div>
+                    <div class="col-md-5">
+                        Wednesday
+                    </div>
+                    <div class="col-md-7">
+
+                        6 AM - 10 PM
+                    </div>
+                    <div class="col-md-5">
+                        Thursday
+                    </div>
+                    <div class="col-md-7">
+
+                        6 AM - 10 PM
+                    </div>
+                    <div class="col-md-5">
+                        Friday
+                    </div>
+                    <div class="col-md-7">
+                        6 AM - 10 PM
+                    </div>
+                    <div class="col-md-5">
+                        Saturday
+                    </div>
+                    <div class="col-md-7">
+
+                        6 AM - 10 PM
+                    </div>
+                    <div class="col-md-5">
+                        Sunday
+                    </div>
+                    <div class="col-md-7">
+                        8 AM - 4 PM
+                    </div>
+
+                </div>
+            </div>
+            <div>
+                <p style="text-align:center">
+                    <center>
+                        Design by <h4><a href="http://www.ciitinstitute.com/" target="_blank">CIIT Training Institute</a></h4>
+
+                        <h6><a href="/Login" target="_blank">Login Here</a></h6>
+                    </center>
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+    <a href="#" id="toTop" style="display: block;">
+        <span id="toTopHover" style="opacity: 0;">
+        </span><span id="toTopHover" style="opacity: 0;"></span>
+    </a>
 </body>
 </html>

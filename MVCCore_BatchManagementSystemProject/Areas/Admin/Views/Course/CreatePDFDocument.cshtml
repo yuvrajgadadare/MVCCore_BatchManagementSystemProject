@@ -1,0 +1,17 @@
+﻿
+@{
+    ViewData["Title"] = "CreatePDFDocument";
+    Layout = "~/Areas/Admin/Views/Shared/_AdminLayout.cshtml";
+}
+
+<h1>CreatePDFDocument</h1>
+
+@{
+    Html.BeginForm("CreateDocument", "Home", FormMethod.Get);
+    {
+        <div>
+            <input type="submit" value="Create PDF Document" style="width:200px;height:27px" />
+        </div>
+    }
+    Html.EndForm();
+}

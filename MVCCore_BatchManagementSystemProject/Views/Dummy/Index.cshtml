@@ -1,0 +1,590 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Areas/Accountant/Views/Shared/_Layout.cshtml";
+}
+
+<center><h3>New Registration</h3></center>
+<style>
+    input, select, textarea {
+        width: 100%;
+    }
+</style>
+<script src="~/Scripts/jquery-3.4.1.min.js"></script>
+<script type="text/javascript">
+    var apiurl = "/api";
+    var specialization = {};
+    var student_qualifications = [];
+    var student_registrations = [];
+    var payments = {};
+    var token = localStorage.getItem("token");
+    $(document).ready(function () {
+        GetStates();
+        GetQualifications();
+        GetCenters();
+        GetTrainingCourses();
+        GetFeeModes();
+        GetEmployees();
+        $("#ddstate").change(function () {
+            GetCities();
+        })
+        $("#ddcity").change(function () {
+            GetLocations();
+        })
+
+        $("#ddqualification").change(function () {
+            GetSpecializations();
+        })
+
+        $("#ddcourse").change(function () {
+            FetchFees();
+        })
+
+        $("#ddfeemode").change(function () {
+            FetchFees();
+
+        })
+        $("#ddspecialization").change(function () {
+            GetSpecializationdetails();
+        })
+        $("#btnaddqualification").click(function () {
+            AddQualification();
+        })
+
+        $("#btnsubmit").click(function () {
+            AddStudentRegistration();
+        })
+    })
+    function GetStates() {
+        $.ajax({
+            url: apiurl + '/state',
+            method: 'get',
+            contentType: 'application/json',
+            success: function (resp) {
+                $.each(resp, function (i, d) {
+                    $("#ddstate").append("<option value="+d.state_id+">"+d.state_name+"</option>")
+                })
+            }
+        })
+    }
+    function GetCities() {
+        var id = $("#ddstate").val();
+        $.ajax({
+            url: apiurl + '/stateidwisecities/'+id,
+            method: 'get',
+            contentType: 'application/json',
+            success: function (resp) {
+                $("#ddcity").empty();
+                $("#ddcity").append("<option >Select City</option>");
+                $.each(resp, function (i, d) {
+                    $("#ddcity").append("<option value=" + d.city_id + ">" + d.city_name + "</option>")
+                })
+            }
+        })
+    }
+
+    function GetLocations() {
+        var id = $("#ddcity").val();
+        $.ajax({
+            url: apiurl + '/locationByCityId/' + id,
+            method: 'get',
+            contentType: 'application/json',
+            success: function (resp) {
+                $("#ddlocation").empty();
+                $("#ddlocation").append("<option >Select Specialization</option>");
+                $.each(resp, function (i, d) {
+                    $("#ddlocation").append("<option value=" + d.location_id + ">" + d.location_name + "</option>")
+                })
+            }
+        })
+    }
+
+    function GetQualifications() {
+        $.ajax({
+            url: apiurl + '/qualification',
+            method: 'get',
+            contentType: 'application/json',
+            success: function (resp) {
+                $.each(resp, function (i, d) {
+                    $("#ddqualification").append("<option value=" + d.quaification_id + ">" + d.qualification + "</option>")
+                })
+            }
+        })
+    }
+
+    function GetSpecializations() {
+        var id = $("#ddqualification").val();
+        $.ajax({
+            url: apiurl + '/specializationByQualification/' + id,
+            method: 'get',
+            contentType: 'application/json',
+            success: function (resp) {
+                $("#ddspecialization").empty();
+                $("#ddspecialization").append("<option >Select Specialization</option>")
+
+                $.each(resp, function (i, d) {
+                    $("#ddspecialization").append("<option value=" + d.specialization_id + ">" + d.specialization + "</option>")
+                })
+            }
+        })
+    }
+    function GetSpecializationdetails() {
+        var id = $("#ddspecialization").val();
+        $.ajax({
+            url: apiurl + '/specialization/' + id,
+            method: 'get',
+            contentType: 'application/json',
+            success: function (resp) {
+                console.log(resp);
+                specialization = resp;
+            }
+        })
+    }
+
+    function GetCenters() {
+        $.ajax({
+            url: apiurl + '/center',
+            method: 'get',
+            contentType: 'application/json',
+            success: function (resp) {
+                $.each(resp, function (i, d) {
+                    $("#ddcenter").append("<option value=" + d.center_id + ">" + d.center_name + "</option>")
+                })
+            }
+        })
+    }
+    function GetTrainingCourses() {
+        $.ajax({
+            url: apiurl + '/trainingcourse',
+            method: 'get',
+            contentType: 'application/json',
+            success: function (resp) {
+                $.each(resp, function (i, d) {
+                    $("#ddcourse").append("<option value=" + d.course_id + ">" + d.course_name + "</option>")
+                })
+            }
+        })
+    }
+
+    function GetFeeModes() {
+        $.ajax({
+            url: apiurl + '/feemode',
+            method: 'get',
+            contentType: 'application/json',
+            success: function (resp) {
+                $.each(resp, function (i, d) {
+                    $("#ddfeemode").append("<option value=" + d.fee_mode_id + ">" + d.fee_mode + "</option>")
+                })
+            }
+        })
+    }
+    function GetEmployees() {
+        $.ajax({
+            url: apiurl + '/employee',
+            method: 'get',
+            contentType: 'application/json',
+            success: function (resp) {
+                $.each(resp, function (i, d) {
+                    $("#ddemployee").append("<option value=" + d.employee_id + ">" + d.first_name+"_"+d.last_name + "</option>")
+                })
+            }
+        })
+    }
+
+    function FetchFees() {
+
+        var cid = $("#ddcourse").val();
+        var fid = $("#ddfeemode").val();
+        $("#course_fee").val("");
+        $.ajax({
+            url: apiurl + "/coursefeebycourse_feemode_wise?course_id=" + cid + "&fee_mode_id=" + fid,
+            method: 'get',
+            contentType: 'application/json',
+            success: function (resp) {
+
+                $("#course_fee").val(resp.amount)
+                    //console.log(resp)
+
+            }
+        })
+    }
+
+    function AddQualification() {
+        var medium = $("#medium").val();
+        var university = $("#university").val();
+        var year = $("#passing_year").val();
+        var per = $("#percentage").val();
+        var st = { "specialization_id": specialization.specialization_id, "qualification": specialization.qualification, "specialization": specialization.specialization, "university": university, "medium": medium, "passing_year": year, "percentage": per };
+        student_qualifications.push(st);
+        DisplayTable();
+    }
+    function DisplayTable() {
+        $("#tblqualifications").empty();
+        $.each(student_qualifications, function (i, d) {
+            $("#tblqualifications").append("<tr><td>" + d.qualification + "</td><td>" + d.specialization + "</td><td>" + d.medium + "</td><td>" + d.university + "</td><td>" + d.year + "</td><td>" + d.percentage + "</td></tr>")
+        })
+    }
+
+    function AddStudentRegistration() {
+        var payment = { 'employee_id': $("#ddemployee").val(), "payment_date": $("#payment_date").val(), "payment_amount": $("#payment_amount").val(), "payment_mode": $("#payment_mode").val(), "description": $("#description").val() }
+        var reg = { "course_id": $("#ddcourse").val(), "joining_date": $("#joining_date").val(), "fee_mode_id": $("#ddfeemode").val(), "discount": $("#discount").val(), "discount_reason": $("#discount_reason").val(), "paymentmodel": payment }
+        console.log(reg);
+        student_registrations.push(reg);
+
+        var st = { "first_name": $("#first_name").val(), "middle_name": $("#middle_name").val(), "last_name": $("#last_name").val(), "email_address": $("#email_address").val(), "birth_date": $("#birth_date").val(), "location_id": $("#ddlocation").val(), "local_address": $("#local_address").val(), "mobile_number": $("#mobile_number").val(), "alternate_number": $("#alternate_number").val(), "permenant_address": $("#permenant_address").val(), "qualificationmodel": student_qualifications, "registrationmodel": student_registrations };
+        console.log(st);
+        $.ajax({
+            url: '/Dummy/NewReg',
+            method: 'post',
+            data: JSON.stringify(st),
+            contentType: 'application/json',
+            success: function (resp) {
+                console.log(resp)
+            }
+        })
+
+    }
+
+
+
+
+</script>
+
+<div style="font-size:12px">
+
+    <ul class="nav nav-tabs">
+        <li class="active"><a data-toggle="tab" href="#studentinfo">Student Information</a></li>
+        <li><a data-toggle="tab" href="#registration">Registration Details</a></li>
+        <li><a data-toggle="tab" href="#paymentdetails">Payment Details</a></li>
+    </ul>
+
+    <div class="tab-content">
+        <div id="studentinfo" class="tab-pane fade in active">
+            <h3>Student Profile</h3>
+            <div class="panel panel-primary">
+                <div class="panel-heading">
+                    <center>
+                        <b>Student Profile</b>
+                    </center>
+                </div>
+                <div class="panel-body">
+                    <div class="col-md-3">
+                        <div class="form-group">
+
+                            <input type="text" id="first_name" placeholder="First Name" />
+                        </div>
+
+                    </div>
+                    <div class="col-md-3">
+                        <div class="form-group">
+
+                            <input type="text" id="middle_name" placeholder="Middle Name" />
+                        </div>
+
+                    </div>
+
+                    <div class="col-md-3">
+                        <div class="form-group">
+
+                            <input type="text" id="last_name" placeholder="Last Name" />
+                        </div>
+
+                    </div>
+                    <div class="col-md-3">
+                        <div class="form-group">
+
+                            <input type="date" id="birth_date" placeholder="Birth Date" />
+
+                        </div>
+                    </div>
+
+
+                    <div class="col-md-6">
+                        <div class="form-group">
+
+                            <input type="email" id="email_address" placeholder="Email Address" />
+
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+
+
+                        <input type="text" id="mobile_number" placeholder="Mobile Number" />
+
+
+                    </div>
+
+
+
+                    <div class="col-md-3">
+                        <div class="form-group">
+
+                            <input type="text" id="alternative_number" placeholder="Alternate Mobile" />
+                        </div>
+
+                    </div>
+
+
+
+
+
+
+
+                    <div class="col-md-4">
+                        <div class="form-group">
+
+                            <select id="ddstate">
+                                <option selected disabled>Select State</option>
+
+                            </select>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="form-group">
+                            <select id="ddcity">
+                                <option selected disabled>Select City</option>
+
+
+                            </select>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="form-group">
+                            <select id="ddlocation">
+                                <option selected disabled>Select Location</option>
+
+
+                            </select>
+                        </div>
+                    </div>
+                    <div class="col-md-12" style="padding-left:0px;padding-right:0px">
+                        <div class="col-md-6">
+                            <div class="form-group">
+
+                                <textarea id="local_address" placeholder="Local Address"></textarea>
+                            </div>
+
+                        </div>
+
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <textarea id="permenant_address" placeholder="Permenent Address"></textarea>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-4">
+                        <div class="form-group">
+                            <input type="file" id="ddphoto" />
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+
+
+            <div class="panel panel-primary">
+                <div class="panel-heading">
+                    <center>
+                        <b>Educational Details</b>
+                    </center>
+
+                </div>
+                <div class="panel-body">
+                    <div class="row">
+                        <div class="col-sm-2">
+                            <div class="form-group">
+                                <select id="ddqualification">
+                                    <option selected disabled>Qualification</option>
+
+                                </select>
+                            </div>
+                        </div>
+                        <div class="col-sm-2">
+                            <div class="form-group">
+                                <select id="ddspecialization">
+                                    <option selected disabled>Specialization</option>
+
+                                </select>
+
+                            </div>
+                        </div>
+                        <div class="col-sm-2">
+                            <div class="form-group">
+                                <input type="text" id="medium" placeholder="Medium" />
+                            </div>
+                        </div>
+
+                        <div class="col-sm-2">
+                            <div class="form-group">
+                                <input type="text" id="university" placeholder="University" />
+                            </div>
+                        </div>
+                        <div class="col-sm-1">
+                            <div class="form-group">
+                                <input type="text" id="passing_year" placeholder="Year" />
+                            </div>
+                        </div>
+                        <div class="col-sm-2">
+                            <div class="form-group">
+                                <input type="text" id="percentage" placeholder="Percentage" />
+                            </div>
+                        </div>
+                        <div class="col-sm-1">
+                            <div class="form-group">
+                                <button id="btnaddqualification" class="btn btn-primary"><span class=" glyphicon glyphicon-plus"></span></button>
+                            </div>
+                        </div>
+
+
+                    </div>
+                    <hr />
+                    <table class="table table-bordered table-striped ">
+                        <thead>
+                            <tr>
+                                <th>Qualification</th>
+                                <th>Specialization</th>
+                                <th>Medium</th>
+                                <th>University</th>
+                                <th>Year</th>
+                                <th>Percentage</th>
+
+                            </tr>
+                        </thead>
+                        <tbody id="tblqualifications">
+                        </tbody>
+
+                    </table>
+                </div>
+
+            </div>
+
+        </div>
+
+        <div id="registration" class="tab-pane fade">
+            <h3>Registration Details</h3>
+            <div class="col-md-10">
+                <div class="panel panel-primary">
+                    <div class="panel-heading">
+                        <center>
+                            <b>Registration Details</b>
+                        </center>
+                    </div>
+                    <div class="panel-body">
+                        <div class="col-md-12">
+                            <div class="form-group">
+                                <label>Center Name</label>
+                                <select id="ddcenter">
+                                    <option>Select Center Name</option>
+
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="col-md-4">
+                            <div class="form-group">
+                                <label>Registration Date</label>
+                                <input type="date" id="joining_date" placeholder="Registartion Date" />
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="form-group">
+                                <label>Training Program</label>
+                                <select id="ddcourse">
+                                    <option>Select Training Program</option>
+                                </select>
+
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="form-group">
+                                <label>Fee mode</label>
+                                <select id="ddfeemode">
+                                    <option>Select Fee mode</option>
+
+                                </select>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="form-group">
+                                <input type="text" id="course_fee" placeholder="Course Fees" readonly />
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="form-group">
+                                <input type="text" id="discount" placeholder="Discount" />
+                            </div>
+                        </div>
+
+                        <div class="col-md-4">
+                            <div class="form-group">
+                                <input type="text" id="final_amount" placeholder="Final Amount" />
+                            </div>
+                        </div>
+                        <div class="col-md-12">
+                            <div class="form-group">
+                                <input type="text" id="discount_reason" placeholder="Discount Reason" />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="paymentdetails" class="tab-pane fade">
+
+            <div class="col-md-10">
+                <h3>Payment Details</h3>
+                <div class="panel panel-primary">
+                    <div class="panel-heading">
+                        <center>
+                            <b>Payment Details</b>
+                        </center>
+                    </div>
+                    <div class="panel-body">
+                        <div class="col-sm-2">
+                            <div class="form-group">
+                                <select id="ddemployee">
+                                    <option selected disabled>Received By</option>
+
+                                </select>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <input type="date" id="payment_date" placeholder="Payment Date" />
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <input type="text" id="payment_amount" placeholder="Payment Amount" />
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <input type="text" id="payment_mode" placeholder="Payment Mode" />
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+
+                            <div class="form-group">
+                                <textarea id="description" placeholder="payment description"></textarea>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="panel-footer">
+                        <input type="button" value="Submit" id="btnsubmit" class="btn btn-primary" />
+
+                    </div>
+                </div>
+            </div>
+
+
+        </div>
+
+    </div>
+
+
+</div>
+

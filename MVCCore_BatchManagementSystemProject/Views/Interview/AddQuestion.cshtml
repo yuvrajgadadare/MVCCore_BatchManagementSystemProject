@@ -1,0 +1,67 @@
+﻿@* @model CIIT_All_In_One.Models.tblinterview_questions
+@{
+    ViewBag.Title = "AddQuestion";
+    Layout = "~/Views/Shared/_InterviewLayout.cshtml";
+}
+<script>
+    $(document).ready(function () {
+        $("#ddtopic").change(function () {
+            GetContents();
+        })
+    })
+    function GetContents() {
+        var topic_id = $("#ddtopic").val();
+        $.ajax({
+            url: '/Interview/GetContents/' + topic_id,
+            method: 'get',
+            contentType: 'application/json',
+            success: function (resp) {
+                console.log(resp);
+                $("#content_id").empty();
+                $("#content_id").append("<option>Select Content</option>");
+
+                $.each(resp, function (i, d) {
+                    $("#content_id").append("<option value="+d.Value+">"+d.Text+"</option>");
+
+                })
+            }
+            
+        })
+    }
+</script>
+<h2>Add Question</h2>
+<div class="col-md-5">
+@using (Html.BeginForm()) {
+
+    <div class="panel panel-primary">
+        <div class="panel-heading">
+            <h4>New Question</h4>
+        </div>
+        <div class="panel-body">
+            <div class="form-group">
+                <label>Select Topic</label>
+                @Html.DropDownList("ddtopic", ViewBag.topics as List<SelectListItem>, "Select Topic", new { @class = "form-control" })
+            </div>
+            <div class="form-group">
+                <label>Select Content</label>
+                @Html.DropDownListFor(e => e.content_id, ViewBag.contents as List<SelectListItem>, "Select Content", new { @class = "form-control" })
+            </div>
+            <div class="form-group">
+                <label>Question</label>
+                @Html.TextBoxFor(e => e.question, new { @class = "form-control" })
+            </div>
+            <div class="form-group">
+                <label>Answer</label>
+                @Html.TextAreaFor(e => e.answer, new { @class = "form-control" })
+            </div>
+
+        </div>
+        <div class="panel-footer">
+            <input type="submit" value="Submit" class="btn btn-primary" />
+            <h4>@ViewBag.msg</h4>
+        </div>
+    </div>
+}
+</div>
+
+ *@

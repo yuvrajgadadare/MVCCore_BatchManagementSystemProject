@@ -28,6 +28,9 @@
     <Folder Include="Areas\Student\Models\" />
     <Folder Include="Areas\Trainer\Data\" />
     <Folder Include="Areas\Trainer\Models\" />
+    <Folder Include="Views\Accountant\" />
+    <Folder Include="Views\Default\" />
+    <Folder Include="Views\ETutorial\" />
     <Folder Include="wwwroot\images\trainers\" />
   </ItemGroup>
 

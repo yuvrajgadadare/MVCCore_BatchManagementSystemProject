@@ -69,11 +69,11 @@ namespace MVCCore_BatchManagementSystemProject.Areas.Admin.Controllers
             d.TblstudentRegistrations.Add(rs);
             studentService.AddStudentDetails(d);
             string message = "<h2>Dear<br/> "+d.StudentName+",</h2><p>Your registration has been completed successfully.You can login by email address <b>"+d.EmailAddress+"</b> and password <b>"+password+"</b></p><br/><br/><h4>Regards,CIIT Training Institute Pvt. Ltd.</h4>";
-            extraService.Send_Email(d.EmailAddress, "Registration Confirmation", message);
+            extraService.Send_Gmail_Email(d.EmailAddress, "Registration Confirmation", message);
             ModelState.Clear();
             ViewBag.msg = "Student Added Successfully";
             ViewBag.courses = GetCourses();
-            ViewBag.students = studentService.GetStudentDetails();
+            ViewBag.students = studentService.GetStudentRegistrations();
             return View();
         }
 
